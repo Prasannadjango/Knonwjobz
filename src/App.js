@@ -19,6 +19,7 @@ import Applyjobspage from "./Pages/Applyjobspage";
 import Jobprofilepage from "./Pages/Jobprofilepage";
 import Jobrecuriterpage from "./Pages/Jobrecuriterpage";
 import Skillassessmentpage from "./Pages/SkillAssessmentpage";
+import Skillquizpage from "./Pages/Skillquizpage";
 
 function App() {
   return (
@@ -41,11 +42,12 @@ function App() {
           <Route path="/SeekerLoginforms" element={<SeekerLoginformpage />} />
           <Route path="/RecuriterLoginforms" element={<RecuriterLoginpage />} />
           <Route path="/Recentjobs" element={<Recentjobpage />} />
-          <Route path="/jobcategory" element={<Jobscategorypage/>}/>
-          <Route path="/Applyjobs" element={<Applyjobspage/>}/>
-          <Route path="/Jobseekerprofile" element={<Jobprofilepage/>}/>
-          <Route path="/Jobrecuriterprofile" element={<Jobrecuriterpage/>}/>
-          <Route  path="/Skillassessment"  element={<Skillassessmentpage/>}/>
+          <Route path="/jobcategory" element={<Jobscategorypage />} />
+          <Route path="/Applyjobs" element={<Applyjobspage />} />
+          <Route path="/Jobseekerprofile" element={<Jobprofilepage />} />
+          <Route path="/Jobrecuriterprofile" element={<Jobrecuriterpage />} />
+          <Route path="/Skillassessment" element={<Skillassessmentpage />} />
+          <Route path="/SkillQuiz" element={<Skillquizpage />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -274,7 +274,8 @@ label {
 /* Register page design */
 .Regsiter_maincontainer,
 .Aboutus_maincontainer,
-.Contact_maincontainer {
+.Contact_maincontainer,
+.Skillquiz_container{
   padding-top: 120px;
 }
 .bannerimage_container {
@@ -1380,11 +1381,18 @@ label {
 .SkillQuiz_boxcontainer > .row {
   justify-content: center;
 }
-.SkillQuiz_boxcontainer > .row > .Skill_box {
+.SkillQuiz_boxcontainer > .row > .Skill_box
+{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   border-radius: 10px;
   width: fit-content;
   padding: 30px;
+}
+.Skillquiz_contentcontainer{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  border-left: 4px solid #f7690a;
+  border-radius:0px 5px 5px 0px;
+  margin: 10px 0;
 }
 
 .Skill_box>ul{
@@ -1399,4 +1407,15 @@ label {
   color: #fff;
   background-color: var(--secondary-color);
   width: 100%;
+}
+.Skillquiz_contentcontainer>div{
+  border-bottom: 1px solid #727272;
+}
+.Skillquiz_contentcontainer>div>ul>li:nth-child(even){
+ padding: 20px 0;
+}
+.Submit_btn>button{
+  background-color: #0775e3;
+  color: #fff;
+  padding: 10px 15px;
 }
