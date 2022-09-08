@@ -203,8 +203,9 @@ function Jobprofile() {
                       </Form.Select>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control placeholder='Current Salary'/>
-                      <Form.Control placeholder='Expected Salary'/>
+                      <Form.Control placeholder='Current Salary' className="me-3"/>
+                      <Form.Control placeholder='Expected Salary' className="me-3"/>
+                      <Form.Control placeholder='Salary Currency' />
                     </InputGroup>
                   </div>
                   <div className="Edit_btncontainer2 mt-4">
