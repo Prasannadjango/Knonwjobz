@@ -1,0 +1,212 @@
+@media (min-width: 320px) and (max-width: 425px) {
+  /*  Homepage  */
+  .Homepage_image > div {
+    width: 100%;
+    top: 12%;
+    left: 0;
+  }
+  .whywithusBoxes,
+  .form_dropdownbtn {
+    flex-direction: column;
+  }
+  .form_dropdownbtn > div > .dropdown > button {
+    text-align: left;
+  }
+.Homepage_image{
+  background: none;
+  padding: 0 15px;
+}
+  .Country_dropdown {
+    width: 100%;
+  }
+  .whywithus_maincontainer {
+    margin-top: 95px;
+  }
+  .whywithusBoxes {
+    padding: 10px;
+  }
+  .whywithusBoxes > div {
+    margin: 10px 0;
+  }
+  .Icon_container > svg {
+    transform: rotate(90deg);
+  }
+  .Searchjobs_maincontainer > .container > div {
+    flex-direction: column;
+  }
+  .Searchjobs_maincontainer > .container > div > div:nth-child(2) {
+    padding: 20px 0;
+  }
+  .Explore-jobsbtn {
+    display: flex;
+    justify-content: center;
+  }
+  .Recentjobs_cardscontainer > .container > div:nth-child(1) {
+    margin-top: 10px;
+  }
+  .viewall_link {
+    padding: 15px;
+  }
+  .Successstory_maincontainer > .container > div {
+    flex-direction: column;
+  }
+  .Successstory_maincontainer > .container > div > div:nth-child(2) {
+    order: 1;
+  }
+  .Successstory_maincontainer > .container > div > div:nth-child(1) {
+    padding-right: 0;
+    order: 2;
+    padding-top: 15px;
+  }
+  .Successjobs_btn {
+    display: flex;
+    justify-content: center;
+  }
+  .Newsletter_maincontainer > div {
+    padding: 0 10px;
+    flex-direction: column;
+  }
+  .Newsletter_maincontainer > div > div:nth-child(1) > input {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .Newsletter_maincontainer > div > div:nth-child(2) > input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .Newsletter_maincontainer > div > div:nth-child(3) > button {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .Footer_maincontents > .container > .row > .col:nth-child(3),
+  .Footer_maincontents > .container > .row > .col:nth-child(4) {
+    margin-top: 25px;
+  }
+
+  /* Search job page */
+  .Jobseekermain_container,
+  .Jobsearch-maincotainer,
+  .jobcategory_page
+ {
+    padding-top: 83px;
+  }
+  .Homepage_maincontainer {
+    padding-top: 30px;
+  }
+  .Jobsearch-maincotainer > .container {
+    flex-direction: column;
+  }
+  .Searchbar-container > .row {
+    flex-direction: column;
+  }
+  .Jobsearch-maincotainer > .container > button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .Searchbar-container > .row > .col {
+    border-bottom: 1.5px solid #e0e0e0;
+    border-right: 0;
+  }
+  .Searchbar-container {
+    padding: 10px 10px;
+  }
+  .pagination_container {
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+  }
+  .pagination_container > .pagination {
+    width: 100%;
+  }
+  .pagination {
+    padding-left: 8px;
+  }
+  .Regsiter_maincontainer,
+  .Aboutus_maincontainer,
+  .Contact_maincontainer {
+    padding-top: 80px;
+  }
+  .List_container {
+    margin: 10px;
+    padding: 30px;
+  }
+  .Job_boxes {
+    flex-direction: column;
+  }
+  .Contact_detailsboxes > .container-fluid > .Job_boxes > div {
+    width: 100%;
+  }
+  .Contact_detailsboxes {
+    padding: 0 10px;
+  }
+  .Contact_detailsboxes > .container-fluid > .Job_boxes > div:nth-child(2) {
+    margin-top: 20px;
+  }
+  .Contanctform > .input-group > .form-control:nth-child(2) {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .Register_boxes {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .jobrecuriter_container {
+    margin-bottom: 20px;
+  }
+  .Recuriterform_container > .input-group > input,
+  .Company_infocontainer > .input-group > input {
+    width: 100%;
+  }
+  .Recuriterform_container > .input-group > input:nth-child(odd),
+  .Company_infocontainer > .input-group > input:nth-child(odd) {
+    margin-right: 0px;
+  }
+  .Recuriterform_container > .input-group > input {
+    margin: 8px 0;
+  }
+
+  .Company_infocontainer > .input-group > input:nth-child(odd) {
+    margin: 10px 0;
+  }
+  .Seeker_maincontainer > .container > div > .row > div:nth-child(1),
+  .Seeker_maincontainer2 > .container > div > .row > div:nth-child(2) {
+    display: none;
+    visibility: hidden;
+  }
+  .Jobseeker_btnscontainer,
+  .Jobseeker_btnscontainer2 {
+    flex-direction: column;
+  }
+  .Jobseeker_btnscontainer > a > button ,
+  .Jobseeker_btnscontainer2 > a > button:nth-child(1){
+    width: 100%;
+  }
+  .Jobseeker_btnscontainer2 > button:nth-child(2){
+    margin: 10px 0 0 0 ;
+  }
+  .Jobseeker_btnscontainer > button:nth-child(1)
+  {
+    margin: 0 0 15px 0;
+  }
+  .Seeker_maincontainer,
+  .Seeker_maincontainer2 {
+    padding-top: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .login_formcontainer,
+  .login_formcontainer2 {
+    border: 2px solid #e0e0e0;
+  }
+  .Recentjob_searchbar {
+    flex-direction: column;
+  }
+  .Recentjob_searchbar > div:nth-child(2) > button{
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+  .Jobseeker_btnscontainer2 > a > button:nth-child(1){
+    margin-right: 0;
+  }
+}
