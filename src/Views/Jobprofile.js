@@ -10,7 +10,7 @@ import {
   Card,
   Row,
   Col,
-  Badge
+  Badge,
 } from "react-bootstrap";
 import personimg from "../Assests/Images/personimage.jpg";
 import { BsPencilSquare } from "react-icons/bs";
@@ -173,52 +173,42 @@ function Jobprofile() {
                     <h2>Career Information</h2>
                   </div>
 
-                  <div>
+                  <div className="Career_detailsform">
                     <InputGroup className="mb-3">
-                    
-                      <Form.Select>
-                        <option value=""  >
-                         Job Experience....
-                        </option>
+                      <Form.Select className="me-3">
+                        <option value="">Job Experience....</option>
                         <option value="Male">Fresher</option>
                         <option value="Female">Experienced</option>
-                       
                       </Form.Select>
                       <Form.Select>
-                        <option value=""  >
-                         Careeer level....
-                        </option>
+                        <option value="">Careeer level....</option>
                         <option value="Male">Intern/student</option>
                         <option value="Female">Entry level</option>
                         <option value="Male">Team Lead</option>
                         <option value="Female">Manager</option>
-                       
                       </Form.Select>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                    
-                    <Form.Select>
-                      <option value=""  >
-                       Job Experience....
-                      </option>
-                      <option value="Male">Fresher</option>
-                      <option value="Female">Experienced</option>
-                     
-                    </Form.Select>
-                    <Form.Select>
-                      <option value=""  >
-                       Careeer level....
-                      </option>
-                      <option value="Male">Intern/student</option>
-                      <option value="Female">Entry level</option>
-                      <option value="Male">Team Lead</option>
-                      <option value="Female">Manager</option>
-                     
-                    </Form.Select>
-                  </InputGroup>
+                      <Form.Select className="me-3">
+                        <option value="">Select Industry....</option>
+                        <option value="Male">Fresher</option>
+                        <option value="Female">Experienced</option>
+                      </Form.Select>
+                      <Form.Select>
+                        <option value="">Functioanl area....</option>
+                        <option value="Male">Intern/student</option>
+                        <option value="Female">Entry level</option>
+                        <option value="Male">Team Lead</option>
+                        <option value="Female">Manager</option>
+                      </Form.Select>
+                    </InputGroup>
+                    <InputGroup className="mb-3">
+                      <Form.Control placeholder='Current Salary'/>
+                      <Form.Control placeholder='Expected Salary'/>
+                    </InputGroup>
                   </div>
                   <div className="Edit_btncontainer2 mt-4">
-                    <BsPencilSquare />
+                   
                     <Button>Edit Profile Details</Button>
                   </div>
                 </div>
@@ -619,7 +609,6 @@ function Jobprofile() {
                         </div>
                       </Card>
                     </Col>
-                   
                   </Row>
                 </div>
               </Tab>

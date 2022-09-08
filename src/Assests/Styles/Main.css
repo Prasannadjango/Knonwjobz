@@ -1300,16 +1300,15 @@ label {
   width: 100%;
 }
 .Postjob_forms > .input-group > input,
-.Postjob_forms > .input-group > select  
-{
+.Postjob_forms > .input-group > select {
   padding: 10px 15px;
 }
-.multi-select >.dropdown-container{
- padding: 4px 15px;
+.multi-select > .dropdown-container {
+  padding: 4px 15px;
 }
 .Postjob_forms > .input-group > input:nth-child(odd),
 .multi-select,
-.Postjob_forms > .input-group > select:nth-child(odd)  {
+.Postjob_forms > .input-group > select:nth-child(odd) {
   margin-right: 10px;
 }
 .multi-select {
@@ -1318,7 +1317,7 @@ label {
   width: 1%;
   min-width: 0;
 }
-.Postjob_btn>button{
+.Postjob_btn > button {
   background-color: #f7690a;
   text-align: center;
   color: #fff;
@@ -1326,34 +1325,38 @@ label {
   padding: 10px 15px;
 }
 
-.Plan_card{
+.Plan_card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   border-radius: 10px;
   width: fit-content;
   position: relative;
 }
-.Plan_cardprice{
+.Plan_cardprice {
   position: absolute;
   color: #fff;
   background-color: #0775e3;
-  width:  60px;
+  width: 60px;
   height: 60px;
   right: -1%;
   top: -10%;
   border-radius: 50px;
   padding: 20px 10px;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
 }
-.Plan_card>div:nth-child(2)>ol>li:nth-child(even){
+.Plan_card > div:nth-child(2) > ol > li:nth-child(even) {
   padding: 20px 0;
 }
-.Active_btn>button{
+.Active_btn > button {
   background-color: #f7690a;
   color: #fff;
   width: 100%;
   text-align: center;
   padding: 10px 15px;
+}
 
+.Career_detailsform > .input-group > input,
+.Career_detailsform > .input-group > select {
+  padding: 12px 10px !important;
 }
