@@ -29,7 +29,7 @@ function Skillassessment() {
 
               <div  className="SkillQuiz_boxcontainer py-5">
                 <Row>
-                  <Col lg={3} className='Skill_box'>
+                  <Col lg={3} className='Skill_box m-4'>
                     <h4 className="fw-bold text-start">HTML</h4>
                     <ul className="p-0 list-style-none">
                     <li>Total Quiz : 10</li>
@@ -39,17 +39,17 @@ function Skillassessment() {
                       <Button>Try now</Button>
                    </div>
                   </Col>
-                  <Col lg={3} className='Skill_box'>
+                  <Col lg={3} className='Skill_box  m-4'>
                     <h4 className="fw-bold text-start">React-js</h4>
                     <ul className="p-0 list-style-none">
                     <li>Total Quiz : 10</li>
                     <li>Total marks : 20</li>
                    </ul>
-                   <div className="Trynow_btn d-flex">
+                   <div className="Trynow_btn d-flex ">
                       <Button>Try now</Button>
                    </div>
                   </Col>
-                  <Col lg={3} className='Skill_box'>
+                  <Col lg={3} className='Skill_box  m-4'>
                     <h4 className="fw-bold text-start">Boostrap</h4>
                     <ul className="p-0 list-style-none">
                     <li>Total Quiz : 10</li>
@@ -59,8 +59,38 @@ function Skillassessment() {
                       <Button>Try now</Button>
                    </div>
                   </Col>
-                  <Col lg={3} className='Skill_box'>
+                  <Col lg={3} className='Skill_box  m-4'>
                     <h4 className="fw-bold text-start">Figma</h4>
+                    <ul className="p-0 list-style-none">
+                    <li>Total Quiz : 10</li>
+                    <li>Total marks : 20</li>
+                   </ul>
+                   <div className="Trynow_btn d-flex">
+                      <Button>Try now</Button>
+                   </div>
+                  </Col>
+                  <Col lg={3} className='Skill_box  m-4'>
+                    <h4 className="fw-bold text-start">Java</h4>
+                    <ul className="p-0 list-style-none">
+                    <li>Total Quiz : 10</li>
+                    <li>Total marks : 20</li>
+                   </ul>
+                   <div className="Trynow_btn d-flex">
+                      <Button>Try now</Button>
+                   </div>
+                  </Col>
+                  <Col lg={3} className='Skill_box  m-4'>
+                    <h4 className="fw-bold text-start">Linux</h4>
+                    <ul className="p-0 list-style-none">
+                    <li>Total Quiz : 10</li>
+                    <li>Total marks : 20</li>
+                   </ul>
+                   <div className="Trynow_btn d-flex">
+                      <Button>Try now</Button>
+                   </div>
+                  </Col>
+                  <Col lg={3} className='Skill_box  m-4'>
+                    <h4 className="fw-bold text-start">CSS</h4>
                     <ul className="p-0 list-style-none">
                     <li>Total Quiz : 10</li>
                     <li>Total marks : 20</li>

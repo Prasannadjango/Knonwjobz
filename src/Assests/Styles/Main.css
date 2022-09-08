@@ -1386,12 +1386,7 @@ label {
   width: fit-content;
   padding: 30px;
 }
-.SkillQuiz_boxcontainer > .row > .Skill_box:nth-child(2){
- margin: 0 50px;
-}
-.SkillQuiz_boxcontainer > .row > .Skill_box:nth-child(3){
-  margin: 0 50px 0 0;
-}
+
 .Skill_box>ul{
   list-style-type: none;
   color: #969696;
