@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, FormControl, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import skillimg from "../Assests/Images/Skillimg.jpg";
 function Skillassessment() {
   return (
@@ -40,7 +41,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -50,7 +53,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex ">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -60,7 +65,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                  <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -70,7 +77,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -80,7 +89,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -90,7 +101,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
               <Col lg={3} className="Skill_box  m-4">
@@ -100,7 +113,9 @@ function Skillassessment() {
                   <li>Total marks : 20</li>
                 </ul>
                 <div className="Trynow_btn d-flex">
-                  <Button>Try now</Button>
+                <Link to="/SkillQuiz">
+                    <Button>Try now</Button>
+                  </Link>
                 </div>
               </Col>
             </Row>
