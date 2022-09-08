@@ -23,7 +23,10 @@ function Recuriterlogin() {
                   </h4>
                   <Form.Control placeholder="Email-id " className="mb-4" />
                   <Form.Control placeholder="Password" />
+                  <Link to='/Jobrecuriterprofile'>
                   <Button className="col-12">Login</Button>
+                  </Link>
+                  
                 </div>
               </Col>
               <Col className="p-0">
