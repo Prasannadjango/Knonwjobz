@@ -6,8 +6,8 @@ function Header() {
   return (
     <>
       <Navbar expand="lg">
-        <Container>
-          <Navbar.Brand href="#home"><img src={Logo}/></Navbar.Brand>
+       
+          <Navbar.Brand className="ms-3"><img src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
@@ -23,6 +23,9 @@ function Header() {
               <Nav.Link href="#link" className="mt-2">
                 <Link to="/Contact">Contact</Link>
               </Nav.Link>
+              <Nav.Link  href="#link" className="mt-2">
+                <Link to='/Skillassessment'>Skill Assessment</Link>
+              </Nav.Link>
               <Nav.Link>
                 <Link to="/Register">
                   <button className="Register_btn border-0 text-white">
@@ -37,7 +40,7 @@ function Header() {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+       
       </Navbar>
     </>
   );

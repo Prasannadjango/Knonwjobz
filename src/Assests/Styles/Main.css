@@ -627,7 +627,8 @@ label {
   width: 40%;
 }
 .Seeker_maincontainer,
-.Jobprofile_maincontainer {
+.Jobprofile_maincontainer,
+.Skillassessment_container {
   padding-top: 130px;
 }
 .login_formcontainer {
@@ -1359,4 +1360,48 @@ label {
 .Career_detailsform > .input-group > input,
 .Career_detailsform > .input-group > select {
   padding: 12px 10px !important;
+}
+.Skill_image {
+  width: 100%;
+  height: 600px;
+}
+.Skill_quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SkillQuiz_container > div:nth-child(1) {
+  justify-content: space-between;
+}
+.SkillQuiz_container > div:nth-child(1) > div:last-child > button {
+  background-color: #0775e3;
+  color: #fff;
+}
+.SkillQuiz_boxcontainer > .row {
+  justify-content: center;
+}
+.SkillQuiz_boxcontainer > .row > .Skill_box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 30px;
+}
+.SkillQuiz_boxcontainer > .row > .Skill_box:nth-child(2){
+ margin: 0 50px;
+}
+.SkillQuiz_boxcontainer > .row > .Skill_box:nth-child(3){
+  margin: 0 50px 0 0;
+}
+.Skill_box>ul{
+  list-style-type: none;
+  color: #969696;
+  font-size: 17px;
+}
+.Trynow_btn{
+  justify-content: center;
+}
+.Trynow_btn>button{
+  color: #fff;
+  background-color: var(--secondary-color);
+  width: 100%;
 }

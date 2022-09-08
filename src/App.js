@@ -18,6 +18,7 @@ import Jobscategorypage from "./Pages/Jobcategorypage";
 import Applyjobspage from "./Pages/Applyjobspage";
 import Jobprofilepage from "./Pages/Jobprofilepage";
 import Jobrecuriterpage from "./Pages/Jobrecuriterpage";
+import Skillassessmentpage from "./Pages/SkillAssessmentpage";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/Applyjobs" element={<Applyjobspage/>}/>
           <Route path="/Jobseekerprofile" element={<Jobprofilepage/>}/>
           <Route path="/Jobrecuriterprofile" element={<Jobrecuriterpage/>}/>
+          <Route  path="/Skillassessment"  element={<Skillassessmentpage/>}/>
         </Routes>
       </BrowserRouter>
     </>
