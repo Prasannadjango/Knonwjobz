@@ -9,9 +9,8 @@ import {
   InputGroup,
   Form,
   Modal,
-  Card,
-  TabPane,
-  Container,
+  Card
+
 } from "react-bootstrap";
 import {
   BsFillBriefcaseFill,
@@ -36,6 +35,11 @@ function Jobrecuiterprofile() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const [show8, setShow8] = useState(false);
+  const handleClose8 = () => setShow8(false);
+  const handleShow8 = () => setShow8(true);
+
   const [selected, setSelected] = useState([]);
   const options = [
     { label: "CSS", value: "CSS" },
@@ -199,12 +203,16 @@ function Jobrecuiterprofile() {
                         </Col>
 
                         <Col xl={5}>
-                          <h3> My Subscription Plan Details</h3>
+                          <h3> My Subscription Plan</h3>
                           <div className="SubscriptionPlan_container p-4 mt-4 position-relative">
                             <h2 className="fw-bold">Silver Plan</h2>
                             <h4 className="text-secondary">$100</h4>
+                            
                             <h4 className="text-secondary pt-3">
                               12.3.22 - 13.3.23
+                            </h4>
+                            <h4 className="text-secondary pt-3">
+                              Available Quota:7/10
                             </h4>
                             <div>
                               <Button onClick={handleShow1}>
@@ -458,7 +466,7 @@ function Jobrecuiterprofile() {
                                 </div>
                               </Card.Text>
                               <div className="Postbutton_container ">
-                                <Button>Edit</Button>
+                                <Button onClick={handleShow8}>Edit</Button>
                                 <Button>Delete</Button>
                               </div>
                             </Card.Body>
@@ -595,6 +603,85 @@ function Jobrecuiterprofile() {
                         <div className="Postjob_btn col-12">
                           <Button variant="primary" onClick={handleClose}>
                             Post a Job
+                          </Button>
+                        </div>
+                      </Modal.Footer>
+                    </Modal>
+
+                    <Modal size="lg" show={show8} onHide={handleClose8}>
+                      <Modal.Header closeButton>
+                        <Modal.Title>Edit this Job</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body className="Postjob_forms">
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Control placeholder="Job-title" />
+                          <Form.Select>
+                            <option>Choose the Experience-level</option>
+                            <option value="Fresher">Fresher</option>
+                            <option value="Mid-senior">Mid-senior</option>
+                            <option value="Experienced">Experienced</option>
+                          </Form.Select>
+                        </InputGroup>
+                        <InputGroup className="my-xl-3 my-1 ">
+                          <MultiSelect
+                            options={options}
+                            value={selected}
+                            onChange={setSelected}
+                            labelledBy="Select Skills"
+                            placeholder="hello"
+                          />
+
+                          <Form.Control placeholder="Select City" />
+                        </InputGroup>
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Control placeholder="Select-state.." />
+                          <Form.Control placeholder="Select-Country.." />
+                        </InputGroup>
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Control placeholder="Salary Currency.." />
+                          <Form.Control placeholder="Salary Period.." />
+                        </InputGroup>
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Control
+                            type="number"
+                            placeholder="Salary from.."
+                          />
+                          <Form.Control
+                            type="number"
+                            placeholder="Salary to.."
+                          />
+                        </InputGroup>
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Select>
+                            <option>Job type</option>
+                            <option value="Fresher">Full-time</option>
+                            <option value="Mid-senior">Part-time</option>
+                            <option value="Experienced">Freelance</option>
+                          </Form.Select>
+                          <Form.Select>
+                            <option>Job shift</option>
+                            <option value="Fresher">Day</option>
+                            <option value="Mid-senior">Night</option>
+                            <option value="Experienced">Rotating</option>
+                          </Form.Select>
+                        </InputGroup>
+                        <InputGroup className=" my-xl-3 my-1 ">
+                          <Form.Select>
+                            <option>Gender</option>
+                            <option value="Fresher">male</option>
+                            <option value="Mid-senior">Female</option>
+                            <option value="Experienced">
+                              Rather not to say
+                            </option>
+                          </Form.Select>
+                          <Form.Control placeholder="No of Openings.." />
+                        </InputGroup>
+                      </Modal.Body>
+
+                      <Modal.Footer>
+                        <div className="Postjob_btn col-12">
+                          <Button variant="primary" onClick={handleClose8}>
+                            Edit & update job
                           </Button>
                         </div>
                       </Modal.Footer>
