@@ -207,7 +207,9 @@ function Home() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Button>Apply Now</Button>
+                      <Link to="/Applyjobdetails" className="w-100">
+                        <Button>Apply Now</Button>
+                      </Link>
                     </div>
                   </Card>
                 </Col>
@@ -240,7 +242,9 @@ function Home() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Button>Apply Now</Button>
+                    <Link to="/Applyjobdetails" className="w-100">
+                        <Button>Apply Now</Button>
+                      </Link>
                     </div>
                   </Card>
                 </Col>
@@ -273,7 +277,9 @@ function Home() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Button>Apply Now</Button>
+                    <Link to="/Applyjobdetails" className="w-100">
+                        <Button>Apply Now</Button>
+                      </Link>
                     </div>
                   </Card>
                 </Col>

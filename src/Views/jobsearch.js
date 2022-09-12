@@ -16,6 +16,7 @@ import searchjobimg from "../Assests/Images/searchjobimg.jpg";
 import { MdLocationPin } from "react-icons/md";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 function Jobsearch() {
   const options = [
     { value: "Fresher", label: "Fresher" },
@@ -187,7 +188,9 @@ function Jobsearch() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
                       <Button className="mb-3">Apply Now</Button>
+                      </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
@@ -216,7 +219,9 @@ function Jobsearch() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
+                    <Link to='/Applyjobdetails'>
                       <Button className="mb-3">Apply Now</Button>
+                      </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
@@ -245,7 +250,9 @@ function Jobsearch() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
+                    <Link to='/Applyjobdetails'>
                       <Button className="mb-3">Apply Now</Button>
+                      </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
