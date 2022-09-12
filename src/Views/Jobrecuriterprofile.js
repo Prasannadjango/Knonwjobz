@@ -9,8 +9,7 @@ import {
   InputGroup,
   Form,
   Modal,
-  Card
-
+  Card,
 } from "react-bootstrap";
 import {
   BsFillBriefcaseFill,
@@ -207,7 +206,7 @@ function Jobrecuiterprofile() {
                           <div className="SubscriptionPlan_container p-4 mt-4 position-relative">
                             <h2 className="fw-bold">Silver Plan</h2>
                             <h4 className="text-secondary">$100</h4>
-                            
+
                             <h4 className="text-secondary pt-3">
                               12.3.22 - 13.3.23
                             </h4>
@@ -227,7 +226,7 @@ function Jobrecuiterprofile() {
                             <Modal.Body className="py-4 ps-2 pe-4 ">
                               <div className="Planscard_container d-flex mt-3 ">
                                 <Col xl={6} className="Plan_card p-3 me-3">
-                                <div className="Plan_cardprice">
+                                  <div className="Plan_cardprice">
                                     <h6 className="m-0">$100</h6>
                                   </div>
                                   <div>
@@ -464,11 +463,15 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
+                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
+                              
                               <div className="Postbutton_container ">
                                 <Button onClick={handleShow8}>Edit</Button>
                                 <Button>Delete</Button>
                               </div>
+                              
                             </Card.Body>
                           </Card>
                         </Col>
@@ -491,6 +494,8 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
+                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>
@@ -518,6 +523,8 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
+                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>

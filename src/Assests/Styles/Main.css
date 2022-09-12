@@ -1484,3 +1484,9 @@ label {
   color: #fff;
   background-color: #f7690a;
 }
+.Shortlist_button{
+  background-color: #f7690a !important;
+  color: #fff !important;
+  width: 100%;
+  margin-top: 20px;
+}
