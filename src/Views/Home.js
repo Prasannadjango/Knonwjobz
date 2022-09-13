@@ -346,7 +346,7 @@ function Home() {
           </div>
         </div>
         <div className="jobscategories_container mb-5 py-xl-5 py-3 px-xl-5 px-3">
-          <Row xs={1} md={3} className="g-4">
+          <Row xs={1} md={2} xl={3} className="g-4">
             <Col>
               <div className="Jobscat_card py-4 ps-3">
                 <div>
