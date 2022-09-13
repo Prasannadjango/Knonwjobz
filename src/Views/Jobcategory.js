@@ -26,7 +26,7 @@ function Jobscategory() {
       </div>
       <div className="jobscategories_pagecontainer mb-5 py-2 px-xl-5 px-2">
       <h4 className=" pb-4 fw-bold">Jobs category</h4>
-        <Row xs={1} md={3} className="g-4">
+        <Row xs={1} md={3} className="g-4 mx-0">
           <Col>
             <div className="Jobscatpage_card py-4 ps-3 position-relative">
               <div>

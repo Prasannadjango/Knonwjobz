@@ -175,7 +175,7 @@ function Jobprofile() {
 
                   <div className="Career_detailsform">
                     <InputGroup className="mb-3">
-                      <Form.Select className="me-3">
+                      <Form.Select className="me-xl-3">
                         <option value="">Job Experience....</option>
                         <option value="Male">Fresher</option>
                         <option value="Female">Experienced</option>
@@ -189,7 +189,7 @@ function Jobprofile() {
                       </Form.Select>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Select className="me-3">
+                      <Form.Select className="me-xl-3">
                         <option value="">Select Industry....</option>
                         <option value="Male">Fresher</option>
                         <option value="Female">Experienced</option>
@@ -203,9 +203,9 @@ function Jobprofile() {
                       </Form.Select>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control placeholder='Current Salary' className="me-3"/>
-                      <Form.Control placeholder='Expected Salary' className="me-3"/>
-                      <Form.Control placeholder='Salary Currency' />
+                      <Form.Control placeholder='Current Salary' className="me-xl-3"/>
+                      <Form.Control placeholder='Expected Salary' className="me-xl-3"/>
+                      <Form.Control placeholder='Salary Currency' className="mt-xl-0 mt-3"/>
                     </InputGroup>
                   </div>
                   <div className="Edit_btncontainer2 mt-4">
@@ -223,7 +223,7 @@ function Jobprofile() {
                       Edit
                     </Button>
                   </div>
-                  <h2 className="fw-bold">Profile Summary</h2>
+                  <h2 className="fw-bold pt-xl-0 pt-4">Profile Summary</h2>
 
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -280,9 +280,9 @@ function Jobprofile() {
                       Add New Education Details
                     </Button>
                   </div>
-                  <h2>My Education Details</h2>
+                  <h2 className="pt-xl-0 pt-4">My Education Details</h2>
                   <div className="d-flex EducationDetails_container mt-5 ">
-                    <Card className="me-5">
+                    <Card className="me-xl-5 me-0 mb-xl-0 mb-4">
                       <div className="Delete_btn">
                         <Button className="p-0">
                           <AiOutlineDelete />
@@ -348,9 +348,9 @@ function Jobprofile() {
                       Add Work Experience
                     </Button>
                   </div>
-                  <h2>My Work Experience</h2>
+                  <h2 className="pt-xl-0 pt-4">My Work Experience</h2>
                   <div className="d-flex EducationDetails_container mt-5 ">
-                    <Card className="me-5">
+                    <Card className="me-xl-5 me-0">
                       <div className="Delete_btn">
                         <Button className="p-0">
                           <AiOutlineDelete />
@@ -395,7 +395,7 @@ function Jobprofile() {
                       Add Skill
                     </Button>
                   </div>
-                  <h2>Skill</h2>
+                  <h2 className="pt-xl-0 pt-4">Skill</h2>
                   <div className="Skill_fieldcontainer d-flex mt-4">
                     <div>
                       {/* <div>1</div> */}

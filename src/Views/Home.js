@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <div className="Homepage_maincontainer">
-        <div className="Homepage_image mb-5">
+        <div className="Homepage_image ">
           <div className=" p-4">
             <h1 className="fw-bold"> Thousands of success job stories.</h1>
             <h1 className="fw-bold">Start Your Journey Now..</h1>
@@ -94,7 +94,7 @@ function Home() {
 
         <div className="whywithus_maincontainer mb-5">
           <div className="Whywithus_heading">
-            <h1 className="text-center fw-bold">
+            <h1 className="text-center fw-bold   pt-xl-5 pt-0">
               Finding the job is made Easy
             </h1>
           </div>

@@ -23,7 +23,7 @@ function Skillassessment() {
             <div>
               <h4 className="fw-bold">Take a Skill assessment Now</h4>
             </div>
-            <div className="col-3 d-flex">
+            <div className=" col-xl-3 col-12 d-flex">
               <FormControl
                 placeholder="Search by Skill-Name..."
                 className="me-2"
@@ -32,87 +32,87 @@ function Skillassessment() {
             </div>
           </div>
 
-          <div className="SkillQuiz_boxcontainer py-5">
+          <div className="SkillQuiz_boxcontainer py-xl-5 py-0">
             <Row>
-              <Col lg={3} className="Skill_box m-4">
+              <Col lg={3} xs={12} className="Skill_box m-4">
                 <h4 className="fw-bold text-start">HTML</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">React-js</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex ">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">Boostrap</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                   <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">Figma</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">Java</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">Linux</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>
                 </div>
               </Col>
-              <Col lg={3} className="Skill_box  m-4">
+              <Col lg={3} xs={12} className="Skill_box  m-4">
                 <h4 className="fw-bold text-start">CSS</h4>
                 <ul className="p-0 list-style-none">
                   <li>Total Quiz : 10</li>
                   <li>Total marks : 20</li>
                 </ul>
-                <div className="Trynow_btn d-flex">
+                <div className="Trynow_btn d-flex col-xl-0 col-12">
                 <Link to="/SkillQuiz">
                     <Button>Try now</Button>
                   </Link>

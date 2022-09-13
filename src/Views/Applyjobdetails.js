@@ -11,7 +11,7 @@ function Applyjobsdetails() {
     <>
       <div className="Applyjobsdetails_container pb-5 px-4 ">
         <div className="d-flex ">
-          <div>
+          <div className="d-flex">
             <img src={Companylogo} />
           </div>
           <div className="ps-4">
