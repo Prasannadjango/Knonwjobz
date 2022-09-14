@@ -15,7 +15,7 @@ function Register() {
            <div className="my-xl-5  my-2">
             <div className="Register_boxes">
            
-                <div className="jobrecuriter_container me-xl-5 me-0">
+                <div className="jobrecuriter_container me-xl-5 me-md-5 me-lg-5 me-0">
                    <h5 className="text-center ">i am looking for a</h5>
                    <h1 className="text-center fw-bold">Job</h1>
                    <div>

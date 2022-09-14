@@ -282,7 +282,7 @@ function Jobprofile() {
                   </div>
                   <h2 className="pt-xl-0 pt-4">My Education Details</h2>
                   <div className="d-flex EducationDetails_container mt-5 ">
-                    <Card className="me-xl-5 me-0 mb-xl-0 mb-4">
+                    <Card className="me-xl-5 me-md-5 me-0 mb-xl-0 mb-md-0 mb-4">
                       <div className="Delete_btn">
                         <Button className="p-0">
                           <AiOutlineDelete />
@@ -422,7 +422,7 @@ function Jobprofile() {
               <Tab eventKey="MyfavoriteJobs" title="My favorite Jobs">
                 <div className="MyfavoriteJobs_container p-4">
                   <h2>My favorite jobs</h2>
-                  <Row xs={1} md={3} className="g-5 mt-1">
+                  <Row xs={1} lg={3} md={2} className="g-5 mt-1">
                     <Col>
                       <Card className="Searchjobs_card pb-3">
                         <div>
@@ -516,7 +516,7 @@ function Jobprofile() {
               <Tab eventKey="Application History" title="Application History">
                 <div className="Applicationhistory_container p-4">
                   <h2>Application History</h2>
-                  <Row xs={1} md={3} className="g-5 mt-1">
+                  <Row xs={1} xl={3} md={2} className="g-5 mt-1">
                     <Col>
                       <Card className="Applicationhistory_card pb-3">
                         <Badge pill bg="danger">

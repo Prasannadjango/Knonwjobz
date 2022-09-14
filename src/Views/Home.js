@@ -101,7 +101,7 @@ function Home() {
 
           <Container className="p-0">
             <div className="d-flex whywithusBoxes  my-xl-5 my-3 ">
-              <div className="col-xl-3 col-12">
+              <div className="col-xl-3  col-12">
                 <span>
                   <ImProfile />
                 </span>
@@ -112,7 +112,7 @@ function Home() {
                 <TiArrowRightThick className="Arrow-icon" />
               </span>
 
-              <div className="col-xl-3 col-12 ms-0">
+              <div className="col-xl-3  col-12 ms-0">
                 <span>
                   <IoDocumentTextOutline />
                 </span>
@@ -122,7 +122,7 @@ function Home() {
                 <TiArrowRightThick className="Arrow-icon" />
               </span>
 
-              <div className="col-xl-3 col-12">
+              <div className="col-xl-3  col-12">
                 <span>
                   <FaBuilding />
                 </span>
@@ -132,7 +132,7 @@ function Home() {
                 <TiArrowRightThick className="Arrow-icon" />
               </span>
 
-              <div className="col-xl-3 col-12 ">
+              <div className="col-xl-3  col-12 ">
                 <span>
                   <FaUserTie />
                 </span>
@@ -175,7 +175,7 @@ function Home() {
           </div>
           <div className="mt-5 p-xl-5 p-0 Recentjobs_cardscontainer">
             <Container>
-              <Row xs={1} xl={3} className="g-4">
+              <Row xs={1} lg={3} xl={3} className="g-4">
                 <Col>
                   <Card className=" Recentjobs_cards py-3">
                     <div>
