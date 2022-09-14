@@ -57,7 +57,7 @@ function Jobsearch() {
       <div className="Jobsearch-maincotainer">
         <Container className="d-flex">
           <div className="Searchbar-container">
-            <Row md={3}>
+            <Row lg={3} className='m-0'>
               <Col className="pe-2">
                 <FormControl
                   placeholder="Search by Job title,Name"
@@ -102,7 +102,7 @@ function Jobsearch() {
               Use Filters to find out the Exact job:{" "}
             </h5>
             <Row className="mt-4">
-              <Col lg={3} xs={12}>
+              <Col lg={3} md={4} xs={12}>
                 <Select
                   placeholder="Experience Level"
                   options={options}
@@ -113,7 +113,7 @@ function Jobsearch() {
                 />
               </Col>
 
-              <Col lg={3} xs={12} className="p-0">
+              <Col lg={3} md={4} xs={12} className="p-0">
                 <div>
                   <Select
                     placeholder="Job type"
@@ -125,7 +125,7 @@ function Jobsearch() {
                   />
                 </div>
               </Col>
-              <Col lg={3} xs={12}>
+              <Col lg={3} md={4} xs={12}>
                 <div>
                   <Select
                     placeholder="Career-level"
@@ -137,7 +137,7 @@ function Jobsearch() {
                   />
                 </div>
               </Col>
-              <Col lg={3} xs={12}>
+              <Col lg={3} md={4} xs={12} className='Datepicker_container'>
                 <DatePicker
                   placeholderText="Select-Date"
                   selectsRange={true}
@@ -163,7 +163,7 @@ function Jobsearch() {
           <div className="mt-5 p-xl-5 p-1 Recentjobs_cardscontainer">
             <Container>
               <h4 className="pb-3 fw-bold">Showing All jobs:</h4>
-              <Row xs={1} md={3} className="g-5">
+              <Row xs={1} sm={1} md={2} xl={3} lg={3} className="g-4">
                 <Col>
                   <Card className="Searchjobs_card pb-3">
                     <div>

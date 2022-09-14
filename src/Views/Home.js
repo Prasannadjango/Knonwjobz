@@ -149,20 +149,18 @@ function Home() {
 
           <Container className="mt-5">
             <div className="d-flex ">
-              <Col xl={6} xs={12}>
+              <Col xl={6} md={6} xs={12}>
                 <img src={searchjobimg} className="w-100" />
               </Col>
-              <Col xl={6} xs={12}>
+              <Col xl={6} md={6} xs={12}>
                 <h3 className="fw-bold">Search for Jobs</h3>
-                <p className="m-0">
+                <p className="m-0 ">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse massa turpis, fringilla sit amet aliquam a,
+                  euismod vel nisi. Aliquam a auctor nisi. Donec a ex commodo
+                  orci tincidunt malesuada
                 </p>
-                <ul className="p-0 mt-3">
-                  <li> Lorem ipsum dolor sit amet</li>
-                  <li> Lorem ipsum dolor sit amet</li>
-                  <li> Lorem ipsum dolor sit amet</li>
-                  <li> Lorem ipsum dolor sit amet</li>
-                </ul>
+
                 <div className="pt-2 Explore-jobsbtn">
                   <Button className="text-white">Explore Jobs</Button>
                 </div>
@@ -177,7 +175,7 @@ function Home() {
           </div>
           <div className="mt-5 p-xl-5 p-0 Recentjobs_cardscontainer">
             <Container>
-              <Row xs={1} md={3} className="g-4">
+              <Row xs={1} xl={3} className="g-4">
                 <Col>
                   <Card className=" Recentjobs_cards py-3">
                     <div>
@@ -242,7 +240,7 @@ function Home() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 d-flex">
-                    <Link to="/Applyjobdetails" className="w-100">
+                      <Link to="/Applyjobdetails" className="w-100">
                         <Button>Apply Now</Button>
                       </Link>
                     </div>
@@ -277,7 +275,7 @@ function Home() {
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 d-flex">
-                    <Link to="/Applyjobdetails" className="w-100">
+                      <Link to="/Applyjobdetails" className="w-100">
                         <Button>Apply Now</Button>
                       </Link>
                     </div>

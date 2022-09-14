@@ -7,7 +7,7 @@ function Contact() {
       <div className="Contact_maincontainer">
         <div  className="Contact_detailsboxes">
           <Container fluid className="px-xl-5 px-0">
-          <div xl={6} xs={12}  className="Job_boxes">
+          <div xl={6}  xs={12}  className="Job_boxes">
               <div className="me-4">
                 <h4 className="fw-bold">Jobseeker Customer help Contact</h4>
                 <p className="text-secondary">
