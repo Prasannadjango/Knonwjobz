@@ -1,8 +1,6 @@
 @media (min-width: 320px) and (max-width: 425px) {
   /*  Homepage  */
-   .Homepage_image{
-     height:inherit;
-  }
+ 
   .Homepage_image > div {
     width: 100%;
     top: 0%;
@@ -21,6 +19,7 @@
   .Homepage_image {
     background: none;
     padding: 0 15px;
+    height:inherit;
   }
   .Country_dropdown {
     width: 100%;
