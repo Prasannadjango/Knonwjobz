@@ -7,7 +7,7 @@ function Header() {
     <>
       <Navbar expand="lg">
        
-          <Navbar.Brand className="ms-3"><img src={Logo}/></Navbar.Brand>
+          <Navbar.Brand className="ms-3"  onClick={() => window.location.reload(false)}><img src={Logo}/></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0"/>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto ">
