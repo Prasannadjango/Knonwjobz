@@ -93,7 +93,7 @@ function Jobsearch() {
               </Col>
             </Row>
           </div>
-          <Button>Search-now</Button>
+          <Button class='col-2'>Search-now</Button>
         </Container>
         <hr className="container mt-xl-5 mt-4" />
         <div className="mt-4 px-xl-4 px-0">
