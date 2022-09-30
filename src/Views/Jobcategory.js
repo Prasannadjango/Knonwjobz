@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Col, Row,FormControl,Button} from "react-bootstrap";
 import { FaChalkboardTeacher } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import {
   MdOutlineEngineering,
   MdComputer,
@@ -27,18 +27,21 @@ function Jobscategory() {
       <div className="jobscategories_pagecontainer mb-5 py-2 px-xl-5 px-2">
       <h4 className=" pb-4 fw-bold">Jobs category</h4>
         <Row xs={1} md={3} className="g-4 mx-0">
+          <Link to='/Jobcategoryinner' className="text-decoration-none">
           <Col>
             <div className="Jobscatpage_card py-4 ps-3 position-relative">
               <div>
                 <MdOutlineEngineering />
               </div>
               <div className="ps-3">
-                <h5 className="fw-bold">Civil Engineers</h5>
+                <h5 className="fw-bold text-dark">Civil Engineers</h5>
                 <p className="text-secondary">30+ Openings</p>
                 
               </div>
             </div>
           </Col>
+          </Link>
+       
 
           <Col>
             <div className="Jobscatpage_card py-4 ps-3 position-relative">

@@ -137,6 +137,7 @@ label {
 .Successstory_maincontainer > .container > div > div:nth-child(1) > p {
   font-size: 16px;
   color: slategray;
+  line-height: 45px;
 }
 .Searchjobs_maincontainer > .container > div > div:nth-child(2) > ul {
   list-style-type: circle;
@@ -170,12 +171,17 @@ label {
 .Recentjobs_maincontainer > div:nth-child(2) {
   background-color: aliceblue;
 }
-.Recentjobs_cards > div:nth-child(1) {
+.Recentjobs_cards > div:nth-child(1),
+.Recentjobs_cards2 > div:nth-child(1){
   width: 80px;
   height: 80px;
   display: flex;
   margin: 0 auto;
   border-radius: 100px;
+}
+.Recentjobs_cards2 {
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .Recentjobs_pagecards {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -201,6 +207,7 @@ label {
   border: none !important;
 }
 .Recentjobs_cards > div > img,
+.Recentjobs_cards2 > div> img,
 .Recentjobs_pagecards > div > img {
   border-radius: inherit;
 }

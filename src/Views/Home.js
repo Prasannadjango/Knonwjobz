@@ -158,7 +158,9 @@ function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse massa turpis, fringilla sit amet aliquam a,
                   euismod vel nisi. Aliquam a auctor nisi. Donec a ex commodo
+                  orci tincidunt malesuada Aliquam a auctor nisi. Donec a ex commodo
                   orci tincidunt malesuada
+
                 </p>
 
                 <div className="pt-2 Explore-jobsbtn">
