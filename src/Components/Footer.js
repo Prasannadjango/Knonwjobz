@@ -14,7 +14,7 @@ function Footer() {
           <hr className="m-0 bg-white "/> 
         <div className="Footer_maincontents pt-5">
           <Container>
-            <Row lg={4} md={2} sm={2}  className="px-xl-5 px-1 mx-0">
+            <Row lg={4} md={2} xs={1} className="px-xl-5 px-1 mx-0">
               <Col>
                 <h5 className="text-white fw-bold pb-3">Quick-links</h5>
                 <ul
@@ -31,11 +31,11 @@ function Footer() {
               </Col>
               <Col>
                 <h5 className="text-white fw-bold pb-3">Get the App now</h5>
-                <div className="mb-3">
-                  <img src={googleplaylogo} />
+                <div className="mb-3 ">
+                  <img src={googleplaylogo} className='w-50'/>
                 </div>
                 <div>
-                  <img src={applestorelogo} />
+                  <img src={applestorelogo} className='w-50'/>
                 </div>
               </Col>
               <Col>
