@@ -562,10 +562,6 @@ label {
   justify-content: center;
   
 }
-.page-link{
-  border-radius: 20px;
-  margin: 0 10px;
-}
 .pagination_container>ul{
   z-index: 1;
 }
