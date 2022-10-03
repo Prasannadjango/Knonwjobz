@@ -565,6 +565,9 @@ label {
 .pagination_container>ul{
   z-index: 1;
 }
+.Datepicker_container{
+  position: relative;
+}
 .Aboutus_maincontainer > .container > div {
   height: 500px;
   margin-top: 30px;
@@ -623,6 +626,7 @@ label {
 } */
 .Datepicker_box {
   padding: 13px;
+  width: 100%;
   border-radius: 45px;
   border: 1px solid hsl(0, 0%, 80%) !important;
 }

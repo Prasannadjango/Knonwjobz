@@ -111,6 +111,7 @@
   .Searchbar-container > .row > .col {
     border-bottom: 1.5px solid #e0e0e0;
     border-right: 0;
+    padding: 9px;
   }
   .Searchbar-container {
     padding: 10px 10px;
