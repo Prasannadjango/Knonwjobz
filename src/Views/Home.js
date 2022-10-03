@@ -35,17 +35,18 @@ function Home() {
               <Form.Group className="mb-xl-3 mb-0" controlId="formBasicEmail">
                 <Form.Label>Job Title</Form.Label>
                 <Form.Control
-                  type="email"
+                  type="text"
                   placeholder="Enter the Job title..."
+                  className='Landingpage_input'
                 />
               </Form.Group>
               <div className="d-flex pt-xl-3 pt-0  form_dropdownbtn">
-                <div className="col-xl-6 py-xl-0 py-3">
+                <div className="col-xl-6 py-xl-0 py-3 me-xl-2 me-0">
                   <Dropdown>
                     <label className="pb-2"> Select your Country</label>
                     <Dropdown.Toggle
                       id="dropdown-basic"
-                      className="border Country_dropdown"
+                      className="border Country_dropdown text-start"
                     >
                       Select your Country
                     </Dropdown.Toggle>
@@ -66,7 +67,7 @@ function Home() {
                     <label className="pb-2"> Select your Location</label>
                     <Dropdown.Toggle
                       id="dropdown-basic"
-                      className="border Country_dropdown"
+                      className="border Country_dropdown text-start"
                     >
                       Select your Location
                     </Dropdown.Toggle>

@@ -81,6 +81,13 @@
 }
 .Country_dropdown {
   color: rgb(131, 131, 131) !important;
+  width: 100%;
+  text-align: left ;
+
+  padding: 10px 0 10px 10px !important;
+}
+.Landingpage_input{
+  padding: 10px 0 10px 10px !important;
 }
 label {
   font-weight: 600;
@@ -554,6 +561,10 @@ label {
   display: flex;
   justify-content: center;
   
+}
+.page-link{
+  border-radius: 20px;
+  margin: 0 10px;
 }
 .pagination_container>ul{
   z-index: 1;
