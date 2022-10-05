@@ -1228,6 +1228,9 @@ label {
   padding: 12px 16px;
   border-radius: 5px;
 }
+.Sidebar_links{
+  flex-direction: column;
+}
 .SideBar_container > .nav-pills > .nav-item {
   padding: 10px 0;
 }

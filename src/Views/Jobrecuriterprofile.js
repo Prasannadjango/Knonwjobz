@@ -10,6 +10,7 @@ import {
   Form,
   Modal,
   Card,
+  Navbar
 } from "react-bootstrap";
 import {
   BsFillBriefcaseFill,
@@ -48,56 +49,60 @@ function Jobrecuiterprofile() {
   const [show1, setShow1] = useState(false);
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
+
   return (
     <>
       <div className="Jobrecuirter_container">
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
-            <Col sm={3} className=" py-4 pe-0 bg-white SideBar_container">
-              <Nav variant="pills" className="flex-column ">
-                <Nav.Item>
-                  <Nav.Link eventKey="first" className="d-flex">
-                    <HiHome />
-                    <p className="pt-1">Home</p>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="second" className="d-flex">
-                    <HiOutlineClipboardList />
-                    <p className="pt-1">Company Profile</p>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="third" className="d-flex">
-                    <HiBriefcase />
-                    <p className="pt-1">Post a Job</p>
-                  </Nav.Link>
-                </Nav.Item>
+            <Col xl={3} xs={12} className=" py-4 pe-0 bg-white SideBar_container">
+          
+             
+                <Nav variant="pills" className="Sidebar_links">
+                  <Nav.Item>
+                    <Nav.Link eventKey="first" className="d-flex">
+                      <HiHome />
+                      <p className="pt-1">Home</p>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="second" className="d-flex">
+                      <HiOutlineClipboardList />
+                      <p className="pt-1">Company Profile</p>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="third" className="d-flex">
+                      <HiBriefcase />
+                      <p className="pt-1">Post a Job</p>
+                    </Nav.Link>
+                  </Nav.Item>
 
-                <Nav.Item>
-                  <Nav.Link eventKey="Fifth" className="d-flex">
-                    <HiChatAlt2 />
-                    <p className="pt-1">Manage Messages</p>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="sixth" className="d-flex">
-                    <HiUserGroup />
-                    <p className="pt-1">Manage Followers</p>
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="seventh" className="d-flex">
-                    <BiLogOut />
-                    <p className="pt-1">Logout</p>
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
+                  <Nav.Item>
+                    <Nav.Link eventKey="Fifth" className="d-flex">
+                      <HiChatAlt2 />
+                      <p className="pt-1">Manage Messages</p>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="sixth" className="d-flex">
+                      <HiUserGroup />
+                      <p className="pt-1">Manage Followers</p>
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="seventh" className="d-flex">
+                      <BiLogOut />
+                      <p className="pt-1">Logout</p>
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+            
             </Col>
-            <Col sm={9} className="p-0 ">
+            <Col xl={9} xs={12} className="p-0 mt-xl-0 mt-3">
               <Tab.Content>
                 <Tab.Pane eventKey="first">
-                  <div className="Home-container p-4 ms-4">
+                  <div className="Home-container p-xl-4 p-0 px-xl-0 px-5 ms-xl-4 ms-0">
                     <div className="Homeboxes_container col-12">
                       <Row>
                         <Col xl={5} className="me-5">
@@ -111,7 +116,7 @@ function Jobrecuiterprofile() {
                             </div>
                           </div>
                         </Col>
-                        <Col xl={5}>
+                        <Col xl={5} className='mt-xl-0 mt-4'>
                           <div className=" d-flex Box_header2">
                             <div>
                               <BsLayoutTextWindowReverse />
@@ -201,7 +206,7 @@ function Jobrecuiterprofile() {
                           </div>
                         </Col>
 
-                        <Col xl={5}>
+                        <Col xl={5} >
                           <h3> My Subscription Plan</h3>
                           <div className="SubscriptionPlan_container p-4 mt-4 position-relative">
                             <h2 className="fw-bold">Silver Plan</h2>
@@ -225,7 +230,7 @@ function Jobrecuiterprofile() {
                             </Modal.Header>
                             <Modal.Body className="py-4 ps-2 pe-4 ">
                               <div className="Planscard_container d-flex mt-3 ">
-                                <Col xl={6} className="Plan_card p-3 me-3">
+                                <Col xl={6} xs={12} className="Plan_card p-3 me-xl-3 me-0 mb-xl-0 mb-5">
                                   <div className="Plan_cardprice">
                                     <h6 className="m-0">$100</h6>
                                   </div>
@@ -244,7 +249,7 @@ function Jobrecuiterprofile() {
                                     <Button>Activate </Button>
                                   </div>
                                 </Col>
-                                <Col xl={6} className="Plan_card p-3 ">
+                                <Col xl={6}  xs={12}  className="Plan_card p-3 ">
                                   <div className="Plan_cardprice">
                                     <h6 className="m-0">$100</h6>
                                   </div>
@@ -443,7 +448,7 @@ function Jobrecuiterprofile() {
                     </div>
 
                     <div className="Postjob_cardcontainer pt-4">
-                      <Row xl={3}>
+                      <Row xl={3} xs={1}>
                         <Col className="position-relative">
                           <Badge pill bg="success" className="p-2">
                             Active
@@ -464,14 +469,14 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
-                              
+
                               <div className="Postbutton_container ">
                                 <Button onClick={handleShow8}>Edit</Button>
                                 <Button>Delete</Button>
                               </div>
-                              
+
                             </Card.Body>
                           </Card>
                         </Col>
@@ -495,7 +500,7 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>
@@ -524,7 +529,7 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button  className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>
@@ -727,7 +732,7 @@ function Jobrecuiterprofile() {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="sixth">
-                  <div className="Managefollowers_container mt-5 p-3 ms-4">
+                  <div className="Managefollowers_container mt-5 p-3 ms-xl-4 ms-0">
                     <Row md={4} xs={1} className="g-2">
                       <Col>
                         <Card className="Followers_card border-0 p-2">

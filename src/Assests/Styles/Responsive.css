@@ -310,8 +310,53 @@
     width: 100%;
     margin-bottom: 20px;
   }
+  .Sidebar_links{
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .SideBar_container > .nav-pills > .nav-item > a {
+    
+    padding: 12px 20px 1px 10px;
+    width: max-content;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+ 
+  border-radius: 30px;
+}
+.Shortlisted_image,
+.Follower_image{
+  position: static;
+
+}
+.Shortlisted_card,.Followers_card,.Companyprofile_forms>.input-group>.form-control,
+.Companyprofile_forms>.input-group>.form-select {
+  width: 100%;
+}
+.Companyprofile_forms>.input-group{
+  flex-direction: column;
+  
 }
 
+.Companyprofile_forms > .input-group > input:nth-child(odd), 
+.Companyprofile_forms > .input-group > select:nth-child(odd) {
+ margin: 10px 0;
+}
+.Updateprofile_btn > button{
+  margin-top: 10px;
+}
+.Postjobs_heading,
+.Planscard_container{
+  flex-direction: column;
+}
+.Postjobs_heading > div:nth-child(2) > button{
+  width: 100%;
+  padding: 12px 15px;
+}
+.Postjob_cardcontainer > .row > .col > .card:nth-child(2){
+  margin: 15px 0;
+}
+}
 
 @media (min-width: 426px) and (max-width: 767px) {
   /*  Homepage  */
@@ -624,6 +669,52 @@
     width: 100%;
     margin-bottom: 20px;
   }
+  .Sidebar_links{
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .SideBar_container > .nav-pills > .nav-item > a {
+    
+    padding: 12px 20px 1px 10px;
+    width: max-content;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+ 
+  border-radius: 30px;
+}
+.Shortlisted_image,
+.Follower_image{
+  position: static;
+
+}
+.Shortlisted_card,.Followers_card,.Companyprofile_forms>.input-group>.form-control,
+.Companyprofile_forms>.input-group>.form-select {
+  width: 100%;
+}
+.Companyprofile_forms>.input-group{
+  flex-direction: column;
+  
+}
+
+.Companyprofile_forms > .input-group > input:nth-child(odd), 
+.Companyprofile_forms > .input-group > select:nth-child(odd) {
+ margin: 10px 0;
+}
+.Updateprofile_btn > button{
+  margin-top: 10px;
+}
+.Postjobs_heading,
+.Planscard_container{
+  flex-direction: column;
+}
+.Postjobs_heading > div:nth-child(2) > button{
+  width: 100%;
+  padding: 12px 15px;
+}
+.Postjob_cardcontainer > .row > .col > .card:nth-child(2){
+  margin: 15px 0;
+}
 }
 @media (min-width: 768px) and (max-width: 992px) {
   /*  Homepage  */
@@ -925,6 +1016,52 @@
   .Tab-content{
     margin-top: 10px;
   }
+  .Sidebar_links{
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .SideBar_container > .nav-pills > .nav-item > a {
+    
+    padding: 12px 20px 1px 10px;
+    width: max-content;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+ 
+  border-radius: 30px;
+}
+.Shortlisted_image,
+.Follower_image{
+  position: static;
+
+}
+.Shortlisted_card,.Followers_card,.Companyprofile_forms>.input-group>.form-control,
+.Companyprofile_forms>.input-group>.form-select {
+  width: 100%;
+}
+.Companyprofile_forms>.input-group{
+  flex-direction: column;
+  
+}
+
+.Companyprofile_forms > .input-group > input:nth-child(odd), 
+.Companyprofile_forms > .input-group > select:nth-child(odd) {
+ margin: 10px 0;
+}
+.Updateprofile_btn > button{
+  margin-top: 10px;
+}
+.Postjobs_heading,
+.Planscard_container{
+  flex-direction: column;
+}
+.Postjobs_heading > div:nth-child(2) > button{
+  width: 100%;
+  padding: 12px 15px;
+}
+.Postjob_cardcontainer > .row > .col > .card:nth-child(2){
+  margin: 15px 0;
+}
 }
 @media (min-width: 993px) and (max-width: 1024px) {
   /*  Homepage  */
@@ -1219,4 +1356,50 @@
   .Tab-content{
     margin-top: 10px;
   }
+  .Sidebar_links{
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll;
+  }
+  .SideBar_container > .nav-pills > .nav-item > a {
+    
+    padding: 12px 20px 1px 10px;
+    width: max-content;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+ 
+  border-radius: 30px;
+}
+.Shortlisted_image,
+.Follower_image{
+  position: static;
+
+}
+.Shortlisted_card,.Followers_card,.Companyprofile_forms>.input-group>.form-control,
+.Companyprofile_forms>.input-group>.form-select {
+  width: 100%;
+}
+.Companyprofile_forms>.input-group{
+  flex-direction: column;
+  
+}
+
+.Companyprofile_forms > .input-group > input:nth-child(odd), 
+.Companyprofile_forms > .input-group > select:nth-child(odd) {
+ margin: 10px 0;
+}
+.Updateprofile_btn > button{
+  margin-top: 10px;
+}
+.Postjobs_heading,
+.Planscard_container{
+  flex-direction: column;
+}
+.Postjobs_heading > div:nth-child(2) > button{
+  width: 100%;
+  padding: 12px 15px;
+}
+.Postjob_cardcontainer > .row > .col > .card:nth-child(2){
+  margin: 15px 0;
+}
 }
