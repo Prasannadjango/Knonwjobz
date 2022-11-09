@@ -422,7 +422,7 @@ label {
   margin-right: 20px;
 }
 .Recuriterform_container > .input-group >div>input,
-.Company_infocontainer > .input-group > input {
+.Company_infocontainer > .input-group > div> input {
   padding: 12px 16px;
   border-radius: 5px;
 }

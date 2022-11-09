@@ -13,7 +13,7 @@ const schema = yup.object({
   firstName: yup.string().required("Firstname is Required"),
   middleName: yup.string().required("Middlename is Required"),
   lastName: yup.string().required("Lastname is Required"),
-  phoneNumber: yup.string().required("phone number is required").matches(phoneRegExp, 'Phone number is not valid').min(10, "too short").max(10, "too long"),
+  phoneNumber: yup.string().required("phone number is required").matches(phoneRegExp, 'Phone number is not valid').min(10, "Phone number must 10 Digits").max(10, "Phone number must 10 Digits"),
   email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
   currentsalary:yup.string().required("Current Salary is required").matches(numberRegExp,'Current salary must be in Number'),
   expectedsalary:yup.string().required("Expected Salary is required").matches(numberRegExp,'Expected Salary must be in Number'),
