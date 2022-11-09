@@ -421,11 +421,14 @@ label {
 .Company_infocontainer > .input-group > input:nth-child(odd) {
   margin-right: 20px;
 }
-.Recuriterform_container > .input-group > input,
+.Recuriterform_container > .input-group >div>input,
 .Company_infocontainer > .input-group > input {
   padding: 12px 16px;
   border-radius: 5px;
 }
+/* .Recuriterform_container > .input-group> div:nth-child(1){
+  margin: 2rem 0;
+} */
 .Create_Accountbtn > button {
   background-color: var(--primary-color);
   padding: 12px 16px;
@@ -711,7 +714,7 @@ label {
 .JobRecuriter_formfields {
   margin-top: 40px;
 }
-.JobRecuriter_formfields > a > button {
+.JobRecuriter_formfields > button {
   background-color: #0775e3;
   padding: 12px 16px;
   font-size: 18px;
@@ -724,7 +727,7 @@ label {
 .JobRecuriter_formfields > h4 {
   color: #0775e3;
 }
-.Jobseeker_formfields > a > button {
+.Jobseeker_formfields  > button {
   background-color: #f7690a;
   padding: 12px 16px;
   font-size: 18px;
