@@ -55,9 +55,9 @@ function Jobsearch() {
   return (
     <>
       <div className="Jobsearch-maincotainer">
-        <Container className="d-flex">
+        <div className="d-flex">
           <div className="Searchbar-container">
-            <Row lg={3} className='m-0'>
+            <Row lg={4} className='m-0'>
               <Col className="pe-2">
                 <FormControl
                   placeholder="Search by Job title,Name"
@@ -91,10 +91,13 @@ function Jobsearch() {
                   </Dropdown.Menu>
                 </Dropdown>
               </Col>
+              <Col>
+              <Button class='col-2'>Search-now</Button>
+              </Col>
             </Row>
           </div>
-          <Button class='col-2'>Search-now</Button>
-        </Container>
+          
+        </div>
         <hr className="container mt-xl-5 mt-4" />
         <div className="mt-4 px-xl-4 px-0">
           <Container>

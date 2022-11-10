@@ -468,8 +468,10 @@ label {
 }
 .Searchbar-container {
   border: 2px solid #e0e0e0;
+ 
+    padding: 10px 0px;
 
-  border-radius: 10px;
+  border-radius:50px;
 }
 .search-field {
   background-image: url(../Images/icons8-search-48.png);
@@ -504,23 +506,29 @@ label {
   border: 0;
   padding-left: 47px !important;
 }
-.Jobsearch-maincotainer > .container {
+.Jobsearch-maincotainer > div:first-child {
   justify-content: center;
+ 
+}
+.Searchbar-container > .row{
+  align-items: center;
 }
 .Searchbar-container > .row > .col:nth-child(4) {
   border-right: 0;
+  display: flex;
+  justify-content: flex-end;
 }
-.Searchbar-container {
-  padding: 20px 10px;
-}
-.Jobsearch-maincotainer > .container > button {
+
+.Searchbar-container > .row > .col:nth-child(4)>button{
   background-color: var(--primary-color);
   padding: 1rem;
   margin-left: 10px;
   color: #fff;
   font-size: 18px;
   text-transform: capitalize;
-  border-radius: 10px;
+  border-radius: 30px;
+ width: 70%;
+  
 }
 .Searchjobs_card {
   border: 0 !important;
@@ -1198,7 +1206,7 @@ label {
 }
 .Company_img > img {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   border-radius: inherit;
 }
 .Picedit_container {
@@ -1216,13 +1224,13 @@ label {
   width: 100%;
   height: 100%;
 }
-.Companyprofile_forms > .input-group > input,
-.Companyprofile_forms > .input-group > select {
+.Companyprofile_forms > .input-group > div > input,
+.Companyprofile_forms > .input-group > div > select {
   padding: 12px 16px;
   border-radius: 5px;
 }
-.Companyprofile_forms > .input-group > input:nth-child(odd),
-.Companyprofile_forms > .input-group > select:nth-child(odd) {
+.Companyprofile_forms > .input-group > div >input:nth-child(odd),
+.Companyprofile_forms > .input-group > div > select:nth-child(odd) {
   margin-right: 20px;
 }
 .Updateprofile_btn > button {

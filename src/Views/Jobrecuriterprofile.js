@@ -31,6 +31,35 @@ import { BiLogOut } from "react-icons/bi";
 import Person from "../Assests/Images/personimage.jpg";
 import Companylog from "../Assests/Images/Complogo.jpg";
 import { MultiSelect } from "react-multi-select-component";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const numberRegExp = /^[0-9]*$/
+const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+const PasswordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+const WebsiteRegExp = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
+const schema = yup.object({
+  companyName: yup.string().required("Companyname is Required"),
+  ceoName: yup.string().required("CEO Name is Required"),
+  address: yup.string().required("Address is Required"),
+  phoneNumber: yup.string().required("phone number is required").matches(phoneRegExp, 'Phone number is not valid').min(10, "Phone number must 10 Digits").max(10, "Phone number must 10 Digits"),
+  LandlineNumber:yup.string().required("Landline is required").matches(phoneRegExp, 'Landline is not valid').min(10, "Landline must 10 Digits").max(10, "Landline must 10 Digits"),
+  email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
+  website:yup.string().required("Website is required").matches(WebsiteRegExp,'Website is not valid'),
+  password:yup.string().required('Password is required')
+  .matches(PasswordRegExp,'Password is Weak , Password must have Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character'),
+  confirmpassword:yup.string().required("confirm password is Required") .oneOf([yup.ref("password")], "Passwords do not match"),
+  companyname:yup.string().required('Company Name is Required'),
+  companylocation:yup.string().required('Company Location is Required'),
+  numberoffices:yup.string().required("Number of offices is required").matches(numberRegExp,'Number of Office must be in Number'),
+  Establishyear:yup.string().required("Established year is required").matches(numberRegExp,'Established year must be in Number'),
+  noemployees:yup.string().required("No of Employeers is required").matches(numberRegExp,'No of Employeers must be in Number'),
+  fax:yup.string().required("Fax is required").matches(numberRegExp,'Fax must be in Number'),
+  Description:yup.string().required('Description is Required'),
+}).required();
+
 function Jobrecuiterprofile() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -49,6 +78,11 @@ function Jobrecuiterprofile() {
   const [show1, setShow1] = useState(false);
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
+ 
+  const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => console.table(data);
 
   return (
     <>
@@ -380,13 +414,24 @@ function Jobrecuiterprofile() {
                       <img src={Companylog} />
                     </div>
 
-                    <div className="Companyprofile_forms pt-5">
+                    <Form className="Companyprofile_forms pt-5" onSubmit={handleSubmit(onSubmit)}>
                       <h2 className="fw-bold pb-4">
                         Edit your Company Profile:
                       </h2>
                       <InputGroup className="my-xl-3 my-1">
-                        <Form.Control placeholder="Company Name.." />
-                        <Form.Control placeholder="CEO Name.." />
+                        <div className='my-2 w-100'>
+                        <Form.Control placeholder="Company Name.." 
+                        {...register("companyName")}
+                        />
+                         <p className='text-danger pt-2 m-0'>{errors.companyName?.message}</p>
+                        </div>
+                       
+                       <div className="my-2 w-100 ">
+                       <Form.Control placeholder="CEO Name.."
+                        {...register("ceoName")} 
+                       />
+                        <p className='text-danger pt-2 m-0'>{errors.ceoName?.message}</p>
+                       </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
                         <Form.Select>
@@ -403,20 +448,54 @@ function Jobrecuiterprofile() {
                         </Form.Select>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                        <Form.Control placeholder="Address.." />
-                        <Form.Control placeholder="No of Offices.." />
+                        <div className='my-2 w-100'>
+                        <Form.Control placeholder="Address.." 
+                        {...register("address")}  />
+                          <p className='text-danger pt-2 m-0'>{errors.address?.message}</p>
+                        </div>
+                        <div className='w-100 my-2'>
+                        <Form.Control placeholder="No of Offices.." 
+                           {...register("numberoffices")}
+                        />
+                         <p className='text-danger pt-2 m-0'>{errors.numberoffices?.message}</p>
+                        </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                        <Form.Control placeholder="No of Employees.." />
-                        <Form.Control placeholder="Established in.." />
+                       <div className="w-100 my-2">
+                       <Form.Control placeholder="No of Employees.." 
+                       {...register("noemployees")} />
+                        <p className='text-danger pt-2 m-0'>{errors.noemployees?.message}</p>
+                       </div>
+                       <div className="w-100 my-0">
+                       <Form.Control placeholder="Established in.." 
+                       {...register("Establishyear")}/>
+                          <p className='text-danger pt-2 m-0'>{errors.Establishyear?.message}</p>
+                       </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                        <Form.Control placeholder="Website URL.." />
-                        <Form.Control placeholder="Fax.." />
+                        <div className="w-100 my-2">
+                        <Form.Control placeholder="Website URL.." 
+                        {...register("website")}/>
+                        <p className='text-danger pt-2 m-0'>{errors.website?.message}</p>
+                        </div>
+                        <div className="w-100 my-2">
+                        <Form.Control placeholder="Fax.." 
+                         {...register("fax")}/>
+                        <p className='text-danger pt-2 m-0'>{errors.fax?.message}</p>
+                         
+                        </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                        <Form.Control placeholder="Land-line Number.." />
-                        <Form.Control placeholder="Phone Number.." />
+                       <div className="w-100 my-2">
+                       <Form.Control placeholder="Phone number.." 
+                       {...register("phoneNumber")}/>
+                       <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
+                       </div>
+                       <div className='w-100 my-2'>
+                       <Form.Control placeholder="Land-line Number.." 
+                       {...register("LandlineNumber")}/>
+                        <p className='text-danger pt-2 m-0'>{errors.LandlineNumber?.message}</p>
+                       </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
                         <Form.Control placeholder="Facebook.." />
@@ -426,12 +505,13 @@ function Jobrecuiterprofile() {
                         <Form.Control placeholder="Country.." />
                         <Form.Control placeholder="State.." />
                       </InputGroup>
-                    </div>
-                    <div className="col-12 Updateprofile_btn">
-                      <Button className="btn text-white text-center">
+                      <div className="col-12 Updateprofile_btn">
+                      <Button className="btn text-white text-center" type='submit'>
                         Update & Save Profile
                       </Button>
                     </div>
+                    </Form>
+
                   </div>
                 </Tab.Pane>
 
