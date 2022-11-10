@@ -86,23 +86,23 @@
     justify-content: center;
   }
 
-  .Newsletter_maincontainer>div {
+  .Newsletter_maincontainer>form {
     padding: 0 10px;
     flex-direction: column;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(1)>input {
+  .Newsletter_maincontainer>form>div:nth-child(1)>input {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(2)>input {
+  .Newsletter_maincontainer>form>div:nth-child(2)>input {
     border-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(3)>button {
+  .Newsletter_maincontainer>form>div:nth-child(3)>button {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
@@ -549,18 +549,18 @@
     flex-direction: column;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(1)>input {
+  .Newsletter_maincontainer>form>div:nth-child(1)>input {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(2)>input {
+  .Newsletter_maincontainer>form>div:nth-child(2)>input {
     border-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(3)>button {
+  .Newsletter_maincontainer>form>div:nth-child(3)>button {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
@@ -1001,23 +1001,23 @@
     width: 100%;
   }
 
-  .Newsletter_maincontainer>div {
+  .Newsletter_maincontainer>form{
     padding: 0 10px;
     flex-direction: column;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(1)>input {
+  .Newsletter_maincontainer>form>div:nth-child(1)>input {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(2)>input {
+  .Newsletter_maincontainer>form>div:nth-child(2)>input {
     border-radius: 5px;
     margin-bottom: 10px;
   }
 
-  .Newsletter_maincontainer>div>div:nth-child(3)>button {
+  .Newsletter_maincontainer>form>div:nth-child(3)>button {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }

@@ -3,10 +3,22 @@ import { Container, Button, Row, Col, Form } from "react-bootstrap";
 import Jobseekerimg from "../Assests/Images/Jobrecuriter.jpg";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-function Recuriterlogin() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
+
+const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+const schema = yup.object({
+  email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
+  password:yup.string().required('Password is required'),
+ }).required();
+function Recuriterlogin() {
+  const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => console.table(data);
   return (
+
     <>
       <div className="Seeker_maincontainer2 mb-5">
         <Container>
@@ -20,28 +32,32 @@ function Recuriterlogin() {
                   <Button>Login as Job-Recuriter</Button>
                 </div>
 
-                <Form className="JobRecuriter_formfields" onSubmit={handleSubmit()}>
+                <Form className="JobRecuriter_formfields" onSubmit={handleSubmit(onSubmit)}>
                   <h4 className="text-center fw-bold pb-3">
                     JobRecuriter-login
                   </h4>
-                  <Form.Control placeholder="Email-id " className="mb-4"
-                    {...register("mail", { required: true })}
-                    aria-invalid={errors.mail ? "true" : "false"}
+                  <div className="w-100 my-2">
+                  <Form.Control placeholder="Email-id " className="mb-2"
+                     {...register("email")}
+                 />
+                  <p className='text-danger'>{errors.email?.message}</p>
+                  </div>
+                 
+                 <div className="w-100 my-2">
+                 <Form.Control placeholder="Password"
+                    type='password' className="mb-2"
+                    {...register("password")}
                   />
-                  {errors.mail?.type === 'required' && <p role="alert" className="text-danger">E-mail is required</p>}
-                  <Form.Control placeholder="Password"
-                    type='password' className="mb-4"
-                    {...register("password", { required: true })}
-                    aria-invalid={errors.password ? "true" : "false"}
-                  />
-                   {errors.password?.type === 'required' && <p role="alert" className="text-danger">Password is required</p>}
+                  <p className='text-danger'>{errors.password?.message}</p>
+                 </div>
+                  
                    
                   <Button className="col-12" type='submit'>Login</Button>
 
                 </Form>
               </Col>
               <Col className="p-0">
-                <img src={Jobseekerimg} className="w-100" />
+                <img src={Jobseekerimg} className="w-100 h-100" />
               </Col>
             </Row>
           </div>

@@ -23,7 +23,19 @@ import { ImProfile } from "react-icons/im";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
 import { GiCook } from "react-icons/gi";
 import { TiArrowRightThick } from "react-icons/ti";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+const schema = yup.object({
+name: yup.string().required("name is Required"),
+email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
+}).required();
 function Home() {
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => console.table(data);
   return (
     <>
       <div className="Homepage_maincontainer">
@@ -328,17 +340,22 @@ function Home() {
           <h3 className="fw-bold text-white text-center">
             Subscribe our Newsletter & get regular Updates
           </h3>
-          <div className="d-flex">
+          <Form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
             <div className="col-xl-5">
-              <Form.Control type="text" placeholder="Name" />
+              <Form.Control type="text" placeholder="Name" 
+               {...register("name")}
+              />
+              <p className='text-white pt-2'>{errors.name?.message}</p>
             </div>
             <div className="col-xl-5">
-              <Form.Control type="mail" placeholder="Email" />
+              <Form.Control type="mail" placeholder="Email" 
+               {...register("email")}/>
+                  <p className='text-white pt-2'>{errors.email?.message}</p>
             </div>
             <div className="col-xl-2">
-              <Button>Subscribe-now</Button>
+              <Button type='submit'>Subscribe-now</Button>
             </div>
-          </div>
+          </Form>
         </div>
 
         <div>

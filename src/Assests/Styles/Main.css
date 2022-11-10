@@ -20,7 +20,7 @@
   background-color: #fff;
   width: 100%;
   box-shadow: 0 8px 5px -10px black;
-  margin-bottom: 5px !important;
+  /* margin-bottom: 5px !important; */
   z-index: 2;
 }
 .navbar-brand {
@@ -236,11 +236,11 @@ label {
 .Newsletter_maincontainer {
   background-color: #f7690a;
 }
-.Newsletter_maincontainer > div {
+.Newsletter_maincontainer > form {
   padding: 0 110px;
   margin-top: 30px;
 }
-.Newsletter_maincontainer > div > div:nth-child(3) > button {
+.Newsletter_maincontainer > form > div:nth-child(3) > button {
   background-color: #0775e3;
   color: #fff;
   width: 100%;
@@ -248,15 +248,15 @@ label {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.Newsletter_maincontainer > div > div:nth-child(1) > input {
+.Newsletter_maincontainer > form > div:nth-child(1) > input {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
-.Newsletter_maincontainer > div > div:nth-child(2) > input {
+.Newsletter_maincontainer > form > div:nth-child(2) > input {
   border-radius: 0;
 }
-.Newsletter_maincontainer > div > div:nth-child(1) > input,
-.Newsletter_maincontainer > div > div:nth-child(2) > input {
+.Newsletter_maincontainer > form> div:nth-child(1) > input,
+.Newsletter_maincontainer > form > div:nth-child(2) > input {
   padding: 10px 22px;
 }
 
@@ -679,8 +679,8 @@ label {
 .login_formcontainer > h3 {
   color: #f7690a;
 }
-.Jobseeker_formfields > input,
-.JobRecuriter_formfields > input {
+.Jobseeker_formfields > div>input,
+.JobRecuriter_formfields > div>input {
   padding: 12px 16px;
   border-radius: 5px;
 }
