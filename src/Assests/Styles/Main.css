@@ -876,7 +876,7 @@ label {
 .Edit_btncontainer > button > svg {
   font-size: 28px;
 }
-.Edit_popupcontent > input {
+.Edit_popupcontent > form >input {
   padding: 12px 23px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -928,8 +928,8 @@ label {
   padding-top: 8px;
   font-weight: 600;
 }
-.ProfileDetails_forms > .input-group > input,
-.ProfileDetails_forms > .input-group > select {
+.ProfileDetails_forms > .input-group > div>input,
+.ProfileDetails_forms > .input-group > div>select {
   padding: 12px 10px;
 }
 
@@ -1405,8 +1405,8 @@ label {
   padding: 10px 15px;
 }
 
-.Career_detailsform > .input-group > input,
-.Career_detailsform > .input-group > select {
+.Career_detailsform > .input-group > div> input,
+.Career_detailsform > .input-group > div>select {
   padding: 12px 10px !important;
 }
 .Skill_image {

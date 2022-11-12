@@ -23,7 +23,74 @@ import {
   AiOutlineDelete,
   AiOutlineFileAdd,
 } from "react-icons/ai";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+const numberRegExp = /^[0-9]*$/
+const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+const PasswordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+const WebsiteRegExp = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
+const schema = yup.object({
+  FirstName:yup.string().required('first name is required'),
+  middleName:yup.string().required('Middle name is required'),
+  lastName:yup.string().required('Last name is required'),
+  Name:yup.string().required("name is Required"),
+  fatherName:yup.string().required('Father Name is Reqiured'),
+  date:yup.string().required("date is required"),
+  Nationalid:yup.string().required(" National id is required"),
+  companyName: yup.string().required("Companyname is Required"),
+  ceoName: yup.string().required("CEO Name is Required"),
+  address: yup.string().required("Address is Required"),
+  phoneNumber: yup.string().required("phone number is required").matches(phoneRegExp, 'Phone number is not valid').min(10, "Phone number must 10 Digits").max(10, "Phone number must 10 Digits"),
+  LandlineNumber:yup.string().required("Landline is required").matches(phoneRegExp, 'Landline is not valid').min(10, "Landline must 10 Digits").max(10, "Landline must 10 Digits"),
+  email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
+  website:yup.string().required("Website is required").matches(WebsiteRegExp,'Website is not valid'),
+  password:yup.string().required('Password is required')
+  .matches(PasswordRegExp,'Password is Weak , Password must have Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character'),
+  confirmpassword:yup.string().required("confirm password is Required") .oneOf([yup.ref("password")], "Passwords do not match"),
+  companyname:yup.string().required('Company Name is Required'),
+  companylocation:yup.string().required('Company Location is Required'),
+  numberoffices:yup.string().required("Number of offices is required").matches(numberRegExp,'Number of Office must be in Number'),
+  Establishyear:yup.string().required("Established year is required").matches(numberRegExp,'Established year must be in Number'),
+  noemployees:yup.string().required("No of Employeers is required").matches(numberRegExp,'No of Employeers must be in Number'),
+  noopenings:yup.string().required('no of openings is required').matches(numberRegExp,'No of Openings must be in Number'),
+  fax:yup.string().required("Fax is required").matches(numberRegExp,'Fax must be in Number'),
+  Description:yup.string().required('Description is Required'),
+  facebook:yup.string().required('Facebook id is Reqiured'),
+  google:yup.string().required('Google id is Required'),
+  country:yup.string().required('Country is required'),
+  state:yup.string().required('state is required'),
+  Nationality:yup.string().required('Nationality is required'),
+  jobtitle:yup.string().required('job title is required'),
+  city:yup.string().required('City is required'),
+  salaryfrom:yup.string().required("salary from is required").matches(numberRegExp,'salaryfrom must be in Number'),
+  salaryto:yup.string().required("salary to is required").matches(numberRegExp,'salaryto must be in Number'),
+  Experiencelevel:yup.string().required('Please select the Experience Level'),
+  Designation:yup.string().required('Designation is required'),
+  profilepic:yup.object().shape({
+    file: yup.mixed()
+          .test("required", "You need to provide a file", (file) => {
+            // return file && file.size <-- u can use this if you don't want to allow empty files to be uploaded;
+            if (file) return true;
+            return false;
+          })
+          .test("fileSize", "The file is too large", (file) => {
+            //if u want to allow only certain file sizes
+            return file && file.size <= 2000000;
+          })
+  }),
+  
+
+}).required();
+
+
 function Jobprofile() {
+  const { register, trigger, handleSubmit, formState:{ errors } } = useForm({
+    mode:"onchange",
+    resolver: yupResolver(schema)
+  });
+  const onSubmit = data => console.table(data);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -73,18 +140,41 @@ function Jobprofile() {
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body className="Edit_popupcontent">
-                    <Form.Control type="Text" placeholder="Name.." />
-                    <Form.Control type="file" placeholder="Profile Photo.." />
-                    <Form.Control type="Text" placeholder="Designation.." />
-                    <Form.Control type="mail" placeholder="Email-id.." />
+                  <Form onSubmit={handleSubmit(onSubmit)}>
+                    <div className='w-100'>
+                    <Form.Control type="Text" placeholder="Name.." 
+                   {...register("Name")} />
+                   <p className='text-danger pt-2 m-0'>{errors.Name?.message}</p>
+                    </div>
+                    <div className='w-100'>
+                    <Form.Control type="file" placeholder="Profile Photo.." 
+                    {...register("profilepic")} />
+                    <p className='text-danger pt-2 m-0'>{errors.profilepic?.message}</p>
+                    </div>
+                    <div className='w-100'>
+                    <Form.Control type="Text" placeholder="Designation.." 
+                       {...register("Designation")}  />
+                        <p className='text-danger pt-2 m-0'>{errors.Designation?.message}</p>
+                    </div>
+                   <div>
+                   <Form.Control type="mail" placeholder="Email-id.." 
+                   {...register("email")} />
+                   <p className='text-danger pt-2 m-0'>{errors.email?.message}</p>
+                   </div>
+                    <div>
                     <Form.Control
                       type="Number"
-                      placeholder="Contanct-number.."
+                      placeholder="Phone-number.."
+                      {...register("phoneNumber")}
                     />
+                    <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
+                    </div>
+                    <div className="Edit_btncontainer2">
+                    <Button type='submit'>Edit Profile</Button>
+                    </div>
+                  </Form>
                   </Modal.Body>
-                  <Modal.Footer className="Edit_btncontainer2">
-                    <Button onClick={handleClose}>Edit Profile</Button>
-                  </Modal.Footer>
+                 
                 </Modal>
               </div>
             </div>
@@ -103,20 +193,36 @@ function Jobprofile() {
                     <h2>My Profile Details</h2>
                   </div>
 
-                  <div className="ProfileDetails_forms pt-4">
+                  <Form className="ProfileDetails_forms pt-4" onSubmit={handleSubmit(onSubmit)}>
                     <InputGroup className="mb-3">
+                      <div className='w-100'>
                       <Form.Control
                         placeholder="FirstName.."
-                        className="me-3"
+                        className="mb-2"
+                        {...register("FirstName")}
                       />
-                      <Form.Control placeholder="MiddleName.." />
+                      <p className='text-danger py-2 m-0'>{errors.FirstName?.message}</p>
+                      </div>
+                      <div className='w-100'>
+                      <Form.Control placeholder="MiddleName.." 
+                      {...register("middleName")}/>
+                      <p className='text-danger py-2 m-0'>{errors.middleName?.message}</p>
+                      </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control
+                       <div className='w-100'>
+                       <Form.Control
                         placeholder="Last Name.."
-                        className="me-3"
+                        className="mb-2"
+                        {...register("lastName")}
                       />
-                      <Form.Control placeholder="Father Name.." />
+                      <p className='text-danger py-2 m-0'>{errors.lastName?.message}</p>
+                      </div>
+                     <div className='w-100'>
+                     <Form.Control placeholder="Father Name.." 
+                      {...register("fatherName")} />
+                      <p className='text-danger py-2 m-0'>{errors.fatherName?.message}</p>
+                     </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <Form.Select className="me-3">
@@ -137,27 +243,58 @@ function Jobprofile() {
                       </Form.Select>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control placeholder="Country.." className="me-3" />
-                      <Form.Control placeholder="State.." />
+                       <div className='w-100'>
+                       <Form.Control placeholder="Country.." className="mb-2" 
+                       {...register("country")} />
+                      <p className='text-danger py-2 m-0'>{errors.country?.message}</p>
+
+                       </div>
+                      <div className='w-100'>
+                      <Form.Control placeholder="State.." {...register("state")}/>
+                      <p className='text-danger py-2 m-0'>{errors.state?.message}</p>
+                      </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control placeholder="City.." className="me-3" />
-                      <Form.Control placeholder="Nationality.." />
+                     <div className='w-100'>
+                     <Form.Control placeholder="City.." className="mb-3"  {...register("city")}/>
+                     <p className='text-danger py-2 m-0'>{errors.city?.message}</p>
+
+                     </div>
+                    <div className='w-100'>
+                    <Form.Control placeholder="Nationality.." {...register("Nationality")}/>
+                    <p className='text-danger py-2 m-0'>{errors.Nationality?.message}</p>
+                    
+                    </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control
+                     <div className='w-100'>
+                     <Form.Control
                         placeholder="Date Of birth.."
-                        className="me-3"
+                        className="mb-3"
                         type="date"
+                        {...register("date")}
                       />
-                      <Form.Control placeholder="National-id Number.." />
+                    <p className='text-danger py-2 m-0'>{errors.date?.message}</p>
+
+                     </div>
+                      <div className='w-100'>
+                      <Form.Control placeholder="National-id Number.." {...register("Nationalid")}/>
+                    <p className='text-danger py-2 m-0'>{errors.Nationalid?.message}</p>
+
+                      </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control
+                     <div className='w-100'>
+                     <Form.Control
                         placeholder="Mobile Number.."
-                        className="me-3"
+                        className="mb-3"
+                        {...register("phoneNumber")}
                       />
-                      <Form.Control placeholder="Secondary Mobile-Number (Optional).." />
+                       <p className='text-danger py-2 m-0'>{errors.phoneNumber?.message}</p>
+                     </div>
+                    <div className='w-100'>
+                    <Form.Control placeholder="Secondary Mobile-Number (Optional).." />
+                    </div>
                     </InputGroup>
                     <div>
                       <Form.Control
@@ -166,34 +303,39 @@ function Jobprofile() {
                         placeholder="Address.."
                       />
                     </div>
-                  </div>
-
-                  <div className=" Career_details d-flex mt-4">
+                    <div className=" Career_details d-flex mt-4">
                     <div>2</div>
                     <h2>Career Information</h2>
                   </div>
 
-                  <div className="Career_detailsform">
-                    <InputGroup className="mb-3">
-                      <Form.Select className="me-xl-3">
+                  <div className="Career_detailsform mt-3">
+                  <InputGroup className="mb-3">
+                      <div className='w-100'>
+                      <Form.Select className="mb-xl-3">
                         <option value="">Job Experience....</option>
                         <option value="Male">Fresher</option>
                         <option value="Female">Experienced</option>
                       </Form.Select>
-                      <Form.Select>
+                      </div>
+                     <div className='w-100'>
+                     <Form.Select>
                         <option value="">Careeer level....</option>
                         <option value="Male">Intern/student</option>
                         <option value="Female">Entry level</option>
                         <option value="Male">Team Lead</option>
                         <option value="Female">Manager</option>
                       </Form.Select>
+                     </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Select className="me-xl-3">
+                      <div className='w-100'>
+                      <Form.Select className="mb-xl-3">
                         <option value="">Select Industry....</option>
                         <option value="Male">Fresher</option>
                         <option value="Female">Experienced</option>
                       </Form.Select>
+                      </div>
+                      <div className='w-100'>
                       <Form.Select>
                         <option value="">Functioanl area....</option>
                         <option value="Male">Intern/student</option>
@@ -201,17 +343,25 @@ function Jobprofile() {
                         <option value="Male">Team Lead</option>
                         <option value="Female">Manager</option>
                       </Form.Select>
+                      </div>
                     </InputGroup>
                     <InputGroup className="mb-3">
-                      <Form.Control placeholder='Current Salary' className="me-xl-3"/>
-                      <Form.Control placeholder='Expected Salary' className="me-xl-3"/>
-                      <Form.Control placeholder='Salary Currency' className="mt-xl-0 mt-3"/>
+                      <div className='w-100'>
+                      <Form.Control placeholder='Current Salary' className="mb-xl-3"/>
+                      </div>
+                     <div className='w-100'>
+                     <Form.Control placeholder='Expected Salary' className="mb-xl-3"/>
+                     </div>
+                  
                     </InputGroup>
                   </div>
                   <div className="Edit_btncontainer2 mt-4">
-                   
-                    <Button>Edit Profile Details</Button>
+                   <Button type='submit'>Edit Profile Details</Button>
                   </div>
+                  </Form>
+
+            
+                  
                 </div>
               </Tab>
               <Tab eventKey="Summary" title="Summary">
