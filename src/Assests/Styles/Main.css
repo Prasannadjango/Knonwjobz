@@ -132,7 +132,7 @@ label {
 .whywithusBoxes>div>span>svg {
   font-size: 50px;
 
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .whywithusBoxes>div>p {
@@ -260,7 +260,7 @@ label {
 }
 
 .viewall_link>a {
-  color: #f7690a;
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
@@ -283,7 +283,7 @@ label {
 }
 
 .Newsletter_maincontainer>div>form>div:nth-child(2)>button {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
   width: 100%;
   padding: 15px 22px;
@@ -320,19 +320,19 @@ label {
   width: 70px;
   height: 70px;
   border-radius: 50px;
-  background-color: #ffebdd;
+  background-color: #a0ceec;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .Jobscat_card>div>svg {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-size: 40px;
 }
 
 .Jobscat_card:hover {
-  box-shadow: #ffc093 -1px 2px 13px;
+  box-shadow: #8db8d4 -1px 2px 13px;
   transition: all 500ms ease;
 }
 
@@ -366,7 +366,7 @@ label {
 
 .Icon_container>svg {
   font-size: 30px;
-  color: #f7690a;
+  color: var(--primary-color);
 }
 
 .Recuriterform_section>div>.input-group:nth-child(odd) {
@@ -438,7 +438,7 @@ label {
 }
 
 .jobseeker_container>h1 {
-  color: #0775e3;
+  color: var(--primary-color);
 }
 
 .Alreadyacc_container>a {
@@ -486,7 +486,7 @@ label {
 
 .Recentjob_searchbar>div:nth-child(2)>button {
   padding: 16px 20px;
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   margin-left: 10px;
   color: #fff;
 }
@@ -547,14 +547,14 @@ label {
   width: 70px;
   height: 70px;
   border-radius: 50px;
-  background-color: #ffebdd;
+  background-color: #a0ceec;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .Jobscatpage_card>div>svg {
-  color: #f7690a;
+  color: var(--primary-color);
   font-size: 40px;
 }
 
@@ -641,12 +641,15 @@ label {
 }
 
 .Searchjobs_card>div:nth-child(1) {
-  background-color: #ffd2b4;
+  background-color: #a0ceec;
   width: 100%;
   height: 60px;
   border-radius: 10px 10px 0 0 !important;
 }
-
+.page-item.active .page-link{
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
 .Searchjobs_card>div:nth-child(1)>div {
   width: 80px;
   height: 80px;
@@ -663,7 +666,7 @@ label {
 }
 
 .SeeDetails_container>a>button {
-  background-color: #f7690a;
+  background-color: var(--primary-color);
   width: 100%;
   color: #fff;
   padding: 10px 15px;
@@ -673,7 +676,7 @@ label {
 .SeeDetails_container>button:nth-child(2) {
   background-color: transparent;
   color: black;
-  border: 1px solid #0775e3;
+  border: 1px solid var(--primary-color);
   width: 100%;
 }
 
@@ -727,7 +730,7 @@ label {
 }
 
 .Contanct_form>h1 {
-  color: #f7690a;
+  color: var(--secondary-color);
 }
 
 .Contanct_form {
@@ -818,7 +821,7 @@ label {
 }
 
 .login_formcontainer>h3 {
-  color: #f7690a;
+  color: var(--secondary-color);
 }
 
 .Jobseeker_formfields>div>input,
@@ -834,7 +837,7 @@ label {
 }
 
 .Jobseeker_btnscontainer2>button:nth-child(2) {
-  background-color: #0775e3;
+  background-color:var(--primary-color);
   color: #fff;
   padding: 12px 16px;
   margin-right: 30px;
@@ -854,7 +857,7 @@ label {
 }
 
 .Jobseeker_btnscontainer>a>button {
-  border: 2px solid #0775e3;
+  border: 2px solid var(--primary-color);
   padding: 12px 16px;
 }
 
@@ -864,7 +867,7 @@ label {
 }
 
 .JobRecuriter_formfields>button {
-  background-color: #0775e3;
+  background-color:var(--primary-color);
   padding: 12px 16px;
   font-size: 18px;
   color: #fff;
@@ -872,15 +875,15 @@ label {
 }
 
 .Jobseeker_formfields>h4 {
-  color: #f7690a;
+  color: var(--secondary-color);
 }
 
 .JobRecuriter_formfields>h4 {
-  color: #0775e3;
+  color: var(--primary-color);
 }
 
 .Jobseeker_formfields>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   padding: 12px 16px;
   font-size: 18px;
   color: #fff;
@@ -896,7 +899,7 @@ label {
 }
 
 .Jobscatpage_card>div:nth-child(2)>div>button {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
   border-radius: inherit;
   text-align: center;
@@ -966,14 +969,14 @@ label {
   padding: 12px 40px;
   border-radius: 5px;
   font-size: 17px;
-  background: #f7690a;
+  background: var(--secondary-color);
   color: #fff;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .Apply_btncontainer>button:nth-child(2) {
-  border: 2px solid #f7690a;
+  border: 2px solid var(--secondary-color);
   padding: 12px 40px;
   border-radius: 5px;
   font-size: 17px;
@@ -981,7 +984,7 @@ label {
 }
 
 .Aboutcompany_container>h6 {
-  color: #0775e3;
+  color: var(--primary-color);
 }
 
 .Aboutcompany_container>p {
@@ -994,14 +997,14 @@ label {
   padding: 12px 40px;
   border-radius: 5px;
   font-size: 17px;
-  background: #0775e3;
+  background: var(--primary-color);
   color: #fff;
   width: 100%;
   margin-bottom: 20px;
 }
 
 .Seekerprofile_header {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   border-radius: 10px;
   display: flex;
   width: fit-content;
@@ -1037,7 +1040,7 @@ label {
 
 .Edit_btncontainer>button {
   color: #fff;
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   border-radius: inherit;
   width: 100%;
   height: 100%;
@@ -1057,7 +1060,7 @@ label {
   width: 100%;
   text-align: center;
   color: #fff !important;
-  background-color: #f7690a !important;
+  background-color: var(--secondary-color) !important;
   padding: 12px 23px !important;
 }
 
@@ -1073,7 +1076,7 @@ label {
 }
 
 .Jobseekerprofile_content>.nav-tabs .nav-link.active {
-  background-color: #f7690a !important;
+  background-color: var(--secondary-color) !important;
   color: #fff;
   border: 0;
 }
@@ -1098,7 +1101,7 @@ label {
   text-align: center;
   color: #fff;
   padding-top: 10px;
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   margin-right: 10px;
 }
 
@@ -1121,7 +1124,7 @@ label {
   text-align: center;
   color: #fff;
   padding-top: 10px;
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   margin-right: 10px;
 }
 
@@ -1148,7 +1151,7 @@ label {
 }
 
 .Edit_btn>button {
-  background-color: #f7690a;
+  background-color:var(--secondary-color);
   color: #fff;
   text-align: center;
   padding: 10px 12px;
@@ -1363,7 +1366,7 @@ label {
   position: absolute;
   right: -3%;
   top: -8%;
-  background-color: #f7690a !important;
+  background-color: var(--secondary-color) !important;
   display: flex;
   align-items: center;
 }
@@ -1413,7 +1416,7 @@ label {
 }
 
 .SubscriptionPlan_container>div>button {
-  background-color: #0775e3;
+  background-color: var(--secondary-color);
   color: white;
   width: 100%;
   text-align: center;
@@ -1445,7 +1448,7 @@ label {
 
 .Picedit_container>button {
   color: #fff;
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   border-radius: inherit;
   width: 100%;
   height: 100%;
@@ -1463,7 +1466,7 @@ label {
 }
 
 .Updateprofile_btn>button {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   width: 100%;
   padding: 12px 16px;
   border-radius: 5px;
@@ -1494,13 +1497,13 @@ label {
 }
 
 .Postjobs_heading>div:nth-child(2)>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   color: white;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  background-color: #f7690a !important;
+  background-color: var(--secondary-color) !important;
 
   color: #fff !important;
 }
@@ -1525,7 +1528,7 @@ label {
 }
 
 .Postbutton_container>button:nth-child(1) {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
   margin-bottom: 10px;
 }
@@ -1623,7 +1626,7 @@ label {
 }
 
 .Postjob_btn>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   text-align: center;
   color: #fff;
   width: 100%;
@@ -1640,7 +1643,7 @@ label {
 .Plan_cardprice {
   position: absolute;
   color: #fff;
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   width: 60px;
   height: 60px;
   right: -1%;
@@ -1657,7 +1660,7 @@ label {
 }
 
 .Active_btn>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   color: #fff;
   width: 100%;
   text-align: center;
@@ -1685,7 +1688,7 @@ label {
 }
 
 .SkillQuiz_container>div:nth-child(1)>div:last-child>button {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -1702,7 +1705,7 @@ label {
 
 .Skillquiz_contentcontainer {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
-  border-left: 4px solid #f7690a;
+  border-left: 4px solid var(--secondary-color);
   border-radius: 0px 5px 5px 0px;
   margin: 10px 0;
 }
@@ -1732,7 +1735,7 @@ label {
 }
 
 .Submit_btn>button {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 10px 15px;
 }
@@ -1766,7 +1769,7 @@ label {
 }
 
 .keyskills_container>div:nth-child(2)>div {
-  background-color: #0775e3;
+  background-color: var(--primary-color);
   color: #fff;
   width: fit-content;
   height: 45px;
@@ -1787,7 +1790,7 @@ label {
 }
 
 .Applynow-container>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   color: #fff;
   padding: 15px 25px;
 
@@ -1795,7 +1798,7 @@ label {
 
 .Applyjobsdetails_container>div>a {
   text-decoration: none !important;
-  color: #f7690a !important;
+  color:var(--secondary-color) !important;
 }
 
 .Companyjobs_container {
@@ -1810,11 +1813,11 @@ label {
   padding: 15px;
   margin-left: 10px;
   color: #fff;
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
 }
 
 .Shortlist_button {
-  background-color: #f7690a !important;
+  background-color: var(--secondary-color)!important;
   color: #fff !important;
   width: 100%;
   margin-top: 20px;
@@ -1854,7 +1857,7 @@ label {
 }
 
 .Viewprofile_btns>button {
-  background-color: #f7690a;
+  background-color: var(--secondary-color);
   color: #fff;
   border-radius: 30px;
   padding: 10px 14px;
@@ -1868,4 +1871,11 @@ label {
 
 .viewprofile_table>tbody>tr>td:nth-child(1) {
   font-weight: 600;
+}
+.Job_Details>.jd_data>div>svg{
+  font-size: 28px;
+  color: var(--primary-color);
+}
+.jd_data:nth-child(odd){
+  background-color: #f5f5f5;
 }

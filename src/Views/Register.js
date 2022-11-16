@@ -28,7 +28,7 @@ function Register() {
              
 
             
-                <div className=" jobseeker_container ">
+                <div className="jobseeker_container ">
                    <h5 className="text-center">i am looking to</h5>
                    <h1 className="text-center fw-bold">Hire</h1>
                    <div>
