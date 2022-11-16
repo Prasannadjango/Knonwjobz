@@ -337,16 +337,15 @@ function Home() {
         </div>
 
         <div className="Newsletter_maincontainer py-5 mb-5">
-          <h3 className="fw-bold text-white text-center">
+          <div>
+          <h1 className="fw-bold text-white text-center">
             Subscribe our Newsletter & get regular Updates
-          </h3>
-          <Form className="d-flex" onSubmit={handleSubmit(onSubmit)}>
-            <div className="col-xl-5">
-              <Form.Control type="text" placeholder="Name" 
-               {...register("name")}
-              />
-              <p className='text-white pt-2'>{errors.name?.message}</p>
-            </div>
+          </h1>
+          <p className="m-0 text-white text-center">
+              Get in touch with us for Regular job updates , we are here to find your Dream job 
+          </p>
+          <Form className="d-flex justify-content-center pt-4" onSubmit={handleSubmit(onSubmit)}>
+           
             <div className="col-xl-5">
               <Form.Control type="mail" placeholder="Email" 
                {...register("email")}/>
@@ -356,6 +355,7 @@ function Home() {
               <Button type='submit'>Subscribe-now</Button>
             </div>
           </Form>
+          </div>
         </div>
 
         <div>

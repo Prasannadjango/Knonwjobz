@@ -32,6 +32,9 @@ const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-
 const PasswordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
 const WebsiteRegExp = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
 const schema = yup.object({
+  Degreename:yup.string().required('Degree name is Required'),
+  instituename:yup.string().required('Institue name is required'),
+  coursetitle:yup.string().required('Course title is required'), 
   FirstName:yup.string().required('first name is required'),
   middleName:yup.string().required('Middle name is required'),
   lastName:yup.string().required('Last name is required'),
@@ -66,8 +69,11 @@ const schema = yup.object({
   city:yup.string().required('City is required'),
   salaryfrom:yup.string().required("salary from is required").matches(numberRegExp,'salaryfrom must be in Number'),
   salaryto:yup.string().required("salary to is required").matches(numberRegExp,'salaryto must be in Number'),
+  passedin:yup.string().required("Passed-in is required").matches(numberRegExp,'Passed-in must be in Number'),
+  passedout:yup.string().required("Passed-out is required").matches(numberRegExp,'Passed-out must be in Number'),
   Experiencelevel:yup.string().required('Please select the Experience Level'),
   Designation:yup.string().required('Designation is required'),
+  Address:yup.string().required('Address is reqiured'),
   profilepic:yup.object().shape({
     file: yup.mixed()
           .test("required", "You need to provide a file", (file) => {
@@ -80,7 +86,8 @@ const schema = yup.object({
             return file && file.size <= 2000000;
           })
   }),
-  
+  currentsalary:yup.string().required("current salary is required").matches(numberRegExp,'current salary must be in Number'),
+  expectedsalary:yup.string().required("expected salary is required").matches(numberRegExp,'expected salary must be in Number'),
 
 }).required();
 
@@ -301,7 +308,10 @@ function Jobprofile() {
                         as="textarea"
                         rows={4}
                         placeholder="Address.."
+                        {...register("Address")}
                       />
+                       <p className='text-danger py-2 m-0'>{errors.Address?.message}</p>
+
                     </div>
                     <div className=" Career_details d-flex mt-4">
                     <div>2</div>
@@ -347,10 +357,15 @@ function Jobprofile() {
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <div className='w-100'>
-                      <Form.Control placeholder='Current Salary' className="mb-xl-3"/>
+                      <Form.Control placeholder='Current Salary' className="mb-xl-3"
+                           {...register("currentsalary")}/>
+                       <p className='text-danger py-2 m-0'>{errors.currentsalary?.message}</p>
+
                       </div>
                      <div className='w-100'>
-                     <Form.Control placeholder='Expected Salary' className="mb-xl-3"/>
+                     <Form.Control placeholder='Expected Salary' className="mb-xl-3"
+                      {...register("expectedsalary")}/>
+                       <p className='text-danger py-2 m-0'>{errors.expectedsalary?.message}</p>
                      </div>
                   
                     </InputGroup>
@@ -475,17 +490,41 @@ function Jobprofile() {
                         </Modal.Title>
                       </Modal.Header>
                       <Modal.Body className="Edit_popupcontent">
-                        <Form.Control placeholder="Course Title" />
-                        <Form.Control placeholder="Institution Name.." />
-                        <Form.Control placeholder="Degree Name.." />
-                        <Form.Control placeholder="Passed in year" />
-                        <Form.Control placeholder="Passed out year" />
-                      </Modal.Body>
-                      <Modal.Footer className="Edit_btncontainer2">
-                        <Button onClick={handleClose2}>
+                        <Form onSubmit={handleSubmit(onSubmit)} >
+                        <div>
+                        <Form.Control placeholder="Course Title" 
+                         {...register("coursetitle")} />
+                          <p className='text-danger  m-0'>{errors.coursetitle?.message}</p>
+                        </div>
+                         <div>
+                         <Form.Control placeholder="Institution Name.." 
+                         {...register("instituename")} />
+                            <p className='text-danger  m-0'>{errors.instituename?.message}</p>
+                         </div>
+                        <div>
+                        <Form.Control placeholder="Degree Name.." 
+                         {...register("Degreename")} />
+                         <p className='text-danger  m-0'>{errors.Degreename?.message}</p>
+                        </div>
+
+                      <div>
+                      <Form.Control placeholder="Passed in year" 
+                       {...register("passedin")}/>
+                       <p className='text-danger  m-0'>{errors.passedin?.message}</p>
+                      </div>
+                       <div>
+                       <Form.Control placeholder="Passed out year" 
+                        {...register("passedout")} />
+                         <p className='text-danger  m-0'>{errors.passedout?.message}</p>
+                       </div>
+                    
+                     
+                        <Button className="Edit_btncontainer2" type='submit'>
                           Add New Education
                         </Button>
-                      </Modal.Footer>
+                      
+                        </Form>
+                        </Modal.Body>
                     </Modal>
                   </div>
                 </div>
@@ -524,15 +563,24 @@ function Jobprofile() {
                         </Modal.Title>
                       </Modal.Header>
                       <Modal.Body className="Edit_popupcontent">
+                        <Form>
+                        <div>
                         <Form.Control placeholder="Job Title" />
+                        </div>
+                        <div>
                         <Form.Control placeholder="Company Name.." />
-                        <Form.Control placeholder="Years of Experience.." />
-                      </Modal.Body>
-                      <Modal.Footer className="Edit_btncontainer2">
-                        <Button onClick={handleClose3}>
+                        </div>
+                        <div>
+                          <Form.Control placeholder="Years of Experience.." />
+                        </div>
+                        <Button className="Edit_btncontainer2" type='submit'>
                           Add New Work Experience
                         </Button>
-                      </Modal.Footer>
+                        </Form>
+                      </Modal.Body>
+                      
+                       
+                     
                     </Modal>
                   </div>
                 </div>
