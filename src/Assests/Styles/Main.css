@@ -12,7 +12,7 @@
 }
 
 :root {
-  --primary-color: #0775e3;
+  --primary-color: #185c89;
   --secondary-color: #f7690a;
 }
 
@@ -302,6 +302,7 @@ label {
 .Newsletter_maincontainer>div>form>div:nth-child(1)>input {
   padding: 15px 22px;
   border-radius: 10px;
+  border:0!important;
 }
 
 .jobscategories_container {
