@@ -39,7 +39,8 @@ function JobseekerReg() {
               <div className="d-flex ">
                 <InputGroup className="my-1 ">
                   <div >
-                    <Form.Control placeholder="First-name"
+                    <label className='fs-5 fw-normal pb-2 text-dark-50'>First-name:</label>
+                    <Form.Control placeholder=" First-name..."
                       {...register("firstName")}
                     />
                     <p className='text-danger'>{errors.firstName?.message}</p>
@@ -49,8 +50,9 @@ function JobseekerReg() {
                 </InputGroup>
                 <InputGroup className="my-1 ">
 
-                  <div className="  ">
-                    <Form.Control placeholder="Middle-name"
+                  <div>
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Middle-name:</label>
+                    <Form.Control placeholder="Middle-name ..."
                       {...register("middleName")}
                     />
                     <p className='text-danger'>{errors.middleName?.message}</p>
@@ -59,7 +61,8 @@ function JobseekerReg() {
               </div>
               <div className="d-flex">
                 <InputGroup className="my-1 ">
-                  <div className="">
+                  <div>
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Last-name:</label>
                     <Form.Control placeholder="Last-name"
                       {...register("lastName")}
 
@@ -73,7 +76,8 @@ function JobseekerReg() {
                 <InputGroup className="my-1 ">
 
 
-                  <div className="">
+                  <div >
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Email:</label>
                     <Form.Control placeholder="Email"
                       {...register("email")}
                     />
@@ -85,8 +89,10 @@ function JobseekerReg() {
 
               </div>
               <div className="d-flex">
+             
                 <InputGroup className=" my-1 ">
                   <div>
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Phone-number:</label>
                     <Form.Control placeholder="Phone-number"
                       {...register("phoneNumber")}
                     />
@@ -101,6 +107,7 @@ function JobseekerReg() {
 
 
                   <div >
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Current-salary:</label>
                     <Form.Control placeholder="Current Salary"
                       {...register("currentsalary")}
                     />
@@ -112,6 +119,7 @@ function JobseekerReg() {
               <div className="d-flex">
                 <InputGroup className=" my-1 ">
                   <div >
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Expected-salary:</label>
                     <Form.Control placeholder="Expected Salary"
                       {...register("expectedsalary")}
                     />
@@ -124,6 +132,7 @@ function JobseekerReg() {
                 <InputGroup className=" my-1 ">
 
                   <div >
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>salaey-currency:</label>
                     <Form.Control placeholder=" Salary's Currency"
 
                     />
@@ -136,6 +145,7 @@ function JobseekerReg() {
               <div className="d-flex">
                 <InputGroup className=" my-1 ">
                   <div>
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>Password:</label>
                     <Form.Control placeholder="Password"
                       type='password'
                       {...register("password")}
@@ -148,6 +158,7 @@ function JobseekerReg() {
                 </InputGroup>
                 <InputGroup>
                   <div>
+                  <label className='fs-5 fw-normal pb-2 text-dark-50'>confirm-Password:</label>
                     <Form.Control placeholder="Confirm-Password"
                       type='password'
                       {...register("confirmpassword")}

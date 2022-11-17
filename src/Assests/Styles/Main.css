@@ -1722,7 +1722,7 @@ label {
 
 .Trynow_btn>a>button {
   color: #fff;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   width: 100%;
 }
 

@@ -27,15 +27,15 @@ function Header() {
                 <Link to='/Skillassessment'>Skill Assessment</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/Register">
+                <Link to="/SeekerLoginforms">
                   <button className="Register_btn border-0 text-white">
-                    Register
+                   Sign-in
                   </button>
                 </Link>
               </Nav.Link>
               <Nav.Link href="#link">
-                <Link to="/SeekerLoginforms">
-                  <button className="Login_btn">Login</button>
+                <Link to="/Register">
+                  <button className="Login_btn">Register</button>
                 </Link>
               </Nav.Link>
             </Nav>
