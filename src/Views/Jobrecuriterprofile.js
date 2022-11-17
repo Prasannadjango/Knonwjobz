@@ -25,6 +25,7 @@ import {
   HiBriefcase,
   HiChatAlt2,
   HiUserGroup,
+  HiChatAlt,
 } from "react-icons/hi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiLogOut } from "react-icons/bi";
@@ -37,7 +38,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 const numberRegExp = /^[0-9]*$/
-const EmailRegExp =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+const EmailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 const PasswordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
 const WebsiteRegExp = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/
 const schema = yup.object({
@@ -45,29 +46,29 @@ const schema = yup.object({
   ceoName: yup.string().required("CEO Name is Required"),
   address: yup.string().required("Address is Required"),
   phoneNumber: yup.string().required("phone number is required").matches(phoneRegExp, 'Phone number is not valid').min(10, "Phone number must 10 Digits").max(10, "Phone number must 10 Digits"),
-  LandlineNumber:yup.string().required("Landline is required").matches(phoneRegExp, 'Landline is not valid').min(10, "Landline must 10 Digits").max(10, "Landline must 10 Digits"),
-  email:yup.string().required('Email is Required').matches(EmailRegExp,'Email is Not Valid'),
-  website:yup.string().required("Website is required").matches(WebsiteRegExp,'Website is not valid'),
-  password:yup.string().required('Password is required')
-  .matches(PasswordRegExp,'Password is Weak , Password must have Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character'),
-  confirmpassword:yup.string().required("confirm password is Required") .oneOf([yup.ref("password")], "Passwords do not match"),
-  companyname:yup.string().required('Company Name is Required'),
-  companylocation:yup.string().required('Company Location is Required'),
-  numberoffices:yup.string().required("Number of offices is required").matches(numberRegExp,'Number of Office must be in Number'),
-  Establishyear:yup.string().required("Established year is required").matches(numberRegExp,'Established year must be in Number'),
-  noemployees:yup.string().required("No of Employeers is required").matches(numberRegExp,'No of Employeers must be in Number'),
-  noopenings:yup.string().required('no of openings is required').matches(numberRegExp,'No of Openings must be in Number'),
-  fax:yup.string().required("Fax is required").matches(numberRegExp,'Fax must be in Number'),
-  Description:yup.string().required('Description is Required'),
-  facebook:yup.string().required('Facebook id is Reqiured'),
-  google:yup.string().required('Google id is Required'),
-  country:yup.string().required('Country is required'),
-  state:yup.string().required('state is required'),
-  jobtitle:yup.string().required('job title is required'),
-  city:yup.string().required('City is required'),
-  salaryfrom:yup.string().required("salary from is required").matches(numberRegExp,'salaryfrom must be in Number'),
-  salaryto:yup.string().required("salary to is required").matches(numberRegExp,'salaryto must be in Number'),
-  Experiencelevel:yup.string().required('Please select the Experience Level'),
+  LandlineNumber: yup.string().required("Landline is required").matches(phoneRegExp, 'Landline is not valid').min(10, "Landline must 10 Digits").max(10, "Landline must 10 Digits"),
+  email: yup.string().required('Email is Required').matches(EmailRegExp, 'Email is Not Valid'),
+  website: yup.string().required("Website is required").matches(WebsiteRegExp, 'Website is not valid'),
+  password: yup.string().required('Password is required')
+    .matches(PasswordRegExp, 'Password is Weak , Password must have Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character'),
+  confirmpassword: yup.string().required("confirm password is Required").oneOf([yup.ref("password")], "Passwords do not match"),
+  companyname: yup.string().required('Company Name is Required'),
+  companylocation: yup.string().required('Company Location is Required'),
+  numberoffices: yup.string().required("Number of offices is required").matches(numberRegExp, 'Number of Office must be in Number'),
+  Establishyear: yup.string().required("Established year is required").matches(numberRegExp, 'Established year must be in Number'),
+  noemployees: yup.string().required("No of Employeers is required").matches(numberRegExp, 'No of Employeers must be in Number'),
+  noopenings: yup.string().required('no of openings is required').matches(numberRegExp, 'No of Openings must be in Number'),
+  fax: yup.string().required("Fax is required").matches(numberRegExp, 'Fax must be in Number'),
+  Description: yup.string().required('Description is Required'),
+  facebook: yup.string().required('Facebook id is Reqiured'),
+  google: yup.string().required('Google id is Required'),
+  country: yup.string().required('Country is required'),
+  state: yup.string().required('state is required'),
+  jobtitle: yup.string().required('job title is required'),
+  city: yup.string().required('City is required'),
+  salaryfrom: yup.string().required("salary from is required").matches(numberRegExp, 'salaryfrom must be in Number'),
+  salaryto: yup.string().required("salary to is required").matches(numberRegExp, 'salaryto must be in Number'),
+  Experiencelevel: yup.string().required('Please select the Experience Level'),
 }).required();
 
 
@@ -93,9 +94,9 @@ function Jobrecuiterprofile() {
   const [show1, setShow1] = useState(false);
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
- 
-  const { register, trigger, handleSubmit, formState:{ errors } } = useForm({
-    mode:"onchange",
+
+  const { register, trigger, handleSubmit, formState: { errors } } = useForm({
+    mode: "onchange",
     resolver: yupResolver(schema)
   });
   const doSomething = async (value) => {
@@ -110,48 +111,48 @@ function Jobrecuiterprofile() {
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
             <Col xl={3} xs={12} className=" py-4 pe-0 bg-white SideBar_container">
-          
-             
-                <Nav variant="pills" className="Sidebar_links">
-                  <Nav.Item>
-                    <Nav.Link eventKey="first" className="d-flex">
-                      <HiHome />
-                      <p className="pt-1">Home</p>
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="second" className="d-flex">
-                      <HiOutlineClipboardList />
-                      <p className="pt-1">Company Profile</p>
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="third" className="d-flex">
-                      <HiBriefcase />
-                      <p className="pt-1">Post a Job</p>
-                    </Nav.Link>
-                  </Nav.Item>
 
-                  <Nav.Item>
-                    <Nav.Link eventKey="Fifth" className="d-flex">
-                      <HiChatAlt2 />
-                      <p className="pt-1">Manage Messages</p>
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="sixth" className="d-flex">
-                      <HiUserGroup />
-                      <p className="pt-1">Manage Followers</p>
-                    </Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="seventh" className="d-flex">
-                      <BiLogOut />
-                      <p className="pt-1">Logout</p>
-                    </Nav.Link>
-                  </Nav.Item>
-                </Nav>
-            
+
+              <Nav variant="pills" className="Sidebar_links">
+                <Nav.Item>
+                  <Nav.Link eventKey="first" className="d-flex">
+                    <HiHome />
+                    <p className="pt-1">Home</p>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second" className="d-flex">
+                    <HiOutlineClipboardList />
+                    <p className="pt-1">Company Profile</p>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="third" className="d-flex">
+                    <HiBriefcase />
+                    <p className="pt-1">Post a Job</p>
+                  </Nav.Link>
+                </Nav.Item>
+
+                <Nav.Item>
+                  <Nav.Link eventKey="Fifth" className="d-flex">
+                    <HiChatAlt2 />
+                    <p className="pt-1">Manage Messages</p>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="sixth" className="d-flex">
+                    <HiUserGroup />
+                    <p className="pt-1">Manage Followers</p>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="seventh" className="d-flex">
+                    <BiLogOut />
+                    <p className="pt-1">Logout</p>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+
             </Col>
             <Col xl={9} xs={12} className="p-0 mt-xl-0 mt-3">
               <Tab.Content>
@@ -184,11 +185,11 @@ function Jobrecuiterprofile() {
                         <Col xl={5} className="me-5 mt-4">
                           <div className=" d-flex Box_header3">
                             <div>
-                              <BsReceipt />
+                              <HiChatAlt />
                             </div>
                             <div>
                               <h1 className="fw-bold text-end">20</h1>
-                              <h5>Job-Enquires</h5>
+                              <h5>Messages</h5>
                             </div>
                           </div>
                         </Col>
@@ -260,71 +261,7 @@ function Jobrecuiterprofile() {
                           </div>
                         </Col>
 
-                        <Col xl={5} >
-                          <h3> My Subscription Plan</h3>
-                          <div className="SubscriptionPlan_container p-4 mt-4 position-relative">
-                            <h2 className="fw-bold">Silver Plan</h2>
-                            <h4 className="text-secondary">$100</h4>
 
-                            <h4 className="text-secondary pt-3">
-                              12.3.22 - 13.3.23
-                            </h4>
-                            <h4 className="text-secondary pt-3">
-                              Available Quota:7/10
-                            </h4>
-                            <div>
-                              <Button onClick={handleShow1}>
-                                Show Other Plans
-                              </Button>
-                            </div>
-                          </div>
-                          <Modal size="lg" show={show1} onHide={handleClose1}>
-                            <Modal.Header closeButton>
-                              <Modal.Title>Membership plans</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body className="py-4 ps-2 pe-4 ">
-                              <div className="Planscard_container d-flex mt-3 ">
-                                <Col xl={6} xs={12} className="Plan_card p-3 me-xl-3 me-0 mb-xl-0 mb-5">
-                                  <div className="Plan_cardprice">
-                                    <h6 className="m-0">$100</h6>
-                                  </div>
-                                  <div>
-                                    <h3 className="fw-bold">Silver plan</h3>
-                                    <ol className="ps-3 pt-2 fs-6">
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                    </ol>
-                                  </div>
-
-                                  <div className="Active_btn w-100 mt-2">
-                                    <Button>Activate </Button>
-                                  </div>
-                                </Col>
-                                <Col xl={6}  xs={12}  className="Plan_card p-3 ">
-                                  <div className="Plan_cardprice">
-                                    <h6 className="m-0">$100</h6>
-                                  </div>
-                                  <div>
-                                    <h3 className="fw-bold">Golden plan</h3>
-                                    <ol className="ps-3 pt-2 fs-6">
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                      <li>Lorem ipsum dolor sit amet</li>
-                                    </ol>
-                                  </div>
-                                  <div className="Active_btn w-100 mt-2">
-                                    <Button>Activate </Button>
-                                  </div>
-                                </Col>
-                              </div>
-                            </Modal.Body>
-                          </Modal>
-                        </Col>
                       </Row>
                       <div>
                         <h2 className="pt-4">Shortlisted Profile</h2>
@@ -440,18 +377,33 @@ function Jobrecuiterprofile() {
                       </h2>
                       <InputGroup className="my-xl-3 my-1">
                         <div className='my-2 w-100'>
-                        <Form.Control placeholder="Company Name.." 
-                        {...register("companyName")}
-                        />
-                         <p className='text-danger pt-2 m-0'>{errors.companyName?.message}</p>
+                          <Form.Control placeholder="Company Name.."
+                            {...register("companyName")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.companyName?.message}</p>
                         </div>
-                       
-                       <div className="my-2 w-100 ">
-                       <Form.Control placeholder="CEO Name.."
-                        {...register("ceoName")} 
-                       />
-                        <p className='text-danger pt-2 m-0'>{errors.ceoName?.message}</p>
-                       </div>
+
+                        <div className="my-2 w-100 ">
+                          <Form.Control placeholder="CEO Name.."
+                            {...register("ceoName")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.ceoName?.message}</p>
+                        </div>
+                      </InputGroup>
+                      <InputGroup className="my-xl-3 my-1">
+                        <div className='my-2 w-100'>
+                          <Form.Control placeholder="Email.."
+                            {...register("companyName")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.companyName?.message}</p>
+                        </div>
+
+                        <div className="my-2 w-100 ">
+                          <Form.Control placeholder="Password.."
+                            {...register("ceoName")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.ceoName?.message}</p>
+                        </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
                         <Form.Select>
@@ -469,84 +421,99 @@ function Jobrecuiterprofile() {
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
                         <div className='my-2 w-100'>
-                        <Form.Control placeholder="Address.." 
-                        {...register("address")}  />
+                          <Form.Control placeholder="Address.."
+                            {...register("address")} />
                           <p className='text-danger pt-2 m-0'>{errors.address?.message}</p>
                         </div>
                         <div className='w-100 my-2'>
-                        <Form.Control placeholder="No of Offices.." 
-                           {...register("numberoffices")}
-                        />
-                         <p className='text-danger pt-2 m-0'>{errors.numberoffices?.message}</p>
+                          <Form.Control placeholder="No of Offices.."
+                            {...register("numberoffices")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.numberoffices?.message}</p>
                         </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                       <div className="w-100 my-2">
-                       <Form.Control placeholder="No of Employees.." 
-                       {...register("noemployees")} />
-                        <p className='text-danger pt-2 m-0'>{errors.noemployees?.message}</p>
-                       </div>
-                       <div className="w-100 my-0">
-                       <Form.Control placeholder="Established in.." 
-                       {...register("Establishyear")}/>
+                        <div className="w-100 my-2">
+                          <Form.Control placeholder="No of Employees.."
+                            {...register("noemployees")} />
+                          <p className='text-danger pt-2 m-0'>{errors.noemployees?.message}</p>
+                        </div>
+                        <div className="w-100 my-0">
+                          <Form.Control placeholder="Established in.."
+                            {...register("Establishyear")} />
                           <p className='text-danger pt-2 m-0'>{errors.Establishyear?.message}</p>
-                       </div>
-                      </InputGroup>
-                      <InputGroup className="my-xl-3 my-1">
-                        <div className="w-100 my-2">
-                        <Form.Control placeholder="Website URL.." 
-                        {...register("website")}/>
-                        <p className='text-danger pt-2 m-0'>{errors.website?.message}</p>
-                        </div>
-                        <div className="w-100 my-2">
-                        <Form.Control placeholder="Fax.." 
-                         {...register("fax")}/>
-                        <p className='text-danger pt-2 m-0'>{errors.fax?.message}</p>
-                         
                         </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                       <div className="w-100 my-2">
-                       <Form.Control placeholder="Phone number.." 
-                       {...register("phoneNumber")}/>
-                       <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
-                       </div>
-                       <div className='w-100 my-2'>
-                       <Form.Control placeholder="Land-line Number.." 
-                       {...register("LandlineNumber")}/>
-                        <p className='text-danger pt-2 m-0'>{errors.LandlineNumber?.message}</p>
-                       </div>
+                        <div className="w-100 my-2">
+                          <Form.Control placeholder="Website URL.."
+                            {...register("website")} />
+                          <p className='text-danger pt-2 m-0'>{errors.website?.message}</p>
+                        </div>
+                        <div className="w-100 my-2">
+                          <Form.Control placeholder="Fax.."
+                            {...register("fax")} />
+                          <p className='text-danger pt-2 m-0'>{errors.fax?.message}</p>
+
+                        </div>
+                      </InputGroup>
+                      <InputGroup className="my-xl-3 my-1">
+                        <div className="w-100 my-2">
+                          <Form.Control placeholder="Phone number.."
+                            {...register("phoneNumber")} />
+                          <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
+                        </div>
+                        <div className='w-100 my-2'>
+                          <Form.Control placeholder="Land-line Number.."
+                            {...register("LandlineNumber")} />
+                          <p className='text-danger pt-2 m-0'>{errors.LandlineNumber?.message}</p>
+                        </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
                         <div className="my-2 w-100">
-                        <Form.Control placeholder="Facebook.." 
-                       {...register("facebook")} />
-                       <p className='text-danger pt-2 m-0'>{errors.facebook?.message}</p>
+                          <Form.Control placeholder="Facebook.."
+                            {...register("facebook")} />
+                          <p className='text-danger pt-2 m-0'>{errors.facebook?.message}</p>
                         </div>
                         <div className="w-100 my-2">
-                        <Form.Control placeholder="Google.." 
-                          {...register("google")} 
-                        />
-                         <p className='text-danger pt-2 m-0'>{errors.google?.message}</p>
+                          <Form.Control placeholder="Google.."
+                            {...register("google")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.google?.message}</p>
                         </div>
                       </InputGroup>
                       <InputGroup className="my-xl-3 my-1">
-                      <div className="my-2 w-100">
-                      <Form.Control placeholder="Country.." 
-                          {...register("country")} />
-                           <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
-                      </div>
-                       <div className="my-2 w-100">
-                       <Form.Control placeholder="State.." 
-                        {...register("state")} />
-                        <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
-                       </div>
+
+                        <div className="w-100 my-2">
+                          <Form.Control placeholder="Linked-in.."
+                            {...register("google")}
+                          />
+                          <p className='text-danger pt-2 m-0'>{errors.google?.message}</p>
+                        </div>
+                        <div className="my-2 w-100">
+                          <Form.Control placeholder="Country.."
+                            {...register("country")} />
+                          <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
+                        </div>
+                      </InputGroup>
+                      <InputGroup className="">
+                        <div className="w-100">
+                          <Form.Control placeholder="State.."
+                            {...register("state")} />
+                          <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
+                        </div>
+                        <div className="w-100">
+                          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+
+                            <Form.Control as="textarea" rows={4} placeholder='About the company' />
+                          </Form.Group>
+                        </div>
                       </InputGroup>
                       <div className="col-12 Updateprofile_btn">
-                      <Button className="btn text-white text-center" type='submit'>
-                        Update & Save Profile
-                      </Button>
-                    </div>
+                        <Button className="btn text-white text-center" type='submit'>
+                          Update & Save Profile
+                        </Button>
+                      </div>
                     </Form>
 
                   </div>
@@ -664,119 +631,119 @@ function Jobrecuiterprofile() {
                       </Modal.Header>
                       <Modal.Body >
                         <Form onSubmit={handleSubmit(onSubmit)} className="Postjob_forms">
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className="my-2 w-100">
-                         <Form.Control placeholder="Job-title" 
-                          {...register("jobtitle")} />
-                           <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
-                         </div>
-                         <div className="w-100 my-2">
-                         <Form.Select 
-                          {...register("Experiencelevel")} 
-                          onChange={(e) => doSomething(e.target.value)}>
-                            <option>Choose the Experience-level</option>
-                            <option value="Fresher">Fresher</option>
-                            <option value="Mid-senior">Mid-senior</option>
-                            <option value="Experienced">Experienced</option>
-                          </Form.Select>
-                          <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
-                         </div>
-                        
-                        </InputGroup>
-                        <InputGroup className="my-xl-3 my-1 ">
-                           <div className="my-2 w-100">
-                           <MultiSelect
-                            options={options}
-                            value={selected}
-                            onChange={setSelected}
-                            labelledBy="Select Skills"
-                            placeholder="hello"
-                            className='w-100'
-                          />
-                           </div>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control placeholder="Job-title"
+                                {...register("jobtitle")} />
+                              <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>Choose the Experience-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
 
-                           <div className='w-100 my-2 '>
-                           <Form.Control placeholder="Select City" 
-                          {...register("city")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.city?.message}</p>
-                           </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className='w-100 my-2'>
-                         <Form.Control placeholder="Select-state.." 
-                         {...register("state")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
-                          </div>
-                         <div className='w-100 my-2'>
-                         <Form.Control placeholder="Select-Country.." 
-                          {...register("country")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
+                          </InputGroup>
+                          <InputGroup className="my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <MultiSelect
+                                options={options}
+                                value={selected}
+                                onChange={setSelected}
+                                labelledBy="Select Skills"
+                                placeholder="hello"
+                                className='w-100'
+                              />
+                            </div>
 
-                         </div>
-                        </InputGroup>
-                       
-                        <InputGroup className=" my-xl-3 my-1 ">
-                          <div className="my-2 w-100">
-                          <Form.Control
-                            
-                            placeholder="Salary from.."
-                            {...register("salaryfrom")}
-                          />
-                           <p className='text-danger pt-2 m-0'>{errors.salaryfrom?.message}</p>
+                            <div className='w-100 my-2 '>
+                              <Form.Control placeholder="Select City"
+                                {...register("city")} />
+                              <p className='text-danger pt-2 m-0'>{errors.city?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className='w-100 my-2'>
+                              <Form.Control placeholder="Select-state.."
+                                {...register("state")} />
+                              <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
+                            </div>
+                            <div className='w-100 my-2'>
+                              <Form.Control placeholder="Select-Country.."
+                                {...register("country")} />
+                              <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
 
+                            </div>
+                          </InputGroup>
+
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control
+
+                                placeholder="Salary from.."
+                                {...register("salaryfrom")}
+                              />
+                              <p className='text-danger pt-2 m-0'>{errors.salaryfrom?.message}</p>
+
+                            </div>
+                            <div className="my-2 w-100">
+                              <Form.Control
+                                {...register("salaryto")}
+                                placeholder="Salary to.."
+                              />
+                              <p className='text-danger pt-2 m-0'>{errors.salaryto?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="w-100 my-2">
+                              <Form.Select>
+                                <option>Job type</option>
+                                <option value="Fresher">Full-time</option>
+                                <option value="Mid-senior">Part-time</option>
+                                <option value="Experienced">Freelance</option>
+                              </Form.Select>
+                            </div>
+                            <div className="my-2 w-100">
+                              <Form.Select>
+                                <option>Job shift</option>
+                                <option value="Fresher">Day</option>
+                                <option value="Mid-senior">Night</option>
+                                <option value="Experienced">Rotating</option>
+                              </Form.Select>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="w-100 my-2">
+                              <Form.Select>
+                                <option>Gender</option>
+                                <option value="Fresher">male</option>
+                                <option value="Mid-senior">Female</option>
+                                <option value="Experienced">
+                                  Rather not to say
+                                </option>
+                              </Form.Select>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Control placeholder="No of Openings.."
+                                {...register("noopenings")} />
+                              <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <div className="Postjob_btn col-12">
+                            <Button variant="primary" type='submit'>
+                              Post a Job
+                            </Button>
                           </div>
-                         <div className="my-2 w-100">
-                         <Form.Control
-                              {...register("salaryto")}
-                            placeholder="Salary to.."
-                          />
-                          <p className='text-danger pt-2 m-0'>{errors.salaryto?.message}</p>
-                         </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className="w-100 my-2">
-                         <Form.Select>
-                            <option>Job type</option>
-                            <option value="Fresher">Full-time</option>
-                            <option value="Mid-senior">Part-time</option>
-                            <option value="Experienced">Freelance</option>
-                          </Form.Select>
-                         </div>
-                          <div className="my-2 w-100">
-                          <Form.Select>
-                            <option>Job shift</option>
-                            <option value="Fresher">Day</option>
-                            <option value="Mid-senior">Night</option>
-                            <option value="Experienced">Rotating</option>
-                          </Form.Select>
-                          </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                          <div className="w-100 my-2">
-                          <Form.Select>
-                            <option>Gender</option>
-                            <option value="Fresher">male</option>
-                            <option value="Mid-senior">Female</option>
-                            <option value="Experienced">
-                              Rather not to say
-                            </option>
-                          </Form.Select>
-                          </div>
-                         <div className="w-100 my-2">
-                         <Form.Control placeholder="No of Openings.." 
-                          {...register("noopenings")}/>
-                            <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
-                         </div>
-                        </InputGroup>
-                        <div className="Postjob_btn col-12">
-                          <Button variant="primary" type='submit'>
-                            Post a Job
-                          </Button>
-                        </div>
                         </Form>
                       </Modal.Body>
 
-                     
+
                     </Modal>
                     <Modal size="lg" show={show8} onHide={handleClose8}>
                       <Modal.Header closeButton>
@@ -784,122 +751,122 @@ function Jobrecuiterprofile() {
                       </Modal.Header>
                       <Modal.Body >
                         <Form onSubmit={handleSubmit(onSubmit)} className="Postjob_forms">
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className="my-2 w-100">
-                         <Form.Control placeholder="Job-title" 
-                          {...register("jobtitle")} />
-                           <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
-                         </div>
-                         <div className="w-100 my-2">
-                         <Form.Select 
-                          {...register("Experiencelevel")} 
-                          onChange={(e) => doSomething(e.target.value)}>
-                            <option>Choose the Experience-level</option>
-                            <option value="Fresher">Fresher</option>
-                            <option value="Mid-senior">Mid-senior</option>
-                            <option value="Experienced">Experienced</option>
-                          </Form.Select>
-                          <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
-                         </div>
-                        
-                        </InputGroup>
-                        <InputGroup className="my-xl-3 my-1 ">
-                           <div className="my-2 w-100">
-                           <MultiSelect
-                            options={options}
-                            value={selected}
-                            onChange={setSelected}
-                            labelledBy="Select Skills"
-                            placeholder="hello"
-                            className='w-100'
-                          />
-                           </div>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control placeholder="Job-title"
+                                {...register("jobtitle")} />
+                              <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>Choose the Experience-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
 
-                           <div className='w-100 my-2 '>
-                           <Form.Control placeholder="Select City" 
-                          {...register("city")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.city?.message}</p>
-                           </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className='w-100 my-2'>
-                         <Form.Control placeholder="Select-state.." 
-                         {...register("state")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
-                          </div>
-                         <div className='w-100 my-2'>
-                         <Form.Control placeholder="Select-Country.." 
-                          {...register("country")}/>
-                           <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
+                          </InputGroup>
+                          <InputGroup className="my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <MultiSelect
+                                options={options}
+                                value={selected}
+                                onChange={setSelected}
+                                labelledBy="Select Skills"
+                                placeholder="hello"
+                                className='w-100'
+                              />
+                            </div>
 
-                         </div>
-                        </InputGroup>
-                       
-                        <InputGroup className=" my-xl-3 my-1 ">
-                          <div className="my-2 w-100">
-                          <Form.Control
-                            
-                            placeholder="Salary from.."
-                            {...register("salaryfrom")}
-                          />
-                           <p className='text-danger pt-2 m-0'>{errors.salaryfrom?.message}</p>
+                            <div className='w-100 my-2 '>
+                              <Form.Control placeholder="Select City"
+                                {...register("city")} />
+                              <p className='text-danger pt-2 m-0'>{errors.city?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className='w-100 my-2'>
+                              <Form.Control placeholder="Select-state.."
+                                {...register("state")} />
+                              <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
+                            </div>
+                            <div className='w-100 my-2'>
+                              <Form.Control placeholder="Select-Country.."
+                                {...register("country")} />
+                              <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
 
+                            </div>
+                          </InputGroup>
+
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control
+
+                                placeholder="Salary from.."
+                                {...register("salaryfrom")}
+                              />
+                              <p className='text-danger pt-2 m-0'>{errors.salaryfrom?.message}</p>
+
+                            </div>
+                            <div className="my-2 w-100">
+                              <Form.Control
+                                {...register("salaryto")}
+                                placeholder="Salary to.."
+                              />
+                              <p className='text-danger pt-2 m-0'>{errors.salaryto?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="w-100 my-2">
+                              <Form.Select>
+                                <option>Job type</option>
+                                <option value="Fresher">Full-time</option>
+                                <option value="Mid-senior">Part-time</option>
+                                <option value="Experienced">Freelance</option>
+                              </Form.Select>
+                            </div>
+                            <div className="my-2 w-100">
+                              <Form.Select>
+                                <option>Job shift</option>
+                                <option value="Fresher">Day</option>
+                                <option value="Mid-senior">Night</option>
+                                <option value="Experienced">Rotating</option>
+                              </Form.Select>
+                            </div>
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="w-100 my-2">
+                              <Form.Select>
+                                <option>Gender</option>
+                                <option value="Fresher">male</option>
+                                <option value="Mid-senior">Female</option>
+                                <option value="Experienced">
+                                  Rather not to say
+                                </option>
+                              </Form.Select>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Control placeholder="No of Openings.."
+                                {...register("noopenings")} />
+                              <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
+                            </div>
+                          </InputGroup>
+                          <div className="Postjob_btn col-12">
+                            <Button variant="primary" type='submit'>
+                              Post a Job
+                            </Button>
                           </div>
-                         <div className="my-2 w-100">
-                         <Form.Control
-                              {...register("salaryto")}
-                            placeholder="Salary to.."
-                          />
-                          <p className='text-danger pt-2 m-0'>{errors.salaryto?.message}</p>
-                         </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                         <div className="w-100 my-2">
-                         <Form.Select>
-                            <option>Job type</option>
-                            <option value="Fresher">Full-time</option>
-                            <option value="Mid-senior">Part-time</option>
-                            <option value="Experienced">Freelance</option>
-                          </Form.Select>
-                         </div>
-                          <div className="my-2 w-100">
-                          <Form.Select>
-                            <option>Job shift</option>
-                            <option value="Fresher">Day</option>
-                            <option value="Mid-senior">Night</option>
-                            <option value="Experienced">Rotating</option>
-                          </Form.Select>
-                          </div>
-                        </InputGroup>
-                        <InputGroup className=" my-xl-3 my-1 ">
-                          <div className="w-100 my-2">
-                          <Form.Select>
-                            <option>Gender</option>
-                            <option value="Fresher">male</option>
-                            <option value="Mid-senior">Female</option>
-                            <option value="Experienced">
-                              Rather not to say
-                            </option>
-                          </Form.Select>
-                          </div>
-                         <div className="w-100 my-2">
-                         <Form.Control placeholder="No of Openings.." 
-                          {...register("noopenings")}/>
-                            <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
-                         </div>
-                        </InputGroup>
-                        <div className="Postjob_btn col-12">
-                          <Button variant="primary" type='submit'>
-                            Post a Job
-                          </Button>
-                        </div>
                         </Form>
                       </Modal.Body>
 
-                     
+
                     </Modal>
 
-                   
+
                   </div>
                 </Tab.Pane>
 
