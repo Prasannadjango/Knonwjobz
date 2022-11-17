@@ -141,7 +141,12 @@
     border-right: 0;
     padding: 9px;
   }
-
+  .Recuriterform_container{
+    margin:0;
+  }
+  .Recuirterform_container{
+    flex-direction: column;
+  }
   .Recuriterform_container>.input-group>div {
     width: 100%;
   }

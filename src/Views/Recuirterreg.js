@@ -55,7 +55,7 @@ function Recuriterreg() {
                 </div>
 
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
+              <InputGroup className="my-1 ps-xl-4 ps-0">
               <div className="w-100 ">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Last-name:</label>
 
@@ -78,7 +78,7 @@ function Recuriterreg() {
                 <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
               </div>
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
+              <InputGroup className="my-1 ps-xl-4 ps-0">
               <div className=" w-100">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Email:</label>
 
@@ -100,7 +100,7 @@ function Recuriterreg() {
                 <p className='text-danger pt-2 m-0'>{errors.password?.message}</p>
               </div>
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
+              <InputGroup className="my-1 ps-xl-4 ps-0">
               <div className="w-100 ">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Confirm-Password:</label>
 
@@ -122,7 +122,7 @@ function Recuriterreg() {
               </div>
               <div className="d-flex Recuirterform_container pt-3">
               <InputGroup className="my-1 ">
-              <div className='my-3 w-100'>
+              <div className=' w-100'>
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Company's-name:</label>
 
                   <Form.Control placeholder="Company's name"
@@ -131,7 +131,7 @@ function Recuriterreg() {
                   <p className='text-danger pt-2 m-0'>{errors.companyname?.message}</p>
                 </div>
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
+              <InputGroup className="ps-xl-4 ps-0">
               <div className="my-3 w-100">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Company's Location:</label>
 
@@ -143,8 +143,8 @@ function Recuriterreg() {
               </InputGroup>
               </div>
               <div className="d-flex Recuirterform_container">
-              <InputGroup className="my-1 ">
-              <div className='w-100 my-3'>
+              <InputGroup >
+              <div className='w-100'>
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Phone-number:</label>
 
                   <Form.Control placeholder="Phone-number"
@@ -153,8 +153,8 @@ function Recuriterreg() {
                   <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
                 </div>
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
-              <div className="w-100 my-3">
+              <InputGroup className=" ps-xl-4 ps-0">
+              <div className="w-100 ">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>E-mail:</label>
 
                   <Form.Control placeholder="Email"
@@ -165,8 +165,8 @@ function Recuriterreg() {
               </InputGroup>
               </div>
               <div className="d-flex Recuirterform_container">
-              <InputGroup className="my-1 ">
-              <div className="w-100 my-3">
+              <InputGroup className="">
+              <div className="w-100 ">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Number of offices:</label>
 
                   <Form.Control placeholder="Number of Offices"
@@ -175,8 +175,8 @@ function Recuriterreg() {
                   <p className='text-danger pt-2 m-0'>{errors.numberoffices?.message}</p>
                 </div>
               </InputGroup>
-              <InputGroup className="my-1 ps-4">
-              <div className="w-100 my-3">
+              <InputGroup className=" ps-xl-4 ps-0">
+              <div className="w-100 ">
               <label className='fs-5 fw-normal pb-2 text-dark-50'>Established in:</label>
 
                   <Form.Control placeholder="Established in"
