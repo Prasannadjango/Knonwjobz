@@ -369,6 +369,14 @@ function Jobprofile() {
                      </div>
                   
                     </InputGroup>
+                    <InputGroup className="mb-3">
+                    
+                     <div className='w-100'>
+                     <Form.Control placeholder='Salary currency' className="mb-xl-3"/>
+                      
+                     </div>
+                  
+                    </InputGroup>
                   </div>
                   <div className="Edit_btncontainer2 mt-4">
                    <Button type='submit'>Edit Profile Details</Button>
@@ -505,6 +513,20 @@ function Jobprofile() {
                         <Form.Control placeholder="Degree Name.." 
                          {...register("Degreename")} />
                          <p className='text-danger  m-0'>{errors.Degreename?.message}</p>
+                        </div>
+                        <div>
+                        <Form.Control placeholder="state" 
+                         {...register("state")} />
+                          <p className='text-danger  m-0'>{errors.state?.message}</p>
+                        </div>
+                         <div>
+                         <Form.Control placeholder="city.." 
+                         {...register("instituename")} />
+                            <p className='text-danger  m-0'>{errors.city?.message}</p>
+                         </div>
+                        <div>
+                        <Form.Control placeholder="result.." />
+                        
                         </div>
 
                       <div>

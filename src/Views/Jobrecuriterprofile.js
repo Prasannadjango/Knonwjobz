@@ -27,6 +27,10 @@ import {
   HiUserGroup,
   HiChatAlt,
 } from "react-icons/hi";
+import {
+  MdLocationPin,
+ 
+} from "react-icons/md";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiLogOut } from "react-icons/bi";
 import Person from "../Assests/Images/personimage.jpg";
@@ -543,7 +547,12 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
+                              <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary ">Mumbai</p>
+                        </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
+                               
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
                                     Posted on :
@@ -574,6 +583,10 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
+                              <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary ">Mumbai</p>
+                        </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
@@ -603,6 +616,10 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
+                              <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary ">Mumbai</p>
+                        </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
@@ -642,6 +659,40 @@ function Jobrecuiterprofile() {
                                 {...register("Experiencelevel")}
                                 onChange={(e) => doSomething(e.target.value)}>
                                 <option>Choose the Experience-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
+
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control placeholder="Functional area..."
+                                {...register("jobtitle")} />
+                              <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>Choose the Degree-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
+
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                         
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>career-level</option>
                                 <option value="Fresher">Fresher</option>
                                 <option value="Mid-senior">Mid-senior</option>
                                 <option value="Experienced">Experienced</option>
@@ -735,6 +786,7 @@ function Jobrecuiterprofile() {
                               <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
                             </div>
                           </InputGroup>
+                          
                           <div className="Postjob_btn col-12">
                             <Button variant="primary" type='submit'>
                               Post a Job
@@ -751,7 +803,7 @@ function Jobrecuiterprofile() {
                       </Modal.Header>
                       <Modal.Body >
                         <Form onSubmit={handleSubmit(onSubmit)} className="Postjob_forms">
-                          <InputGroup className=" my-xl-3 my-1 ">
+                        <InputGroup className=" my-xl-3 my-1 ">
                             <div className="my-2 w-100">
                               <Form.Control placeholder="Job-title"
                                 {...register("jobtitle")} />
@@ -762,6 +814,40 @@ function Jobrecuiterprofile() {
                                 {...register("Experiencelevel")}
                                 onChange={(e) => doSomething(e.target.value)}>
                                 <option>Choose the Experience-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
+
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                            <div className="my-2 w-100">
+                              <Form.Control placeholder="Functional area..."
+                                {...register("jobtitle")} />
+                              <p className='text-danger pt-2 m-0'>{errors.jobtitle?.message}</p>
+                            </div>
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>Choose the Degree-level</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Mid-senior">Mid-senior</option>
+                                <option value="Experienced">Experienced</option>
+                              </Form.Select>
+                              <p className='text-danger pt-2 m-0'>{errors.Experiencelevel?.message}</p>
+                            </div>
+
+                          </InputGroup>
+                          <InputGroup className=" my-xl-3 my-1 ">
+                         
+                            <div className="w-100 my-2">
+                              <Form.Select
+                                {...register("Experiencelevel")}
+                                onChange={(e) => doSomething(e.target.value)}>
+                                <option>career-level</option>
                                 <option value="Fresher">Fresher</option>
                                 <option value="Mid-senior">Mid-senior</option>
                                 <option value="Experienced">Experienced</option>
