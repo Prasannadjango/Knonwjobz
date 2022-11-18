@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import {
   Button,
   Container,
@@ -11,7 +12,9 @@ import {
   Row,
   Col,
   Badge,
+  FormControl,
 } from "react-bootstrap";
+
 import personimg from "../Assests/Images/personimage.jpg";
 import { BsPencilSquare } from "react-icons/bs";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
@@ -23,6 +26,7 @@ import {
   AiOutlineDelete,
   AiOutlineFileAdd,
 } from "react-icons/ai";
+
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -97,6 +101,10 @@ function Jobprofile() {
     mode:"onchange",
     resolver: yupResolver(schema)
   });
+  const navigate = useNavigate();
+const navigateToApplyjob = () => {
+ navigate('/Applyjobdetails');
+};
   const onSubmit = data => console.table(data);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -176,8 +184,8 @@ function Jobprofile() {
                     />
                     <p className='text-danger pt-2 m-0'>{errors.phoneNumber?.message}</p>
                     </div>
-                    <div className="Edit_btncontainer2">
-                    <Button type='submit'>Edit Profile</Button>
+                    <div >
+                    <Button className="Edit_btncontainer2" type='submit'>Edit Profile</Button>
                     </div>
                   </Form>
                   </Modal.Body>
@@ -378,8 +386,8 @@ function Jobprofile() {
                   
                     </InputGroup>
                   </div>
-                  <div className="Edit_btncontainer2 mt-4">
-                   <Button type='submit'>Edit Profile Details</Button>
+                  <div >
+                   <Button className="Edit_btncontainer2 mt-4" type='submit'>Edit Profile Details</Button>
                   </div>
                   </Form>
 
@@ -436,13 +444,10 @@ function Jobprofile() {
                 </div>
               </Tab>
               <Tab eventKey="MyResume" title="My Resume">
-                <div className="Myresume_container p-4">
-                  <embed
-                    src="sample.pdf"
-                    frameborder="0"
-                    width="100%"
-                    height="400px"
-                  ></embed>
+                <div className="Myresume_container d-flex justify-content-center p-4">
+                <div>
+                <FormControl type='file' />
+                </div>
                 </div>
               </Tab>
               <Tab eventKey="Education Details" title="Education Details">
@@ -574,6 +579,7 @@ function Jobprofile() {
                         <Card.Text>
                           <h5>Abc Technology</h5>
                           <h5>3 years</h5>
+                          <h6>2014-2017</h6>
                         </Card.Text>
                       </Card.Body>
                     </Card>
@@ -591,6 +597,14 @@ function Jobprofile() {
                         </div>
                         <div>
                         <Form.Control placeholder="Company Name.." />
+                        </div>
+                        <div>
+                        <Form.Control type='date'
+                        placeholder="Start-date.." />
+                        </div>
+                        <div>
+                        <Form.Control type='date'
+                        placeholder="End-date.." />
                         </div>
                         <div>
                           <Form.Control placeholder="Years of Experience.." />
@@ -618,7 +632,7 @@ function Jobprofile() {
                   <h2 className="pt-xl-0 pt-4">Skill</h2>
                   <div className="Skill_fieldcontainer d-flex mt-4">
                     <div>
-                      {/* <div>1</div> */}
+                      
                       HTML
                     </div>
                     <div>React js</div>
@@ -632,10 +646,11 @@ function Jobprofile() {
                     </Modal.Header>
                     <Modal.Body className="Edit_popupcontent">
                       <Form.Control placeholder="Ex:java,PHP" />
+                      <Button className="Edit_btncontainer2 mt-2">Add New Skills</Button>
                     </Modal.Body>
-                    <Modal.Footer className="Edit_btncontainer2">
-                      <Button onClick={handleClose4}>Add New Skills</Button>
-                    </Modal.Footer>
+                   
+                     
+                 
                   </Modal>
                 </div>
               </Tab>
@@ -667,7 +682,7 @@ function Jobprofile() {
                           </Card.Text>
                         </Card.Body>
                         <div className="SeeDetails_container col-12 px-3 ">
-                          <Button className="mb-3">Apply Now</Button>
+                          <Button className="mb-3" onClick={navigateToApplyjob}>Apply Now</Button>
                         </div>
                       </Card>
                     </Col>
@@ -695,7 +710,7 @@ function Jobprofile() {
                           </Card.Text>
                         </Card.Body>
                         <div className="SeeDetails_container col-12 px-3 ">
-                          <Button className="mb-3">Apply Now</Button>
+                          <Button className="mb-3" onClick={navigateToApplyjob}>Apply Now</Button>
                         </div>
                       </Card>
                     </Col>
@@ -723,7 +738,7 @@ function Jobprofile() {
                           </Card.Text>
                         </Card.Body>
                         <div className="SeeDetails_container col-12 px-3 ">
-                          <Button className="mb-3">Apply Now</Button>
+                          <Button className="mb-3"  onClick={navigateToApplyjob}>Apply Now</Button>
                         </div>
                       </Card>
                     </Col>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import {
   Col,
   Row,
@@ -80,7 +81,10 @@ const schema = yup.object({
 
 function Jobrecuiterprofile() {
 
-
+  const navigate = useNavigate();
+  const shortlistedProfiles = () => {
+   navigate('/Shorlistprofiles');
+  };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -561,7 +565,7 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
-                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
                                 <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
 
@@ -596,7 +600,7 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
-                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
                                 <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
@@ -629,7 +633,7 @@ function Jobrecuiterprofile() {
                                     12/3/22
                                   </p>
                                 </div>
-                                <Button className="Shortlist_button">Shortlisted-candidates<Badge >9</Badge></Button>
+                                <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
                                 <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
