@@ -86,6 +86,9 @@ function Jobrecuiterprofile() {
   const shortlistedProfiles = () => {
     navigate('/Shorlistprofiles');
   };
+  const userProfiles = () => {
+    navigate('/userprofile');
+  };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -1046,7 +1049,7 @@ function Jobrecuiterprofile() {
                             </Card.Text>
                           </Card.Body>
                           <div className="ViewProfile_btn w-100">
-                            <Button>View Profile</Button>
+                            <Button onClick={userProfiles}>View Profile</Button>
                           </div>
                         </Card>
                       </Col>
@@ -1064,7 +1067,7 @@ function Jobrecuiterprofile() {
                             </Card.Text>
                           </Card.Body>
                           <div className="ViewProfile_btn w-100">
-                            <Button>View Profile</Button>
+                            <Button onClick={userProfiles}>View Profile</Button>
                           </div>
                         </Card>
                       </Col>
@@ -1082,7 +1085,7 @@ function Jobrecuiterprofile() {
                             </Card.Text>
                           </Card.Body>
                           <div className="ViewProfile_btn w-100">
-                            <Button>View Profile</Button>
+                            <Button onClick={userProfiles}>View Profile</Button>
                           </div>
                         </Card>
                       </Col>

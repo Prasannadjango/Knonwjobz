@@ -26,6 +26,7 @@ import Applidecandidatepage from "./Pages/Appliedcandidatepage";
 import Viewprofilepage from "./Pages/Viewprofilepage";
 import Jobcategoryinnerpage from "./Pages/Jobcategoryinnerpage";
 import Shortlistprofile from "./Pages/Shortlistedprofiles";
+import Userprofile from "./Pages/Userprofile";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="/Candidateprofile" element={<Viewprofilepage/>}/>
           <Route path="/Jobcategoryinner" element={<Jobcategoryinnerpage/>}/>
           <Route path="/Shorlistprofiles" element={<Shortlistprofile/>}/>
+          <Route path="/userprofile" element={<Userprofile/>}/>
         </Routes>
       </BrowserRouter>
     </>

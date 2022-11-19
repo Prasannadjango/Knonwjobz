@@ -1900,3 +1900,53 @@ label {
   margin-left: 10px;
   color: #fff;
 }
+.UserProfile_heading,
+.UserProfile_profileinfo{
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  padding: 20px;
+}
+.Userprofile_container{
+  padding-top: 100px;
+}
+.UserProfile_heading>div:nth-child(2)>button{
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+  padding: 14px 12px !important;
+  border-radius: 10px;
+}
+.Profilepic_container{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+.Profilepic_container>img{
+  border-radius: inherit;
+}
+.UserProfile_table>tr>td{
+  padding: 20px 10px;
+  font-size: 18px;
+}
+.UserProfile_profileinfo>h3{
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+.Userprofile_container>div:nth-child(3)>p{
+  margin: 0;
+  line-height: 40px;
+  padding: 15px 0;
+  color: #727272;
+
+}
+.myskills_container {
+  flex-wrap: wrap;
+}
+.myskills_container>span{
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 40px;
+  width: fit-content;
+  margin: 0 10px;
+}
