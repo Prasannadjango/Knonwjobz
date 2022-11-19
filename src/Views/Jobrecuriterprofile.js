@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   Col,
   Row,
@@ -11,7 +11,8 @@ import {
   Form,
   Modal,
   Card,
-  Navbar
+  Navbar,
+  Table
 } from "react-bootstrap";
 import {
   BsFillBriefcaseFill,
@@ -30,7 +31,7 @@ import {
 } from "react-icons/hi";
 import {
   MdLocationPin,
- 
+
 } from "react-icons/md";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiLogOut } from "react-icons/bi";
@@ -83,7 +84,7 @@ function Jobrecuiterprofile() {
 
   const navigate = useNavigate();
   const shortlistedProfiles = () => {
-   navigate('/Shorlistprofiles');
+    navigate('/Shorlistprofiles');
   };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -140,6 +141,12 @@ function Jobrecuiterprofile() {
                     <p className="pt-1">Post a Job</p>
                   </Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="fourth" className="d-flex">
+                    <HiBriefcase />
+                    <p className="pt-1">Manage Packages</p>
+                  </Nav.Link>
+                </Nav.Item>
 
                 <Nav.Item>
                   <Nav.Link eventKey="Fifth" className="d-flex">
@@ -147,6 +154,7 @@ function Jobrecuiterprofile() {
                     <p className="pt-1">Manage Messages</p>
                   </Nav.Link>
                 </Nav.Item>
+
                 <Nav.Item>
                   <Nav.Link eventKey="sixth" className="d-flex">
                     <HiUserGroup />
@@ -551,12 +559,12 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
-                              <div className="d-flex Location_container">
-                          <MdLocationPin className="mt-1 fs-4 me-2" />
-                          <p className="pt-1 text-secondary ">Mumbai</p>
-                        </div>
+                                <div className="d-flex Location_container">
+                                  <MdLocationPin className="mt-1 fs-4 me-2" />
+                                  <p className="pt-1 text-secondary ">Mumbai</p>
+                                </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
-                               
+
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
                                     Posted on :
@@ -587,10 +595,10 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
-                              <div className="d-flex Location_container">
-                          <MdLocationPin className="mt-1 fs-4 me-2" />
-                          <p className="pt-1 text-secondary ">Mumbai</p>
-                        </div>
+                                <div className="d-flex Location_container">
+                                  <MdLocationPin className="mt-1 fs-4 me-2" />
+                                  <p className="pt-1 text-secondary ">Mumbai</p>
+                                </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
@@ -620,10 +628,10 @@ function Jobrecuiterprofile() {
                                 Senior Ui Developer
                               </Card.Title>
                               <Card.Text>
-                              <div className="d-flex Location_container">
-                          <MdLocationPin className="mt-1 fs-4 me-2" />
-                          <p className="pt-1 text-secondary ">Mumbai</p>
-                        </div>
+                                <div className="d-flex Location_container">
+                                  <MdLocationPin className="mt-1 fs-4 me-2" />
+                                  <p className="pt-1 text-secondary ">Mumbai</p>
+                                </div>
                                 <h6 className=" text-secondary">Free-Lancer</h6>
                                 <div className="d-flex">
                                   <h6 className="fw-bold m-0 pb-2">
@@ -691,7 +699,7 @@ function Jobrecuiterprofile() {
 
                           </InputGroup>
                           <InputGroup className=" my-xl-3 my-1 ">
-                         
+
                             <div className="w-100 my-2">
                               <Form.Select
                                 {...register("Experiencelevel")}
@@ -790,7 +798,7 @@ function Jobrecuiterprofile() {
                               <p className='text-danger pt-2 m-0'>{errors.noopenings?.message}</p>
                             </div>
                           </InputGroup>
-                          
+
                           <div className="Postjob_btn col-12">
                             <Button variant="primary" type='submit'>
                               Post a Job
@@ -807,7 +815,7 @@ function Jobrecuiterprofile() {
                       </Modal.Header>
                       <Modal.Body >
                         <Form onSubmit={handleSubmit(onSubmit)} className="Postjob_forms">
-                        <InputGroup className=" my-xl-3 my-1 ">
+                          <InputGroup className=" my-xl-3 my-1 ">
                             <div className="my-2 w-100">
                               <Form.Control placeholder="Job-title"
                                 {...register("jobtitle")} />
@@ -846,7 +854,7 @@ function Jobrecuiterprofile() {
 
                           </InputGroup>
                           <InputGroup className=" my-xl-3 my-1 ">
-                         
+
                             <div className="w-100 my-2">
                               <Form.Select
                                 {...register("Experiencelevel")}
@@ -958,6 +966,37 @@ function Jobrecuiterprofile() {
 
 
                   </div>
+                </Tab.Pane>
+                <Tab.Pane eventKey="fourth">
+                  <div className="managepackage_Container bg-white">
+                    <h2 className="p-4">Manage Packages</h2>
+                    <div >
+                      <h4 className="p-4">Showing Manage Packages</h4>
+                       <div className="mx-4">
+                       <Table striped bordered hover>
+                        <thead>
+                          <tr>
+                            <th>S:no</th>
+                            <th>Package plan</th>
+                            <th>Valid from </th>
+                            <th>Valid to</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Silver</td>
+                            <td>12.3.22</td>
+                            <td>12.3.23</td>
+                          </tr>
+                          
+                          
+                        </tbody>
+                      </Table>
+                       </div>
+                    </div>
+                  </div>
+
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="Fifth">

@@ -1892,3 +1892,11 @@ label {
  border: 0 none transparent;
   opacity: 0;
 }
+.Shortlist_profilecontainer{
+  padding-top: 100px;
+}
+.Shortlistsearch>form>button{
+  background-color: var(--primary-color);
+  margin-left: 10px;
+  color: #fff;
+}
