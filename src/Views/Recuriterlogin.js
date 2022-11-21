@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { Container, Button, Row, Col, Form } from "react-bootstrap";
 import Jobseekerimg from "../Assests/Images/Jobrecuriter.jpg";
 import { Link } from "react-router-dom";
@@ -17,6 +18,10 @@ function Recuriterlogin() {
     resolver: yupResolver(schema)
   });
   const onSubmit = data => console.table(data);
+  const navigate = useNavigate();
+  const RecuriterProfile = () => {
+    navigate('/Jobrecuriterprofile');
+  };
   return (
 
     <>
@@ -52,7 +57,7 @@ function Recuriterlogin() {
                  </div>
                   
                    
-                  <Button className="col-12" type='submit'>Login</Button>
+                  <Button className="col-12" type='submit' onClick={RecuriterProfile}>Login</Button>
 
                 </Form>
               </Col>

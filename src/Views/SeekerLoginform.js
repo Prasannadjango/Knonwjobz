@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import { Container, Button, Row, Col, InputGroup, Form } from "react-bootstrap";
 import Jobseekerimg from "../Assests/Images/jobseeker.jpg";
 import { Link } from "react-router-dom";
@@ -15,6 +16,10 @@ function SeekerLoginform() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
+  const navigate = useNavigate();
+  const JobseekerProfile = () => {
+    navigate('/Jobseekerprofile');
+  };
   const onSubmit = data => console.table(data);
   return (
 
@@ -51,7 +56,7 @@ function SeekerLoginform() {
                     <p className='text-danger'>{errors.password?.message}</p>
                   </div>
 
-                  <Button className="col-12" type='submit'>Login</Button>
+                  <Button className="col-12" type='submit'  onClick={JobseekerProfile}>Login</Button>
 
                 </Form>
               </Col>
