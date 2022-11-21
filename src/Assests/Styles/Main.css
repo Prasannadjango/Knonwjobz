@@ -1057,6 +1057,11 @@ label {
   border-radius: 5px !important;
   margin-bottom: 20px !important;
 }
+.Edit_popupcontent>form>input {
+  padding: 12px 23px !important;
+  border-radius: 5px !important;
+  margin-bottom: 20px !important;
+}
 
 .Edit_btncontainer2 {
   width: 100%;
@@ -1953,3 +1958,41 @@ label {
 .dropdown-toggle::after{
   margin-left: 7.255em;
 }
+.call_interview{
+  position: absolute;
+  right: 1%;
+  top:5%;
+}
+
+.call_interview>button{
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+  padding: 14px 12px !important;
+  border-radius: 10px;
+ 
+}
+.Planprice_container{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.Badge_color{
+  background-color: var(--primary-color) !important;
+  text-align: center;
+  border-radius: 30px;
+  color: #fff;
+}
+.pay_btn{
+  background-color: var(--primary-color) !important;
+  padding: 12px 15px !important;
+  color: #fff !important;
+  width: 100%;
+  text-align: center;
+} 

@@ -999,6 +999,62 @@ function Jobrecuiterprofile() {
                           
                         </tbody>
                       </Table>
+
+                      <div className="Postjob_cardcontainer pt-4">
+                      <Row xl={3} xs={1}>
+                        <Col className="position-relative">
+                       
+                          <Card className="p-2">
+                          <div pill  className="p-2 fs-5 Badge_color">
+                            Free
+                          </div>
+                            <Card.Body>
+                              <div className="Planprice_container">
+                               $0
+                              </div>
+                             <div>
+                              <ul className="ps-3 my-4">
+                                <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                              </ul>
+
+                              <Button className='pay_btn mb-3'>Pay with Stripe</Button>
+                              <Button className='pay_btn'>Pay with Razor pay</Button>
+                             </div>
+                             
+
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                        <Col className="position-relative">
+                       
+                       <Card className="p-2">
+                       <div pill  className="p-2 fs-5 Badge_color">
+                         Montly
+                       </div>
+                         <Card.Body>
+                           <div className="Planprice_container">
+                            $20
+                           </div>
+                          <div>
+                           <ul className="ps-3 my-4">
+                             <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                             <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                           </ul>
+
+                           <Button className='pay_btn mb-3'>Pay with Stripe</Button>
+                           <Button className='pay_btn'>Pay with Razor pay</Button>
+                          </div>
+                          
+
+                         </Card.Body>
+                       </Card>
+                     </Col>
+
+                       
+                     
+                      </Row>
+                    </div>
                        </div>
                     </div>
                   </div>

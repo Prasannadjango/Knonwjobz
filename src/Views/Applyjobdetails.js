@@ -1,8 +1,7 @@
 import React from "react";
-
 import Companylogo from "../Assests/Images/Complogo.jpg";
 import { HiOutlineCurrencyDollar } from "react-icons/hi";
-import { BsBuilding,BsBriefcaseFill,BsClockHistory,BsAwardFill,BsBookHalf,BsFillCalendarCheckFill,BsPeopleFill} from "react-icons/bs";
+import { BsBuilding, BsBriefcaseFill, BsBagCheckFill,BsFillBookmarkPlusFill,BsClockHistory, BsAwardFill, BsBookHalf, BsFillCalendarCheckFill, BsPeopleFill } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -10,23 +9,29 @@ function Applyjobsdetails() {
   return (
     <>
       <div className="Applyjobsdetails_container pb-5 px-4 ">
-        <div className="d-flex ">
+        <div className="d-flex position-relative">
           <div className="d-flex">
             <img src={Companylogo} />
           </div>
-          <div className="ps-4">
-            <h2>Senior Web Developer</h2>
-            <div className="d-flex Location_container">
-              <MdLocationPin className="mt-1 fs-4 me-2" />
-              <p className="pt-1 text-secondary">Mumbai</p>
-            </div>
-            <div className="d-flex Location_container">
-              <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
-              <p className="pt-1 text-secondary">1000/month</p>
-            </div>
-            <h6 className="fw-bold">No.of Positions: 5</h6>
+          <div>
+            <div className="ps-4">
+              <h2>Senior Web Developer</h2>
+              <div className="d-flex Location_container">
+                <MdLocationPin className="mt-1 fs-4 me-2" />
+                <p className="pt-1 text-secondary">Mumbai</p>
+              </div>
+              <div className="d-flex Location_container">
+                <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
+                <p className="pt-1 text-secondary">1000/month</p>
+              </div>
+              <h6 className="fw-bold">No.of Positions: 5</h6>
 
-            <Link to="/companyjobs">See other openings</Link>
+              <Link to="/companyjobs">See other openings</Link>
+            </div>
+            <div className="call_interview">
+              <Button>
+                <BsFillBookmarkPlusFill className="fs-4 me-3"/>Add to favourite jobs</Button>
+            </div>
           </div>
 
         </div>
@@ -39,61 +44,70 @@ function Applyjobsdetails() {
               <h6 className="m-0 ps-2">Company Name:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">IM Technology</span>
+              <span className="fw-bold">IM Technology</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsBriefcaseFill/>
+              <BsBriefcaseFill />
               <h6 className="m-0 ps-2">Type:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">Part-time</span>
+              <span className="fw-bold">Part-time</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsClockHistory/>
+              <BsClockHistory />
               <h6 className="m-0 ps-2">Shift:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">day</span>
+              <span className="fw-bold">day</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsAwardFill/>
+              <BsAwardFill />
               <h6 className="m-0 ps-2">Career-level:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">mid-senior</span>
+              <span className="fw-bold">mid-senior</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsBookHalf/>
+              <BsBagCheckFill />
+              <h6 className="m-0 ps-2">Degree-level:</h6>
+            </div>
+            <div className="col-xl-8 col-6">
+              <span className="fw-bold">Bachelor's Degree</span>
+            </div>
+          </div>
+          <div className="d-flex jd_data align-items-center py-4 ">
+            <div className="d-flex align-items-center col-xl-4 ps-4">
+              <BsBookHalf />
               <h6 className="m-0 ps-2">Education-level:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">Graduate</span>
+              <span className="fw-bold">Graduate</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsPeopleFill/>
+              <BsPeopleFill />
               <h6 className="m-0 ps-2">Gender:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">All</span>
+              <span className="fw-bold">All</span>
             </div>
           </div>
           <div className="d-flex jd_data align-items-center py-4 ">
             <div className="d-flex align-items-center col-xl-4 ps-4">
-              <BsFillCalendarCheckFill/>
+              <BsFillCalendarCheckFill />
               <h6 className="m-0 ps-2">Last Date to Apply:</h6>
             </div>
             <div className="col-xl-8 col-6">
-            <span className="fw-bold">12.2.22</span>
+              <span className="fw-bold">12.2.22</span>
             </div>
           </div>
         </div>

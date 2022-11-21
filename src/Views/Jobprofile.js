@@ -609,6 +609,9 @@ const navigateToApplyjob = () => {
                         <div>
                           <Form.Control placeholder="Years of Experience.." />
                         </div>
+                        <div>
+                          <Form.Control placeholder="About the Job.." />
+                        </div>
                         <Button className="Edit_btncontainer2" type='submit'>
                           Add New Work Experience
                         </Button>
@@ -645,8 +648,12 @@ const navigateToApplyjob = () => {
                       </Modal.Title>
                     </Modal.Header>
                     <Modal.Body className="Edit_popupcontent">
+                      <Form>
                       <Form.Control placeholder="Ex:java,PHP" />
+                      <Form.Control placeholder="Graduate" />
+                      <Form.Control placeholder="Experience" />
                       <Button className="Edit_btncontainer2 mt-2">Add New Skills</Button>
+                      </Form>
                     </Modal.Body>
                    
                      
