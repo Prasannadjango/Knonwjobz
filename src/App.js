@@ -27,6 +27,8 @@ import Viewprofilepage from "./Pages/Viewprofilepage";
 import Jobcategoryinnerpage from "./Pages/Jobcategoryinnerpage";
 import Shortlistprofile from "./Pages/Shortlistedprofiles";
 import Userprofile from "./Pages/Userprofile";
+import Appliedprofilesinner from "./Views/Appliedprofiles";
+import Appliedprofilesinnerpage from "./Pages/Viewprofilepage";
 
 function App() {
   return (
@@ -58,10 +60,11 @@ function App() {
           <Route path="/Applyjobdetails" element={<Applyjobsdetailspage />} />
           <Route path='/companyjobs' element={<Companyjobpage/>}/>
           <Route path="/Appliedcandidate" element={<Applidecandidatepage/>}/>
-          <Route path="/Candidateprofile" element={<Viewprofilepage/>}/>
+          <Route path="/Appliedprofilesinfo" element={<Appliedprofilesinnerpage/>}/>
           <Route path="/Jobcategoryinner" element={<Jobcategoryinnerpage/>}/>
           <Route path="/Shorlistprofiles" element={<Shortlistprofile/>}/>
           <Route path="/userprofile" element={<Userprofile/>}/>
+          
         </Routes>
       </BrowserRouter>
     </>

@@ -26,7 +26,7 @@ function Applidecandidate() {
                   <Card.Text>Java Developer</Card.Text>
                 </Card.Body>
                 <div className="SeeDetails_container col-12 px-3 ">
-                  <Link to='/Candidateprofile'>
+                  <Link to='/Appliedprofilesinfo'>
                   <Button>View Profile</Button>
                   </Link>
                 </div>

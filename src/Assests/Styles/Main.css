@@ -1950,3 +1950,6 @@ label {
   width: fit-content;
   margin: 0 10px;
 }
+.dropdown-toggle::after{
+  margin-left: 7.255em;
+}

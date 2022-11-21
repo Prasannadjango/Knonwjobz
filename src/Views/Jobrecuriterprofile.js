@@ -89,6 +89,9 @@ function Jobrecuiterprofile() {
   const userProfiles = () => {
     navigate('/userprofile');
   };
+  const Appliedcandidates = () => {
+    navigate('/Appliedcandidate');
+  };
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -577,7 +580,7 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button" onClick={Appliedcandidates}>Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
 
                               <div className="Postbutton_container ">
@@ -612,7 +615,7 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button" onClick={Appliedcandidates}>Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>
@@ -645,7 +648,7 @@ function Jobrecuiterprofile() {
                                   </p>
                                 </div>
                                 <Button className="Shortlist_button" onClick={shortlistedProfiles}>Shortlisted-candidates<Badge >9</Badge></Button>
-                                <Button className="Shortlist_button">Applied-candidates<Badge >5</Badge></Button>
+                                <Button className="Shortlist_button" onClick={Appliedcandidates} >Applied-candidates<Badge >5</Badge></Button>
                               </Card.Text>
                               <div className="Postbutton_container ">
                                 <Button>Edit</Button>

@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import Viewprofile from "../Views/Viewprofile";
-function Viewprofilepage() {
+import Viewprofile from "../Views/Appliedprofiles";
+function Appliedprofilesinnerpage() {
     return (
       <>
       <Header/>
@@ -12,4 +12,4 @@ function Viewprofilepage() {
     );
   }
   
-  export default  Viewprofilepage;
+  export default  Appliedprofilesinnerpage;
