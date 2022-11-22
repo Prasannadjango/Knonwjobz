@@ -1360,6 +1360,7 @@ label {
 .SubscriptionPlan_container,
 .Companyprofile_container,
 .PostedJobs_container,
+.Companyprofile_container
 .Managemessages_container {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   border-radius: 5px;
