@@ -346,12 +346,12 @@ function Home() {
           </p>
           <Form className="d-flex justify-content-center pt-4" onSubmit={handleSubmit(onSubmit)}>
            
-            <div className="col-xl-5">
+            <div className="col-xl-5 col-md-6 col-12">
               <Form.Control type="mail" placeholder="Email" 
                {...register("email")}/>
                   <p className='text-white pt-2'>{errors.email?.message}</p>
             </div>
-            <div className="col-xl-2">
+            <div className="col-xl-2 col-md-3 col-12">
               <Button type='submit'>Subscribe-now</Button>
             </div>
           </Form>

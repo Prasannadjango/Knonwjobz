@@ -29,7 +29,7 @@ function Shortlist() {
             </Form>
          </div>
         <div className="Shortlisted_profile d-flex  mt-4 p-4">
-          <div className="pt-5 ">
+          <div >
             <Row md={4} xs={1} className="g-2">
               <Col>
                 <Card className="Shortlisted_card border-0 p-3 my-5">

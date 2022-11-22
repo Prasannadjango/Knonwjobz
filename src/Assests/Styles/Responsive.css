@@ -456,6 +456,22 @@
   .Postjob_cardcontainer>.row>.col>.card:nth-child(2) {
     margin: 15px 0;
   }
+  .Newsletter_maincontainer>div{
+    padding: 0;
+  }
+  .Newsletter_maincontainer>div>form{
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .Newsletter_maincontainer>div>form>div:nth-child(2)>button{
+    margin: 0;
+  }
+  .Recuriterform_section>div{
+    flex-direction: column;
+  }
+  .Recuriterform_section>div>.input-group:nth-child(odd){
+    padding: 0;
+  }
 }
 
 @media (min-width: 426px) and (max-width: 767px) {
@@ -912,6 +928,22 @@
 
   .Postjob_cardcontainer>.row>.col>.card:nth-child(2) {
     margin: 15px 0;
+  }
+  .Newsletter_maincontainer>div{
+    padding: 0;
+  }
+  .Newsletter_maincontainer>div>form{
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .Newsletter_maincontainer>div>form>div:nth-child(2)>button{
+    margin: 0;
+  }
+  .Recuriterform_section>div{
+    flex-direction: column;
+  }
+  .Recuriterform_section>div>.input-group:nth-child(odd){
+    padding: 0;
   }
 }
 

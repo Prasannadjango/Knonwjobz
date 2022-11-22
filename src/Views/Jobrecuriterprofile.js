@@ -222,7 +222,7 @@ function Jobrecuiterprofile() {
                             </div>
                             <div>
                               <h1 className="fw-bold text-end">10</h1>
-                              <h5>Shortlisted-profiles</h5>
+                              <h5>Recent Applicants</h5>
                             </div>
                           </div>
                         </Col>
@@ -286,7 +286,7 @@ function Jobrecuiterprofile() {
 
                       </Row>
                       <div>
-                        <h2 className="pt-4">Shortlisted Profile</h2>
+                        <h2 className="pt-4">Recent Applicants</h2>
                         <div className="Shortlisted_profile mt-4 p-4">
                           <div className="pt-5 ">
                             <Row md={3} xs={1} className="g-2">
@@ -314,7 +314,7 @@ function Jobrecuiterprofile() {
                                     </Card.Text>
                                   </Card.Body>
                                   <div className="ViewProfile_btn w-100">
-                                    <Button>View Profile</Button>
+                                    <Button onClick={userProfiles}>View Profile</Button>
                                   </div>
                                 </Card>
                               </Col>
@@ -342,7 +342,7 @@ function Jobrecuiterprofile() {
                                     </Card.Text>
                                   </Card.Body>
                                   <div className="ViewProfile_btn w-100">
-                                    <Button>View Profile</Button>
+                                    <Button onClick={userProfiles}>View Profile</Button>
                                   </div>
                                 </Card>
                               </Col>
@@ -370,7 +370,7 @@ function Jobrecuiterprofile() {
                                     </Card.Text>
                                   </Card.Body>
                                   <div className="ViewProfile_btn w-100">
-                                    <Button>View Profile</Button>
+                                    <Button onClick={userProfiles}>View Profile</Button>
                                   </div>
                                 </Card>
                               </Col>
@@ -518,6 +518,13 @@ function Jobrecuiterprofile() {
                           <p className='text-danger pt-2 m-0'>{errors.country?.message}</p>
                         </div>
                       </InputGroup>
+                      <InputGroup className="">
+                        <div className="w-100">
+                          <Form.Control placeholder="City.."
+                            {...register("state")} />
+                          <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
+                        </div>
+                        </InputGroup>
                       <InputGroup className="">
                         <div className="w-100">
                           <Form.Control placeholder="State.."
@@ -1030,7 +1037,7 @@ function Jobrecuiterprofile() {
                        
                        <Card className="p-2">
                        <div pill  className="p-2 fs-5 Badge_color">
-                         Montly
+                         Silver
                        </div>
                          <Card.Body>
                            <div className="Planprice_container">

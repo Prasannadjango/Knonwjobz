@@ -530,7 +530,7 @@ const navigateToApplyjob = () => {
                             <p className='text-danger  m-0'>{errors.city?.message}</p>
                          </div>
                         <div>
-                        <Form.Control placeholder="result.." />
+                        <Form.Control placeholder="result(in %).." />
                         
                         </div>
 
@@ -650,8 +650,12 @@ const navigateToApplyjob = () => {
                     <Modal.Body className="Edit_popupcontent">
                       <Form>
                       <Form.Control placeholder="Ex:java,PHP" />
-                      <Form.Control placeholder="Graduate" />
-                      <Form.Control placeholder="Experience" />
+                      <Form.Select aria-label="Default select example">
+      <option>Select Experience in this Skill</option>
+      <option value="Fresher">Fresher</option>
+      <option value="Experienced">Experienced</option>
+    
+    </Form.Select>
                       <Button className="Edit_btncontainer2 mt-2">Add New Skills</Button>
                       </Form>
                     </Modal.Body>
@@ -753,7 +757,10 @@ const navigateToApplyjob = () => {
                 </div>
               </Tab>
 
-              <Tab eventKey="JobAlerts" title="Job Alerts"></Tab>
+              <Tab eventKey="JobAlerts" title="Job Alerts">
+            
+                    <Form></Form>
+              </Tab>
 
               <Tab eventKey="Application History" title="Application History">
                 <div className="Applicationhistory_container p-4">

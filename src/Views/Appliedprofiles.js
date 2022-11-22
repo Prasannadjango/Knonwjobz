@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Table, Card } from "react-bootstrap";
-import { BsFillCloudDownloadFill, BsFillFilePersonFill, BsFillPersonCheckFill,BsPeopleFill, BsGlobe, BsGeoAltFill, BsPinMapFill, BsGeoFill, BsPhoneFill } from "react-icons/bs";
+import { BsFillCloudDownloadFill, BsFillFilePersonFill, BsTelephoneForwardFill,BsFillPersonCheckFill, BsPeopleFill, BsGlobe, BsGeoAltFill, BsPinMapFill, BsGeoFill, BsPhoneFill } from "react-icons/bs";
 import personimg from "../Assests/Images/personimage.jpg";
 function Appliedprofilesinner() {
     return (
@@ -17,11 +17,16 @@ function Appliedprofilesinner() {
                         </div>
                     </div>
                     <div className="d-flex align-items-center">
-                    <Button className="me-3"><BsFillPersonCheckFill className="me-3 fs-4" />
+                    <Button className="me-3"><BsTelephoneForwardFill className="me-3 fs-4" />
+                           Call for Interview </Button>
+                            
+
+                        <Button className="me-3"><BsFillPersonCheckFill className="me-3 fs-4" />
                             Approve profile </Button>
+
                         <Button><BsFillCloudDownloadFill className="me-3 fs-4" />
                             Download Resume </Button>
-                           
+
                     </div>
                 </div>
                 <div className="UserProfile_profileinfo">
@@ -123,12 +128,12 @@ function Appliedprofilesinner() {
                 <div className="UserProfile_profileinfo">
                     <h3 >Skills</h3>
                     <div className="d-flex myskills_container mt-4 ">
-                          <span>HTML</span>
-                          <span>CSS</span>
-                          <span>Figma</span>
-                          <span>Javascript</span>
-                          <span>Core php</span>
-                          <span>React js</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Figma</span>
+                        <span>Javascript</span>
+                        <span>Core php</span>
+                        <span>React js</span>
                     </div>
                 </div>
             </div>

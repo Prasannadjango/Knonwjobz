@@ -1057,7 +1057,8 @@ label {
   border-radius: 5px !important;
   margin-bottom: 20px !important;
 }
-.Edit_popupcontent>form>input {
+.Edit_popupcontent>form>input,
+.Edit_popupcontent>form>select {
   padding: 12px 23px !important;
   border-radius: 5px !important;
   margin-bottom: 20px !important;
@@ -1891,11 +1892,17 @@ label {
  width: 200px;
  height: 200px;
  border-radius: 15px;
+ background-image:url(../Images/pngfind.com-upload-icon-png-661223.png);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: center;
 }
 .Myresume_container>div>input{
  height: inherit;
  border: 0 none transparent;
   opacity: 0;
+  
+  
 }
 .Shortlist_profilecontainer{
   padding-top: 100px;
