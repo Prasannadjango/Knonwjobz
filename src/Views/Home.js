@@ -190,13 +190,16 @@ function Home() {
           </div>
           <div className="mt-5 p-xl-5 p-0 Recentjobs_cardscontainer">
             <Container>
-              <Row xs={1} lg={3} xl={3} className="g-4">
+            <Row xs={1} sm={1} md={2} xl={3} lg={3} className="g-4">
                 <Col>
-                  <Card className=" Recentjobs_cards py-3">
+                  <Card className="Searchjobs_card pb-3">
                     <div>
-                      <img src={searchjobimg} className="w-100 " />
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
                     </div>
-                    <Card.Body>
+
+                    <Card.Body className="pt-5">
                       <Card.Title className="fw-bold">
                         Java Developer
                       </Card.Title>
@@ -209,29 +212,30 @@ function Home() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
-                        <div>
-                          <p className="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Donec quis dui quis arcu ultricies malesuada
-                            vitae vitae eros. Donec ex ipsum, dapibus ac
-                            placerat eget, eleifend vitae elit.
-                          </p>
-                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
-                    <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Link to="/Applyjobdetails" className="w-100">
-                        <Button>Apply Now</Button>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
+                      <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
                 </Col>
                 <Col>
-                  <Card className=" Recentjobs_cards py-3">
+                  <Card className="Searchjobs_card pb-3">
                     <div>
-                      <img src={searchjobimg} className="w-100 " />
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
                     </div>
-                    <Card.Body>
+
+                    <Card.Body className="pt-5">
                       <Card.Title className="fw-bold">
                         Java Developer
                       </Card.Title>
@@ -244,29 +248,30 @@ function Home() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
-                        <div>
-                          <p className="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Donec quis dui quis arcu ultricies malesuada
-                            vitae vitae eros. Donec ex ipsum, dapibus ac
-                            placerat eget, eleifend vitae elit.
-                          </p>
-                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
-                    <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Link to="/Applyjobdetails" className="w-100">
-                        <Button>Apply Now</Button>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
+                      <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
                 </Col>
                 <Col>
-                  <Card className=" Recentjobs_cards py-3">
+                  <Card className="Searchjobs_card pb-3">
                     <div>
-                      <img src={searchjobimg} className="w-100 " />
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
                     </div>
-                    <Card.Body>
+
+                    <Card.Body className="pt-5">
                       <Card.Title className="fw-bold">
                         Java Developer
                       </Card.Title>
@@ -279,27 +284,25 @@ function Home() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
-                        <div>
-                          <p className="text-secondary">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Donec quis dui quis arcu ultricies malesuada
-                            vitae vitae eros. Donec ex ipsum, dapibus ac
-                            placerat eget, eleifend vitae elit.
-                          </p>
-                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
-                    <div className="SeeDetails_container col-12 px-3 d-flex">
-                      <Link to="/Applyjobdetails" className="w-100">
-                        <Button>Apply Now</Button>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
+                      <Button>Add to Favourite jobs</Button>
                     </div>
                   </Card>
                 </Col>
               </Row>
 
               <div className="viewall_link pt-xl-5  text-center">
-                <Link to="/Recentjobs">view all Recent jobs</Link>
+                <Link to="/Searchjob">view all Recent jobs and Other jobs</Link>
               </div>
             </Container>
           </div>

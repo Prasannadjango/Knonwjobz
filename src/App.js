@@ -29,6 +29,7 @@ import Shortlistprofile from "./Pages/Shortlistedprofiles";
 import Userprofile from "./Pages/Userprofile";
 import Appliedprofilesinner from "./Views/Appliedprofiles";
 import Appliedprofilesinnerpage from "./Pages/Viewprofilepage";
+import Companiespage from "./Pages/Companiespage";
 
 function App() {
   return (
@@ -64,7 +65,7 @@ function App() {
           <Route path="/Jobcategoryinner" element={<Jobcategoryinnerpage/>}/>
           <Route path="/Shorlistprofiles" element={<Shortlistprofile/>}/>
           <Route path="/userprofile" element={<Userprofile/>}/>
-          
+          <Route path="/Companies" element={<Companiespage/>}/>
         </Routes>
       </BrowserRouter>
     </>

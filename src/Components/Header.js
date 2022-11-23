@@ -23,6 +23,10 @@ function Header() {
               <Nav.Link href="#link" className="mt-2">
                 <Link to="/Contact">Contact</Link>
               </Nav.Link>
+              <Nav.Link  className="mt-2">
+                <Link to="/Companies">Companies</Link>
+              </Nav.Link>
+             
               <Nav.Link  href="#link" className="mt-2">
                 <Link to='/Skillassessment'>Skill Assessment</Link>
               </Nav.Link>

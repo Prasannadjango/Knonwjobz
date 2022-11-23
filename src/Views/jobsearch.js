@@ -92,11 +92,11 @@ function Jobsearch() {
                 </Dropdown>
               </Col>
               <Col>
-              <Button class='col-2'>Search-now</Button>
+                <Button class='col-2'>Search-now</Button>
               </Col>
             </Row>
           </div>
-          
+
         </div>
         <hr className="container mt-xl-5 mt-4" />
         <div className="mt-4 px-xl-4 px-0">
@@ -164,8 +164,8 @@ function Jobsearch() {
         </div>
         <div>
           <div className="mt-5 p-xl-5 p-1 Recentjobs_cardscontainer">
-            <Container>
-              <h4 className="pb-3 fw-bold">Showing All jobs:</h4>
+          <Container>
+              <h4 className="pb-3 fw-bold">Showing Recent job Openings:</h4>
               <Row xs={1} sm={1} md={2} xl={3} lg={3} className="g-4">
                 <Col>
                   <Card className="Searchjobs_card pb-3">
@@ -188,11 +188,16 @@ function Jobsearch() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
                       <Link to='/Applyjobdetails'>
-                      <Button className="mb-3">Apply Now</Button>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
@@ -219,11 +224,16 @@ function Jobsearch() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
-                    <Link to='/Applyjobdetails'>
-                      <Button className="mb-3">Apply Now</Button>
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
@@ -250,11 +260,130 @@ function Jobsearch() {
                           <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
                           <p className="pt-1 text-secondary">1000/month</p>
                         </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
                       </Card.Text>
                     </Card.Body>
                     <div className="SeeDetails_container col-12 px-3 ">
-                    <Link to='/Applyjobdetails'>
-                      <Button className="mb-3">Apply Now</Button>
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
+                      </Link>
+                      <Button>Add to Favourite jobs</Button>
+                    </div>
+                  </Card>
+                </Col>
+              </Row>
+            </Container>
+
+            <Container className="pt-5">
+              <h4 className="pb-3 fw-bold">Showing All Job Openings:</h4>
+              <Row xs={1} sm={1} md={2} xl={3} lg={3} className="g-4">
+                <Col>
+                  <Card className="Searchjobs_card pb-3">
+                    <div>
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
+                    </div>
+
+                    <Card.Body className="pt-5">
+                      <Card.Title className="fw-bold">
+                        Java Developer
+                      </Card.Title>
+                      <Card.Text>
+                        <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">Mumbai</p>
+                        </div>
+                        <div className="d-flex Location_container">
+                          <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">1000/month</p>
+                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
+                      </Link>
+                      <Button>Add to Favourite jobs</Button>
+                    </div>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card className="Searchjobs_card pb-3">
+                    <div>
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
+                    </div>
+
+                    <Card.Body className="pt-5">
+                      <Card.Title className="fw-bold">
+                        Java Developer
+                      </Card.Title>
+                      <Card.Text>
+                        <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">Mumbai</p>
+                        </div>
+                        <div className="d-flex Location_container">
+                          <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">1000/month</p>
+                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
+                      </Link>
+                      <Button>Add to Favourite jobs</Button>
+                    </div>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card className="Searchjobs_card pb-3">
+                    <div>
+                      <div>
+                        <img src={searchjobimg} className="w-100 " />
+                      </div>
+                    </div>
+
+                    <Card.Body className="pt-5">
+                      <Card.Title className="fw-bold">
+                        Java Developer
+                      </Card.Title>
+                      <Card.Text>
+                        <div className="d-flex Location_container">
+                          <MdLocationPin className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">Mumbai</p>
+                        </div>
+                        <div className="d-flex Location_container">
+                          <HiOutlineCurrencyDollar className="mt-1 fs-4 me-2" />
+                          <p className="pt-1 text-secondary">1000/month</p>
+                        </div>
+                        <p className="m-0 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                          quis dui quis arcu ultricies malesuada vitae vitae eros. Donec
+                          ex ipsum, dapibus ac placerat eget, eleifend vitae elit
+                        </p>
+                      </Card.Text>
+                    </Card.Body>
+                    <div className="SeeDetails_container col-12 px-3 ">
+                      <Link to='/Applyjobdetails'>
+                        <Button className="mb-3">Apply Now</Button>
                       </Link>
                       <Button>Add to Favourite jobs</Button>
                     </div>
