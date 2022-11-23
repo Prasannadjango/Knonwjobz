@@ -19,9 +19,9 @@ import personimg from "../Assests/Images/personimage.jpg";
 import {
   BsFillBriefcaseFill,
   BsLayoutTextWindowReverse,
-  BsGeoAltFill, 
-  BsPinMapFill,  
-  BsPhoneFill ,
+  BsGeoAltFill,
+  BsPinMapFill,
+  BsPhoneFill,
   BsPersonLinesFill,
   BsFillCameraFill,
   BsInboxesFill,
@@ -38,10 +38,10 @@ import {
 } from "react-icons/hi";
 import {
   MdLocationPin,
-  MdEditNote,MdMarkEmailRead,
+  MdEditNote, MdMarkEmailRead,
   MdPeopleAlt
 } from "react-icons/md";
-import { FaGlobeAfrica,FaBuilding } from "react-icons/fa";
+import { FaGlobeAfrica, FaBuilding } from "react-icons/fa";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiLogOut } from "react-icons/bi";
 import Person from "../Assests/Images/personimage.jpg";
@@ -398,72 +398,72 @@ function Jobrecuiterprofile() {
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="Company Profile">
-                   <div className="Companyprofile_container p-2">
-                   <div className="UserProfile_heading d-flex justify-content-between">
-                    <div className="d-flex align-items-center">
+                  <div className="Companyprofile_container p-2">
+                    <div className="UserProfile_heading d-flex justify-content-between">
+                      <div className="d-flex align-items-center">
                         <div className="Profilepic_container">
-                            <img src={personimg} className='w-100 h-100' />
+                          <img src={personimg} className='w-100 h-100' />
                         </div>
                         <div className="ps-3">
-                            <h1>Ayc Technology</h1>
-                            <h5 className='pt-2'>Infromation Technology</h5>
-                            <div className="d-flex align-items-center pt-2">
-                            <BsGeoAltFill className="fs-4 me-2"/>
-                             Madurai
-                            </div>
+                          <h1>Ayc Technology</h1>
+                          <h5 className='pt-2'>Infromation Technology</h5>
+                          <div className="d-flex align-items-center pt-2">
+                            <BsGeoAltFill className="fs-4 me-2" />
+                            Madurai
+                          </div>
                         </div>
+                      </div>
+
                     </div>
-                    
-                </div>
-                <div className="UserProfile_profileinfo">
-                    <h3 >Company  Information</h3>
-                    <Table striped hover className="my-4">
+                    <div className="UserProfile_profileinfo">
+                      <h3 >Company  Information</h3>
+                      <Table striped hover className="my-4">
 
                         <tbody className="UserProfile_table">
-                            
-                        <tr>
-                                <td className="col-xl-4"><HiMail className="fs-2 me-2" />Mail</td>
-                                <td className="col-xl-8">ABCinfo@gmail.com</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><FaGlobeAfrica className="fs-2 me-2" />Website</td>
-                                <td className="col-xl-8">www.ABCinfo.com</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><BsPhoneFill className="fs-2 me-2" />Phone-number</td>
-                                <td className="col-xl-8">34232312312</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><BsPinMapFill className="fs-2 me-2" />Address</td>
-                                <td className="col-xl-8">34 South Carolina Avenue, Fenwick madurai</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><FaBuilding className="fs-2 me-2" />Established in</td>
-                                <td className="col-xl-8">2019</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><MdPeopleAlt className="fs-2 me-2" />Number of Employees</td>
-                                <td className="col-xl-8">80</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><MdMarkEmailRead className="fs-2 me-2" />E-Mail verified</td>
-                                <td className="col-xl-8">Yes</td>
-                            </tr>
-                            <tr>
-                                <td className="col-xl-4"><BsHandbagFill className="fs-2 me-2" />Current Jobs Openings</td>
-                                <td className="col-xl-8">10</td>
-                            </tr>
+
+                          <tr>
+                            <td className="col-xl-4"><HiMail className="fs-2 me-2" />Mail</td>
+                            <td className="col-xl-8">ABCinfo@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><FaGlobeAfrica className="fs-2 me-2" />Website</td>
+                            <td className="col-xl-8">www.ABCinfo.com</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><BsPhoneFill className="fs-2 me-2" />Phone-number</td>
+                            <td className="col-xl-8">34232312312</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><BsPinMapFill className="fs-2 me-2" />Address</td>
+                            <td className="col-xl-8">34 South Carolina Avenue, Fenwick madurai</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><FaBuilding className="fs-2 me-2" />Established in</td>
+                            <td className="col-xl-8">2019</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><MdPeopleAlt className="fs-2 me-2" />Number of Employees</td>
+                            <td className="col-xl-8">80</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><MdMarkEmailRead className="fs-2 me-2" />E-Mail verified</td>
+                            <td className="col-xl-8">Yes</td>
+                          </tr>
+                          <tr>
+                            <td className="col-xl-4"><BsHandbagFill className="fs-2 me-2" />Current Jobs Openings</td>
+                            <td className="col-xl-8">10</td>
+                          </tr>
                         </tbody>
-                    </Table>
-                </div>
-                <div className="UserProfile_profileinfo">
-                    <h3 >About the company</h3>
-                    <p>
+                      </Table>
+                    </div>
+                    <div className="UserProfile_profileinfo">
+                      <h3 >About the company</h3>
+                      <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper id nisi vel placerat. Sed lobortis velit at turpis egestas rhoncus. Curabitur nulla ipsum, malesuada tempor sodales sit amet, consectetur et tellus. Maecenas ultrices, ligula vitae blandit maximus, enim ligula vehicula risus, sit amet finibus tortor ex vitae est. Etiam eu consequat tortor. Proin pharetra ligula ante. Nulla facilisi. Aliquam at ipsum sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper id nisi vel placerat. Sed lobortis velit at turpis egestas rhoncus. Curabitur nulla ipsum, malesuada tempor sodales sit amet, consectetur et tellus. Maecenas ultrices, ligula vitae blandit maximus, enim ligula vehicula risus, sit amet finibus tortor ex vitae est. Etiam eu consequat tortor. Proin pharetra ligula ante. Nulla facilisi. Aliquam at ipsum sem.
-                    </p>
-                </div>
-              
-                   </div>
+                      </p>
+                    </div>
+
+                  </div>
                 </Tab.Pane>
 
                 <Tab.Pane eventKey="second">
@@ -608,7 +608,7 @@ function Jobrecuiterprofile() {
                             {...register("state")} />
                           <p className='text-danger pt-2 m-0'>{errors.state?.message}</p>
                         </div>
-                        </InputGroup>
+                      </InputGroup>
                       <InputGroup className="">
                         <div className="w-100">
                           <Form.Control placeholder="State.."
@@ -1069,84 +1069,84 @@ function Jobrecuiterprofile() {
                     <h2 className="p-4">Manage Packages</h2>
                     <div >
                       <h4 className="p-4">Showing Manage Packages</h4>
-                       <div className="mx-4">
-                       <Table striped bordered hover>
-                        <thead>
-                          <tr>
-                            <th>S:no</th>
-                            <th>Package plan</th>
-                            <th>Valid from </th>
-                            <th>Valid to</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Silver</td>
-                            <td>12.3.22</td>
-                            <td>12.3.23</td>
-                          </tr>
-                          
-                          
-                        </tbody>
-                      </Table>
+                      <div className="mx-4">
+                        <Table striped bordered hover>
+                          <thead>
+                            <tr>
+                              <th>S:no</th>
+                              <th>Package plan</th>
+                              <th>Valid from </th>
+                              <th>Valid to</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Silver</td>
+                              <td>12.3.22</td>
+                              <td>12.3.23</td>
+                            </tr>
 
-                      <div className="Postjob_cardcontainer pt-4">
-                      <Row xl={3} xs={1}>
-                        <Col className="position-relative">
-                       
-                          <Card className="p-2">
-                          <div pill  className="p-2 fs-5 Badge_color">
-                            Free
-                          </div>
-                            <Card.Body>
-                              <div className="Planprice_container">
-                               $0
-                              </div>
-                             <div>
-                              <ul className="ps-3 my-4">
-                                <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                                <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                              </ul>
 
-                              <Button className='pay_btn mb-3'>Pay with Stripe</Button>
-                              <Button className='pay_btn'>Pay with Razor pay</Button>
-                             </div>
-                             
+                          </tbody>
+                        </Table>
 
-                            </Card.Body>
-                          </Card>
-                        </Col>
-                        <Col className="position-relative">
-                       
-                       <Card className="p-2">
-                       <div pill  className="p-2 fs-5 Badge_color">
-                         Silver
-                       </div>
-                         <Card.Body>
-                           <div className="Planprice_container">
-                            $20
-                           </div>
-                          <div>
-                           <ul className="ps-3 my-4">
-                             <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                             <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                           </ul>
+                        <div className="Postjob_cardcontainer pt-4">
+                          <Row xl={3} xs={1}>
+                            <Col className="position-relative">
 
-                           <Button className='pay_btn mb-3'>Pay with Stripe</Button>
-                           <Button className='pay_btn'>Pay with Razor pay</Button>
-                          </div>
-                          
+                              <Card className="p-2">
+                                <div pill className="p-2 fs-5 Badge_color">
+                                  Free
+                                </div>
+                                <Card.Body>
+                                  <div className="Planprice_container">
+                                    $0
+                                  </div>
+                                  <div>
+                                    <ul className="ps-3 my-4">
+                                      <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                      <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    </ul>
 
-                         </Card.Body>
-                       </Card>
-                     </Col>
+                                    <Button className='pay_btn mb-3'>Pay with Stripe</Button>
+                                    <Button className='pay_btn'>Pay with Razor pay</Button>
+                                  </div>
 
-                       
-                     
-                      </Row>
-                    </div>
-                       </div>
+
+                                </Card.Body>
+                              </Card>
+                            </Col>
+                            <Col className="position-relative">
+
+                              <Card className="p-2">
+                                <div pill className="p-2 fs-5 Badge_color">
+                                  Silver
+                                </div>
+                                <Card.Body>
+                                  <div className="Planprice_container">
+                                    $20
+                                  </div>
+                                  <div>
+                                    <ul className="ps-3 my-4">
+                                      <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                      <li className="pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                                    </ul>
+
+                                    <Button className='pay_btn mb-3'>Pay with Stripe</Button>
+                                    <Button className='pay_btn'>Pay with Razor pay</Button>
+                                  </div>
+
+
+                                </Card.Body>
+                              </Card>
+                            </Col>
+
+
+
+                          </Row>
+                        </div>
+                      </div>
                     </div>
                   </div>
 

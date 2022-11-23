@@ -480,11 +480,13 @@ label {
   margin: 0 auto;
 }
 
-.Recentjob_searchbar>div:nth-child(1)>input {
+.Recentjob_searchbar>div:nth-child(1)>input,
+.Companies_searchbar>div:nth-child(1)>input {
   padding: 16px 20px;
 }
 
-.Recentjob_searchbar>div:nth-child(2)>button {
+.Recentjob_searchbar>div:nth-child(2)>button ,
+.Companies_searchbar>div:nth-child(2)>button {
   padding: 16px 20px;
   background-color: var(--primary-color);
   margin-left: 10px;
@@ -543,8 +545,14 @@ label {
   background-color: #fff;
   border-radius: 10px;
   display: flex;
+  position: relative;
+  transition: all 0.6s ease 0s;
 }
+.Jobscatpage_card:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--primary-color) 0px 5px 15px;
 
+}
 .Jobscatpage_card>div:nth-child(1) {
   width: 70px;
   height: 70px;
@@ -554,7 +562,10 @@ label {
   align-items: center;
   justify-content: center;
 }
-
+.Jobscatpage_card>div:nth-child(1)>img{
+  border-radius: inherit;
+  height: 100%;
+}
 .Jobscatpage_card>div>svg {
   color: var(--primary-color);
   font-size: 40px;
@@ -808,7 +819,8 @@ label {
 
 .Seeker_maincontainer,
 .Jobprofile_maincontainer,
-.Skillassessment_container {
+.Skillassessment_container,
+.Companiesinner_container {
   padding-top: 130px;
 }
 
@@ -892,13 +904,13 @@ label {
   margin-top: 15px;
 }
 
-.Jobscatpage_card>div:nth-child(2)>div {
+/* .Jobscatpage_card>div:nth-child(2)>div {
   border-radius: 25px;
   position: absolute;
   right: -10px;
   top: 33%;
   z-index: 10;
-}
+} */
 
 .Jobscatpage_card>div:nth-child(2)>div>button {
   background-color: var(--primary-color);
@@ -1512,7 +1524,7 @@ label {
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--primary-color) !important;
 
   color: #fff !important;
 }
@@ -1606,7 +1618,7 @@ label {
 }
 
 .ViewProfile_btn>button {
-  background-color: #f7690a;
+  background-color:var(--primary-color);
   text-align: center;
   color: #fff;
   width: 100%;
@@ -1905,7 +1917,8 @@ label {
   
   
 }
-.Shortlist_profilecontainer{
+.Shortlist_profilecontainer,
+.Companies_container{
   padding-top: 100px;
 }
 .Shortlistsearch>form>button{
@@ -1997,10 +2010,11 @@ label {
   border-radius: 30px;
   color: #fff;
 }
-.pay_btn{
+.pay_btn,
+.companyinner_searchbtn{
   background-color: var(--primary-color) !important;
   padding: 12px 15px !important;
   color: #fff !important;
-  width: 100%;
+ 
   text-align: center;
 } 

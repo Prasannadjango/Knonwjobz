@@ -30,6 +30,7 @@ import Userprofile from "./Pages/Userprofile";
 import Appliedprofilesinner from "./Views/Appliedprofiles";
 import Appliedprofilesinnerpage from "./Pages/Viewprofilepage";
 import Companiespage from "./Pages/Companiespage";
+import Companiesinnerpage from "./Pages/Companiesinnerpage";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
           <Route path="/Shorlistprofiles" element={<Shortlistprofile/>}/>
           <Route path="/userprofile" element={<Userprofile/>}/>
           <Route path="/Companies" element={<Companiespage/>}/>
+          <Route path="/Companiesinner" element={<Companiesinnerpage/>}/>
         </Routes>
       </BrowserRouter>
     </>
